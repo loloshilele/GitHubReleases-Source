@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T06:06:44.728419+00:00",
+  "generated_at": "2026-11-13T06:25:55.383012+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -104,7 +104,16 @@
       "duplicates": [],
       "releases_scanned": 141,
       "eligible_releases": 53,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "Kazumi",
+          "bundleIdentifier": "com.example.kazumi",
+          "version": "2.4.4"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/jkcoxson/idevice_pair/releases",
@@ -115,7 +124,10 @@
       "duplicates": [],
       "releases_scanned": 19,
       "eligible_releases": 8,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/mengangs/ipadn/releases",
@@ -132,7 +144,16 @@
       ],
       "releases_scanned": 15,
       "eligible_releases": 15,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "iPadn",
+          "bundleIdentifier": "app.local.iPadn",
+          "version": "2.0.0"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/FluentRead/FluentRead/releases",
@@ -143,7 +164,10 @@
       "duplicates": [],
       "releases_scanned": 7,
       "eligible_releases": 7,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/storytold/artcraft/releases",
@@ -154,7 +178,10 @@
       "duplicates": [],
       "releases_scanned": 29,
       "eligible_releases": 27,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/OpenVPN/openvpn/releases",
@@ -165,7 +192,10 @@
       "duplicates": [],
       "releases_scanned": 29,
       "eligible_releases": 18,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/OpenVPN/openvpn-gui/releases",
@@ -176,7 +206,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/claration/feather/releases",
@@ -187,7 +220,16 @@
       "duplicates": [],
       "releases_scanned": 29,
       "eligible_releases": 5,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "Feather",
+          "bundleIdentifier": "thewonderofyou.Feather",
+          "version": "2.9.0"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/pbakaus/impeccable/releases",
@@ -196,9 +238,12 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 105,
-      "eligible_releases": 104,
-      "status": "no_ipa"
+      "releases_scanned": 107,
+      "eligible_releases": 106,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/morluto/rea/releases",
@@ -209,7 +254,10 @@
       "duplicates": [],
       "releases_scanned": 40,
       "eligible_releases": 40,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/robbietilton/Compositor/releases",
@@ -220,7 +268,10 @@
       "duplicates": [],
       "releases_scanned": 66,
       "eligible_releases": 66,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/youhunwl/TVAPP/releases",
@@ -231,7 +282,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/eternity4719/HowToLiveBetter/releases",
@@ -242,7 +296,10 @@
       "duplicates": [],
       "releases_scanned": 1,
       "eligible_releases": 1,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/waligoraamodio288-rgb/hongguo-desktop-releases/releases",
@@ -253,7 +310,10 @@
       "duplicates": [],
       "releases_scanned": 35,
       "eligible_releases": 24,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/nab138/iloader/releases",
@@ -264,7 +324,10 @@
       "duplicates": [],
       "releases_scanned": 51,
       "eligible_releases": 47,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/rustdesk/rustdesk/releases",
@@ -275,7 +338,10 @@
       "duplicates": [],
       "releases_scanned": 42,
       "eligible_releases": 9,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/freeok/so-novel/releases",
@@ -286,7 +352,10 @@
       "duplicates": [],
       "releases_scanned": 58,
       "eligible_releases": 8,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/ZGQ-inc/source/releases",
@@ -297,7 +366,10 @@
       "duplicates": [],
       "releases_scanned": 24,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/cathrynlavery/diagram-design/releases",
@@ -308,7 +380,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/DowneyRem/PixivSource/releases",
@@ -319,7 +394,10 @@
       "duplicates": [],
       "releases_scanned": 143,
       "eligible_releases": 47,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/swaggyP36000/TrollStore-IPAs/releases",
@@ -330,7 +408,10 @@
       "duplicates": [],
       "releases_scanned": 544,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/kaich/Yuedu/releases",
@@ -341,7 +422,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/aoaostar/legado/releases",
@@ -352,7 +436,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/Aidoku/Aidoku/releases",
@@ -363,7 +450,16 @@
       "duplicates": [],
       "releases_scanned": 35,
       "eligible_releases": 8,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "Aidoku",
+          "bundleIdentifier": "app.aidoku.Aidoku",
+          "version": "0.9"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/tanweai/pua/releases",
@@ -374,7 +470,10 @@
       "duplicates": [],
       "releases_scanned": 11,
       "eligible_releases": 11,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/moeru-ai/airi/releases",
@@ -385,7 +484,16 @@
       "duplicates": [],
       "releases_scanned": 96,
       "eligible_releases": 44,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "AIRI",
+          "bundleIdentifier": "ai.moeru.airi-pocket",
+          "version": "0.15.2"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/LiveContainer/LiveContainer/releases",
@@ -402,7 +510,16 @@
       ],
       "releases_scanned": 19,
       "eligible_releases": 3,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "LiveContainer",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "version": "3.8.0"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/open-ani/animeko/releases",
@@ -413,7 +530,16 @@
       "duplicates": [],
       "releases_scanned": 247,
       "eligible_releases": 17,
-      "status": "included"
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "Animeko",
+          "bundleIdentifier": "org.animeko.animeko",
+          "version": "6.4.0"
+        }
+      ],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/opa334/TrollStore/releases",
@@ -424,7 +550,10 @@
       "duplicates": [],
       "releases_scanned": 48,
       "eligible_releases": 1,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/openclaw/openclaw/releases",
@@ -435,7 +564,10 @@
       "duplicates": [],
       "releases_scanned": 284,
       "eligible_releases": 144,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/jin-yufeng/mp-html/releases",
@@ -446,7 +578,10 @@
       "duplicates": [],
       "releases_scanned": 25,
       "eligible_releases": 1,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/opendigg/awesome-github-vue/releases",
@@ -457,7 +592,10 @@
       "duplicates": [],
       "releases_scanned": 0,
       "eligible_releases": 0,
-      "status": "no_recent_release"
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     },
     {
       "url": "https://github.com/chavyleung/scripts/releases",
@@ -468,9 +606,21 @@
       "duplicates": [],
       "releases_scanned": 149,
       "eligible_releases": 5,
-      "status": "no_ipa"
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
     }
   ],
   "app_count": 22,
-  "github_repositories": 33
+  "github_repositories": 33,
+  "health": {
+    "github_repositories": 33,
+    "github_failed": 0,
+    "github_included": 7,
+    "official_source_failures": 4,
+    "last_complete_scan_at": "2026-11-13T06:25:55.383012+00:00",
+    "mode": "complete"
+  },
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43378601097"
 }
