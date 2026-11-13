@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T02:46:03.014139+00:00",
+  "generated_at": "2026-11-13T03:02:52.414748+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -91,9 +91,386 @@
       "accepted": 0
     },
     {
+      "url": "https://github.com/loloshilele?tab=stars",
+      "status": "complete",
+      "repositories": 33
+    },
+    {
       "url": "https://github.com/Predidit/Kazumi/releases",
-      "accepted": 1
+      "repository": "Predidit/Kazumi",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 141,
+      "eligible_releases": 53,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/jkcoxson/idevice_pair/releases",
+      "repository": "jkcoxson/idevice_pair",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 19,
+      "eligible_releases": 8,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/mengangs/ipadn/releases",
+      "repository": "mengangs/ipadn",
+      "accepted": 1,
+      "ipa_assets": 2,
+      "failures": [],
+      "duplicates": [
+        {
+          "asset": "iPadn-2.0.0-lite-unsigned.ipa",
+          "bundleIdentifier": "app.local.iPadn",
+          "reason": "Same Bundle ID; prefer complete unsigned IPA"
+        }
+      ],
+      "releases_scanned": 15,
+      "eligible_releases": 15,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/FluentRead/FluentRead/releases",
+      "repository": "FluentRead/FluentRead",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 7,
+      "eligible_releases": 7,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/storytold/artcraft/releases",
+      "repository": "storytold/artcraft",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 29,
+      "eligible_releases": 27,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/OpenVPN/openvpn/releases",
+      "repository": "OpenVPN/openvpn",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 29,
+      "eligible_releases": 18,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/OpenVPN/openvpn-gui/releases",
+      "repository": "OpenVPN/openvpn-gui",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/claration/feather/releases",
+      "repository": "claration/feather",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 29,
+      "eligible_releases": 5,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/pbakaus/impeccable/releases",
+      "repository": "pbakaus/impeccable",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 105,
+      "eligible_releases": 104,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/morluto/rea/releases",
+      "repository": "morluto/rea",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 40,
+      "eligible_releases": 40,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/robbietilton/Compositor/releases",
+      "repository": "robbietilton/Compositor",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 66,
+      "eligible_releases": 66,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/youhunwl/TVAPP/releases",
+      "repository": "youhunwl/TVAPP",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/eternity4719/HowToLiveBetter/releases",
+      "repository": "eternity4719/HowToLiveBetter",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 1,
+      "eligible_releases": 1,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/waligoraamodio288-rgb/hongguo-desktop-releases/releases",
+      "repository": "waligoraamodio288-rgb/hongguo-desktop-releases",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 34,
+      "eligible_releases": 23,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/nab138/iloader/releases",
+      "repository": "nab138/iloader",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 51,
+      "eligible_releases": 47,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/rustdesk/rustdesk/releases",
+      "repository": "rustdesk/rustdesk",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 42,
+      "eligible_releases": 9,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/freeok/so-novel/releases",
+      "repository": "freeok/so-novel",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 58,
+      "eligible_releases": 8,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/ZGQ-inc/source/releases",
+      "repository": "ZGQ-inc/source",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 24,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/cathrynlavery/diagram-design/releases",
+      "repository": "cathrynlavery/diagram-design",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/DowneyRem/PixivSource/releases",
+      "repository": "DowneyRem/PixivSource",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 143,
+      "eligible_releases": 47,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/swaggyP36000/TrollStore-IPAs/releases",
+      "repository": "swaggyP36000/TrollStore-IPAs",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 544,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/kaich/Yuedu/releases",
+      "repository": "kaich/Yuedu",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/aoaostar/legado/releases",
+      "repository": "aoaostar/legado",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/Aidoku/Aidoku/releases",
+      "repository": "Aidoku/Aidoku",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 35,
+      "eligible_releases": 8,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/tanweai/pua/releases",
+      "repository": "tanweai/pua",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 11,
+      "eligible_releases": 11,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/moeru-ai/airi/releases",
+      "repository": "moeru-ai/airi",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 96,
+      "eligible_releases": 44,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/LiveContainer/LiveContainer/releases",
+      "repository": "LiveContainer/LiveContainer",
+      "accepted": 1,
+      "ipa_assets": 2,
+      "failures": [],
+      "duplicates": [
+        {
+          "asset": "LiveContainer.ipa",
+          "bundleIdentifier": "com.kdt.livecontainer",
+          "reason": "Same Bundle ID; prefer complete unsigned IPA"
+        }
+      ],
+      "releases_scanned": 19,
+      "eligible_releases": 3,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/open-ani/animeko/releases",
+      "repository": "open-ani/animeko",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 247,
+      "eligible_releases": 17,
+      "status": "included"
+    },
+    {
+      "url": "https://github.com/opa334/TrollStore/releases",
+      "repository": "opa334/TrollStore",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 48,
+      "eligible_releases": 1,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/openclaw/openclaw/releases",
+      "repository": "openclaw/openclaw",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 284,
+      "eligible_releases": 144,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/jin-yufeng/mp-html/releases",
+      "repository": "jin-yufeng/mp-html",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 25,
+      "eligible_releases": 1,
+      "status": "no_ipa"
+    },
+    {
+      "url": "https://github.com/opendigg/awesome-github-vue/releases",
+      "repository": "opendigg/awesome-github-vue",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release"
+    },
+    {
+      "url": "https://github.com/chavyleung/scripts/releases",
+      "repository": "chavyleung/scripts",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 149,
+      "eligible_releases": 5,
+      "status": "no_ipa"
     }
   ],
-  "app_count": 20
+  "app_count": 22,
+  "github_repositories": 33
 }
