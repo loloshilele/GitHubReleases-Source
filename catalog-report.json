@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T03:02:52.414748+00:00",
+  "generated_at": "2026-11-13T06:06:44.728419+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -251,8 +251,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 34,
-      "eligible_releases": 23,
+      "releases_scanned": 35,
+      "eligible_releases": 24,
       "status": "no_ipa"
     },
     {
