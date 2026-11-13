@@ -214,7 +214,7 @@ def collect(seed=None, urls=None, now=None, days=MAX_AGE_DAYS, loader=None, log=
             accepted += 1
         report['sources'].append({'url': url, 'accepted': accepted})
         log(f'  · 官方源：{raw.get("name") or url}，一年内有效应用 {accepted} 个')
-    result = {k: (seed or {})[k] for k in ('name', 'identifier', 'sourceURL') if (seed or {}).get(k)}
+    result = {k: (seed or {})[k] for k in ('name', 'identifier', 'sourceURL', 'iconURL') if (seed or {}).get(k)}
     result.setdefault('name', 'GitHub Stars IPA 源')
     result.setdefault('identifier', 'local.githubreleases.stars')
     result['apps'] = sorted(by_bundle.values(), key=lambda a: parse_date(a['versions'][0]['date']), reverse=True)
@@ -224,6 +224,11 @@ def collect(seed=None, urls=None, now=None, days=MAX_AGE_DAYS, loader=None, log=
 
 def write_site(output, source, report):
     output = Path(output)
+    icon = Path(__file__).with_name('source-icon.jpg')
+    if icon.exists():
+        import shutil
+        output.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(icon, output / 'source-icon.jpg')
     atomic_json(output / 'apps.json', source)
     atomic_json(output / 'catalog-report.json', report)
     page = ('<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
@@ -245,9 +250,14 @@ def main():
     args = parser.parse_args()
     path = Path(args.seed)
     seed = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+    from github_catalog import collect_repositories
+    github_apps, github_reports = collect_repositories(seed, datetime.now(timezone.utc), MAX_AGE_DAYS)
+    seed['apps'] = (seed.get('apps') or []) + github_apps
     source, report = collect(seed)
+    report['sources'].extend(github_reports)
     if args.base:
         source['sourceURL'] = args.base.rstrip('/') + '/apps.json'
+        source['iconURL'] = args.base.rstrip('/') + '/source-icon.jpg'
     if not source['apps']:
         raise RuntimeError('没有一年内的有效应用，未覆盖线上源')
     write_site(args.out, source, report)
