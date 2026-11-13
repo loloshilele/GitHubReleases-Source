@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T02:15:46.725056+00:00",
+  "generated_at": "2026-11-13T02:46:03.014139+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -89,7 +89,11 @@
     {
       "url": "https://flyinghead.github.io/flycast-builds/altstore.json",
       "accepted": 0
+    },
+    {
+      "url": "https://github.com/Predidit/Kazumi/releases",
+      "accepted": 1
     }
   ],
-  "app_count": 19
+  "app_count": 20
 }
