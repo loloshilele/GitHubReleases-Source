@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-11-13T02:15:46.725056+00:00",
+  "max_age_days": 365,
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/claration/Feather/main/app-repo.json",
+      "accepted": 1
+    },
+    {
+      "url": "https://apps.altstore.io",
+      "accepted": 2
+    },
+    {
+      "url": "https://community-apps.sidestore.io/sidecommunity.json",
+      "accepted": 0
+    },
+    {
+      "url": "https://stikdebug.xyz/index.json",
+      "accepted": 2
+    },
+    {
+      "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
+      "accepted": 1
+    },
+    {
+      "url": "https://apps.manicemu.site/altstore",
+      "accepted": 0
+    },
+    {
+      "url": "https://git.ryujinx.app/melonx/emu/-/raw/XC-ios-ht/source.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
+      "accepted": 0
+    },
+    {
+      "url": "https://ios-repo.geode-sdk.org/altsource/main.json",
+      "accepted": 1
+    },
+    {
+      "url": "https://repo.untitledcharts.com",
+      "accepted": 1
+    },
+    {
+      "url": "https://provenance-emu.com/apps.json",
+      "accepted": 4
+    },
+    {
+      "url": "https://neoarz.github.io/Countdown-App/Countdown.json",
+      "error": "Expecting property name enclosed in double quotes: line 30 column 9 (char 1746)"
+    },
+    {
+      "url": "https://altstore.oatmealdome.me",
+      "accepted": 1
+    },
+    {
+      "url": "https://alt.getutm.app",
+      "accepted": 2
+    },
+    {
+      "url": "https://alt.crystall1ne.dev",
+      "accepted": 0
+    },
+    {
+      "url": "https://pokemmo.eu/altstore/",
+      "accepted": 1
+    },
+    {
+      "url": "https://theodyssey.dev/altstore/odysseysource.json",
+      "accepted": 0
+    },
+    {
+      "url": "https://repos.yattee.stream/alt/apps.json",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://altstore.ignitedemulator.com/",
+      "accepted": 0
+    },
+    {
+      "url": "https://alt.thatstel.la/",
+      "error": "Expecting value: line 29 column 13 (char 3558)"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
+      "accepted": 1
+    },
+    {
+      "url": "https://flyinghead.github.io/flycast-builds/altstore.json",
+      "accepted": 0
+    }
+  ],
+  "app_count": 19
+}

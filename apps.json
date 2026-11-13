@@ -1,37 +1,408 @@
 {
   "name": "GitHub Stars IPA 源",
+  "identifier": "local.githubreleases.stars",
+  "sourceURL": "https://loloshilele.github.io/GitHubReleases-Source/apps.json",
   "apps": [
     {
-      "name": "Aidoku",
-      "bundleIdentifier": "app.aidoku.Aidoku",
-      "developerName": "Aidoku",
-      "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes",
-      "iconURL": "https://github.com/Aidoku.png",
+      "name": "iCube",
+      "bundleIdentifier": "com.joemattiello.iCube",
+      "developerName": "Provenance Emu",
+      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
+      "iconURL": "https://icube-emu.com/icon-1024.png",
+      "tintColor": "#3B82F6",
+      "category": "games",
+      "screenshots": [
+        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
+        "https://icube-emu.com/screenshots/iphone/search.jpg",
+        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg",
+        "https://icube-emu.com/screenshots/iphone/settings-graphics.jpg",
+        "https://icube-emu.com/screenshots/iphone/settings-controllers.jpg",
+        "https://icube-emu.com/screenshots/iphone/emulation-shader.jpg"
+      ],
       "versions": [
         {
-          "version": "0.9",
-          "date": "2026-10-16",
-          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
-          "size": 14753154,
-          "minOSVersion": "15.0",
-          "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes"
+          "version": "1.0.0",
+          "buildVersion": "507",
+          "date": "2026-11-13T00:07:10.036Z",
+          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-507/Non-Jailbroken.ipa",
+          "size": 123842896,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
         }
       ]
     },
     {
-      "name": "LiveContainer",
-      "bundleIdentifier": "com.kdt.livecontainer",
-      "developerName": "LiveContainer",
-      "localizedDescription": "# ⚠️This build is OUTDATED. Please use [nightly version](https://github.com/LiveContainer/LiveContainer/releases/tag/nightly) instead.\r\n\r\n# LiveContainer 3.8.0\r\n\r\n> [!Warning]\r\n> The standalone version requires **SideStore 0.6.2+** or **AltStore 2.2.1+** for installation.\r\n> To install LiveContainer with built-in SideStore (`LiveContainer+SideStore.ipa`), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r\n\r\n# New Features\r\n\r\n## Storage Management\r\n\r\n- Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\r\n- Added per-app storage details, including app bundle size, container sizes, and last-used date.\r\n- Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\r\n\r\n## Multiple LiveContainers\r\n- Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (#1367)\r\n\r\n## Share to Apps in LiveContainer\r\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (#1357)\r\n\r\n## Multitasking\r\n\r\n- Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (#1208)\r\n- Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (#1228, #1250)\r\n- Added more multitask window animations and improved native-window scene handling.\r\n- URL schemes and `open-url` payloads can be passed to already-running multitask apps and native windows.\r\n\r\n## JIT\r\n- Added StosDebug support as a JIT enabler.\r\n\r\n## TweakLoader\r\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\r\n\r\n# Improvements\r\n- Added support for manually setting a container's IDFV. (#1194)\r\n- IDFV spoofing works even when Tweakloader is not loaded.\r\n- Reworked signing logic for tweaks and app installation, with multithreaded signing support.\r\n- Download alerts now block tab switching while a download is in progress.\r\n- Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\r\n- Add a \"Clear Notification\" button (#1388)\r\n- Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (#1417)\r\n\r\n# Bug Fixes\r\n\r\n- Fixed `livecontainer://open-url` dropping the deep link when launching an app from a cold start. (#1339)\r\n- Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (#1209)\r\n- Fixed a crash when opening Container Preferences if the app did not contain an `en.lproj` path. (#1239)\r\n- Fixed apps and AltStore sources not being searchable in some cases. (#1365, #1368)\r\n- Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (#1347)\r\n- Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (#1386)\r\n- Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (#1430)\r\n- Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (#1300, #1310, #1329)\r\n- Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (#1402, #844, #870)\r\n- Added support for iOS 27 developer beta. (#1394, #1417, #1416)\r\n- Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (#1415)\r\n\r\n# Localization\r\n\r\n- Updated translations. Added Spanish translation by @Deci8BelioS\r\n\r\n# Credits\r\n\r\nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\r\n\r\nGreat thanks to everyone who helped translate LiveContainer.",
-      "iconURL": "https://github.com/LiveContainer.png",
+      "name": "Provenance Alpha",
+      "bundleIdentifier": "com.provenance-emu.provenance.alpha",
+      "developerName": "Provenance-EMU",
+      "subtitle": "Latest dev builds - test new features early",
+      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "tintColor": "FF6B35",
+      "screenshotURLs": [],
       "versions": [
         {
-          "version": "3.8.0",
-          "date": "2026-07-17",
-          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer%2BSideStore.ipa",
-          "size": 35403538,
-          "minOSVersion": "15.0",
-          "localizedDescription": "# ⚠️This build is OUTDATED. Please use [nightly version](https://github.com/LiveContainer/LiveContainer/releases/tag/nightly) instead.\r\n\r\n# LiveContainer 3.8.0\r\n\r\n> [!Warning]\r\n> The standalone version requires **SideStore 0.6.2+** or **AltStore 2.2.1+** for installation.\r\n> To install LiveContainer with built-in SideStore (`LiveContainer+SideStore.ipa`), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r\n\r\n# New Features\r\n\r\n## Storage Management\r\n\r\n- Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\r\n- Added per-app storage details, including app bundle size, container sizes, and last-used date.\r\n- Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\r\n\r\n## Multiple LiveContainers\r\n- Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (#1367)\r\n\r\n## Share to Apps in LiveContainer\r\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (#1357)\r\n\r\n## Multitasking\r\n\r\n- Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (#1208)\r\n- Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (#1228, #1250)\r\n- Added more multitask window animations and improved native-window scene handling.\r\n- URL schemes and `open-url` payloads can be passed to already-running multitask apps and native windows.\r\n\r\n## JIT\r\n- Added StosDebug support as a JIT enabler.\r\n\r\n## TweakLoader\r\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\r\n\r\n# Improvements\r\n- Added support for manually setting a container's IDFV. (#1194)\r\n- IDFV spoofing works even when Tweakloader is not loaded.\r\n- Reworked signing logic for tweaks and app installation, with multithreaded signing support.\r\n- Download alerts now block tab switching while a download is in progress.\r\n- Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\r\n- Add a \"Clear Notification\" button (#1388)\r\n- Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (#1417)\r\n\r\n# Bug Fixes\r\n\r\n- Fixed `livecontainer://open-url` dropping the deep link when launching an app from a cold start. (#1339)\r\n- Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (#1209)\r\n- Fixed a crash when opening Container Preferences if the app did not contain an `en.lproj` path. (#1239)\r\n- Fixed apps and AltStore sources not being searchable in some cases. (#1365, #1368)\r\n- Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (#1347)\r\n- Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (#1386)\r\n- Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (#1430)\r\n- Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (#1300, #1310, #1329)\r\n- Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (#1402, #844, #870)\r\n- Added support for iOS 27 developer beta. (#1394, #1417, #1416)\r\n- Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (#1415)\r\n\r\n# Localization\r\n\r\n- Updated translations. Added Spanish translation by @Deci8BelioS\r\n\r\n# Credits\r\n\r\nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\r\n\r\nGreat thanks to everyone who helped translate LiveContainer."
+          "version": "3.4.0",
+          "buildVersion": "11154",
+          "marketingVersion": "3.4.0-alpha.20261113.45eca85",
+          "date": "2026-11-13",
+          "localizedDescription": "Alpha build 45eca85 · 2026-11-13\n\nChanges in this build:\n• feat(input): route controller tilt to Dolphin Wii Remote\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
+          "size": 783048569,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "com.apple.developer.icloud-services"
+          },
+          {
+            "name": "com.apple.developer.icloud-container-identifiers"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Used to discover and connect to local network game servers for netplay."
+          },
+          {
+            "name": "Camera",
+            "usageDescription": "Used to scan QR codes for importing game data."
+          }
+        ]
+      }
+    },
+    {
+      "name": "iFly",
+      "bundleIdentifier": "com.provenance.ifly",
+      "developerName": "Provenance Emu",
+      "subtitle": "Dreamcast Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
+      "iconURL": "https://ifly-emu.com/icon-1024.png",
+      "tintColor": "#ff6900",
+      "category": "games",
+      "screenshots": [
+        "https://ifly-emu.com/screenshots/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
+        "https://ifly-emu.com/screenshots/iphone/search.jpg",
+        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg",
+        "https://ifly-emu.com/screenshots/iphone/import.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0+1794465576",
+          "buildVersion": "1794465576",
+          "date": "2026-11-12",
+          "localizedDescription": "iFly 1.0.0 (build 1794465576) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794465576/iFly-1.0.0-1794465576.ipa",
+          "size": 136299123,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1794459606",
+          "buildVersion": "1794459606",
+          "date": "2026-11-12",
+          "localizedDescription": "iFly 1.0.0 (build 1794459606) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794459606/iFly-1.0.0-1794459606.ipa",
+          "size": 135231936,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1794380700",
+          "buildVersion": "1794380700",
+          "date": "2026-11-11",
+          "localizedDescription": "iFly 1.0.0 (build 1794380700) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794380700/iFly-1.0.0-1794380700.ipa",
+          "size": 135188123,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1794377660",
+          "buildVersion": "1794377660",
+          "date": "2026-11-11",
+          "localizedDescription": "iFly 1.0.0 (build 1794377660) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794377660/iFly-1.0.0-1794377660.ipa",
+          "size": 135103994,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1794365272",
+          "buildVersion": "1794365272",
+          "date": "2026-11-11",
+          "localizedDescription": "iFly 1.0.0 (build 1794365272) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1794365272/iFly-1.0.0-1794365272.ipa",
+          "size": 135103886,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
+      ]
+    },
+    {
+      "name": "AltStore",
+      "bundleIdentifier": "com.rileytestut.AltStore",
+      "developerName": "Riley Testut",
+      "versions": [
+        {
+          "version": "2.3.3",
+          "date": "2026-11-09T13:00:00-04:00",
+          "localizedDescription": "This update fixes the 415 error when sideloading and refreshing apps.\n\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3_3.ipa",
+          "size": 40615381,
+          "sha256": "3bcfc4ef816abf1551ab31304040d8d556382657663e1f0b720d1a505ca8aca9",
+          "minOSVersion": "17.4"
+        },
+        {
+          "version": "2.3.2",
+          "date": "2026-10-28T13:00:00-04:00",
+          "localizedDescription": "This update fixes 503 and -80046 errors when sideloading and refreshing apps.\n\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3_2.ipa",
+          "size": 40614848,
+          "sha256": "579e7343c911af87c31c31ede646af30f257edc34914ea49e3cd381116ef2189",
+          "minOSVersion": "17.4"
+        },
+        {
+          "version": "2.3.1",
+          "date": "2026-10-21T11:00:00-04:00",
+          "localizedDescription": "This update fixes error -80045 when sideloading and refreshing apps.\n\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3_1.ipa",
+          "size": 40614481,
+          "sha256": "30c33e049e35ae164b8f58bca9f73f03b90baa5c091ad35b2b01ecf70b6ddf72",
+          "minOSVersion": "17.4"
+        },
+        {
+          "version": "2.3",
+          "date": "2026-09-14T12:00:00-04:00",
+          "localizedDescription": "NEW\n\nRemote AltServer\n• Supports sideloading apps without a computer\n• Install, refresh, and (de-)activate apps from anywhere with a WiFi connection\n• Tap “Set up Remote AltServer” in AltStore settings to get started\n• Thanks @jkcoxson and the entire SideStore team for making this possible!\n\nLiquid Glass UI\n• Updated design to fit at home on iOS 26\n\nIMPROVED\n• Includes `ALT_CLASSIC_VER` header with current build version when fetching sources\n\nFIXED\n• Fixed unreadable text in light mode for some news alerts (thanks @partyknightsdev!)\n• Fixed showing empty text view for updates with no description\n• Fixed extra space above version description for app updates\n• Fixed category cells not being accessible with VoiceOver\n• Fixed My Apps tab badge count showing incorrect number of app updates",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3.ipa",
+          "size": 40649417,
+          "sha256": "e39b8728299d4fe50818fac36dba9cd025065818e91755eade486f7f9a897742",
+          "minOSVersion": "17.4"
+        },
+        {
+          "version": "2.2.2",
+          "date": "2026-09-08T15:00:00-05:00",
+          "localizedDescription": "⚠️ You must manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.\n\nThis update fixes “data is not in the correct format” error when signing-in with Apple ID.",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_2_2.ipa",
+          "size": 32770196,
+          "sha256": "afa85752546e3f775aacb7dc747bb1d45764634cbb607f44e50570ee536ab6e7",
+          "minOSVersion": "14.0"
+        }
+      ],
+      "versionDescription": "• Fixed error fetching Friend Zone patrons due to unexpected nil name\n• Fixed incorrect cell height for some News items",
+      "localizedDescription": "AltStore is an alternative app store for non-jailbroken devices. \n\nThis version of AltStore allows you to install Delta, an all-in-one emulator for iOS, as well as sideload other .ipa files from the Files app.",
+      "iconURL": "https://user-images.githubusercontent.com/705880/65270980-1eb96f80-dad1-11e9-9367-78ccd25ceb02.png",
+      "tintColor": "018084",
+      "category": "utilities",
+      "screenshots": [
+        "https://user-images.githubusercontent.com/705880/277757391-76c02f48-be2a-485a-ba75-277480c99356.jpeg",
+        "https://user-images.githubusercontent.com/705880/277757303-ee0b7695-0e7d-4a93-8b25-4fbbbd3cb745.PNG",
+        "https://user-images.githubusercontent.com/705880/277757263-ef612879-0314-4464-a8f4-103e1f22fbb1.png",
+        "https://user-images.githubusercontent.com/705880/277757445-450618d1-6005-445e-bfd4-7c75387e990b.PNG",
+        "https://user-images.githubusercontent.com/705880/277757220-ebbf42dc-5153-4e2d-9ff4-4c25ad367941.PNG",
+        "https://user-images.githubusercontent.com/705880/277757419-f8067301-61f3-4eae-bbd1-be1bf2a1c05c.PNG"
+      ],
+      "screenshotURLs": [
+        "https://user-images.githubusercontent.com/705880/78942028-acf54300-7a6d-11ea-821c-5bb7a9b3e73a.PNG",
+        "https://user-images.githubusercontent.com/705880/78942222-0fe6da00-7a6e-11ea-9f2a-dda16157583c.PNG",
+        "https://user-images.githubusercontent.com/705880/65605577-332cba80-df5e-11e9-9f00-b369ce974f71.PNG"
+      ],
+      "permissions": [
+        {
+          "type": "background-fetch",
+          "usageDescription": "AltStore periodically refreshes apps in the background to prevent them from expiring."
+        },
+        {
+          "type": "background-audio",
+          "usageDescription": "Allows AltStore to run longer than 30 seconds when refreshing apps in background."
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "get-task-allow"
+          },
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "aps-environment"
+          },
+          {
+            "name": "com.apple.developer.siri"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "AltStore uses the local network to find and communicate with AltServer."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mona - HRT journal",
+      "bundleIdentifier": "com.deliacheminot.mona",
+      "developerName": "Délia Cheminot",
+      "subtitle": "Your hormonal journal",
+      "localizedDescription": "Take control of your hormonal health with Mona, the fully local, open-source app designed to help you track, understand, and manage your hormone journey.\n\nWhy Mona is different:\n- Completely private: All your data stays on your device. Nothing is sent to servers.\n- Open source: The app is fully open source, allowing maximum transparency and contributions from the community.\n- Free for life: No subscriptions, no premium features. Mona is free for everyone.\n\nMedication reminders:\n- Add your medication regimens\n- Get detailed info for each upcoming dose (quantity, date, side, missed doses)\n- Receive notifications so you never miss a dose\n\nManage your medication stock efficiently:\n- Keep track of each medication in stock\n- Quantities are automatically updated with each intake\n\nHormone level graphs: \n- For users on estradiol monotherapy, visualize simulated hormone levels over time",
+      "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
+      "tintColor": "#4d0473",
+      "category": "utilities",
+      "screenshots": [
+        "https://i.imgur.com/9lIZ9Ft.png",
+        "https://i.imgur.com/ZxD1twb.png",
+        "https://i.imgur.com/pGfNAcY.png"
+      ],
+      "screenshotURLs": [
+        "https://i.imgur.com/dSOQssK.png",
+        "https://i.imgur.com/vuSqW2l.png",
+        "https://i.imgur.com/5cjzlB0.png"
+      ],
+      "versionDescription": "Fix:\n\n- Corrected a performance drop in the simulator.",
+      "versions": [
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.2/mona-1.25.2.ipa",
+          "size": 11882599,
+          "version": "1.25.2",
+          "buildVersion": "35",
+          "date": "2026-11-08T18:20:12Z",
+          "localizedDescription": "Fix:\n\n- Corrected a performance drop in the simulator.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.1/mona-1.25.1.ipa",
+          "size": 11873556,
+          "version": "1.25.1",
+          "buildVersion": "34",
+          "date": "2026-11-07T19:05:25Z",
+          "localizedDescription": "Fix:\r\n\r\n- Reverted the time charts to left-to-right in all languages.\r\n- Minor UI improvements.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.0/mona-1.25.0.ipa",
+          "size": 11876148,
+          "version": "1.25.0",
+          "buildVersion": "33",
+          "date": "2026-11-03T12:53:20Z",
+          "localizedDescription": "New:\r\n\r\n- You can now record labs with data below or above a value.\r\n- New units: ng/L and µg/L.\r\n- New languages: Arabic, Kurdish, Persian, Hebrew, Luri and Dari.\r\n\r\nFix:\r\n\r\n- Corrected wrong time on daily / weekly notifications after DST.\r\n- The estradiol undecylate graph is not cut anymore after 100 days.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.24.2/mona-1.24.2.ipa",
+          "size": 11848223,
+          "version": "1.24.2",
+          "buildVersion": "32",
+          "date": "2026-10-17T19:47:08Z",
+          "localizedDescription": "New:\r\n\r\n- New language: Basque\r\n\r\nFix:\r\n\r\n- Fixed a bug causing some characters to import badly and the graph to disappear with imported data",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.24.1/mona-1.24.1.ipa",
+          "size": 11836644,
+          "version": "1.24.1",
+          "buildVersion": "31",
+          "date": "2026-10-10T17:31:50Z",
+          "localizedDescription": "Fix:\r\n\r\n- The chart is now right-to-left in RTL languages",
+          "minOSVersion": "13.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.developer.usernotifications.time-sensitive"
+          },
+          {
+            "name": "get-task-allow"
+          }
+        ],
+        "privacy": {}
+      }
+    },
+    {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StikDebug",
+      "subtitle": "On-device JIT enabler and device toolbox.",
+      "localizedDescription": "An on-device debugger and developer toolbox for iOS versions 17.4+ powered by idevice.  Note: Requires LocalDevVPN, cannot be natively used inside LiveContainer to enable JIT for the same LiveContainer.",
+      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
+      "tintColor": "#3B86F7",
+      "screenshots": {
+        "iphone": [
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/home.png"
+          },
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/scripts.png"
+          },
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/settings.png"
+          }
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "StikDebug needs access to devices on your local network so it can connect to the ip of the target device.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings.",
+          "NSLocationWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings."
+        }
+      },
+      "versions": [
+        {
+          "version": "3.2.2",
+          "date": "2026-11-08",
+          "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\nFull Changelog: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+          "size": 16924687,
+          "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
+      "bundleIdentifier": "eu.pokemmo.client",
+      "developerName": "PokeMMO",
+      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "localizedDescription": "PokeMMO is a free to play mmorpg, come join a growing community as you level up and discover new monsters. Available now on PC, Android, iOS, Mac, and Linux.",
+      "name": "PokeMMO",
+      "screenshotURLs": [
+        "https://pokemmo.com/build/images/screenshot/c.b5d935d8.png",
+        "https://pokemmo.com/build/images/screenshot/b.3a233486.png",
+        "https://pokemmo.com/build/images/screenshot/d.4080dd9c.png",
+        "https://pokemmo.com/build/images/screenshot/e.ed0aa85b.png",
+        "https://pokemmo.com/build/images/screenshot/a.debf11f5.png"
+      ],
+      "tintColor": "73ACE2",
+      "versions": [
+        {
+          "version": "34995",
+          "date": "2026-11-06T02:53:21+00:00",
+          "downloadURL": "https://dl.pokemmo.com/PokeMMO-Client.ipa?r=34995",
+          "size": 133711770
         }
       ]
     },
@@ -51,8 +422,534 @@
           "localizedDescription": "- 加快桌面端网页视频解析速度\r\n- 优化季度拆分资源的弹幕匹配准确性\r\n- 新增通知中心与公告，可查看互动消息、举报处理结果和账号安全提醒，并按类型设置通知\r\n- 新增弹幕文字转换设置，支持按弹幕来源单独配置并预览转换效果 (#3536 by @GeneralK1ng)\r\n- iOS 支持 Anime4K 视频增强，提升视频画面清晰度 (#3606 by @black4der)\r\n- Windows 和 macOS 自动更新支持增量下载，减少下载流量并加快更新\r\n- 新增 JSON API 数据源\r\n- 修复一系列播放相关问题\r\n\r\n----\r\n\r\n- TV 端支持配置全局网络代理 (#3550 by @LoliWolf)\r\n- Android 支持通过包含 Bangumi 章节 ID 或剧集 ID 的 ani 链接打开指定剧集\r\n- 优化续播与换源体验，直接从记忆进度开始播放，减少重复缓冲并避免换源后进度回退\r\n- 优化剧集页播放器快捷键，切换标签页或关闭侧边栏后可直接操作视频，输入文字时避免误触快捷键 (#3542 by @Tsukumi233)\r\n- 修复桌面端在部分多显卡或渲染模式切换场景下视频黑屏、窗口空白的问题\r\n- 修复 Windows 退出播放页时可能卡死的问题\r\n- 修复 Windows 和 Linux 播放纯音频媒体时可能卡在加载中的问题\r\n- 修复 Android 播放部分 MKV 视频时无法显示压缩字幕的问题，支持 ASS 和 SRT 字幕\r\n- 修复 Android 暂停或播放结束后切换全屏时画面缩在左侧或被裁切的问题\r\n- 修复 Android 应用语言切换不生效的问题\r\n- 修复 Jellyfin 数据源切集后找不到下一集资源的问题\r\n- 修复部分网络环境下数据源因页面链接使用 HTTP 而无法加载的问题 (#3633 by @wdw89)\r\n- 修复进入或切换页面时自动聚焦输入框、滑块等控件，导致页面意外滚动的问题 (#3650 by @NihilDigit)\r\n\r\n**Full Changelog**: https://github.com/open-ani/animeko/compare/v6.3.0...v6.4.0\r\n\r\n\r\n[//]: # (ANI-SERVER-MAGIC-SEPARATOR)\r\n\r\n[//]: # (注意: api server 依赖这个特殊分隔符)\r\n\r\n[//]: # (对于所有可用的变量列表, 参考 CI release.yml 的 step release-notes)\r\n\r\n[github-win-x64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-windows-x86_64.zip\r\n\r\n[github-win-aarch64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-windows-aarch64.zip\r\n\r\n[github-mac-x64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-macos-x86_64.dmg\r\n\r\n[github-mac-aarch64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-macos-aarch64.dmg\r\n\r\n[github-android]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-universal.apk\r\n\r\n[github-android-arm64-v8a]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-arm64-v8a.apk\r\n\r\n[github-android-armeabi-v7a]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-armeabi-v7a.apk\r\n\r\n[github-android-x86_64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-x86_64.apk\r\n\r\n[cf-win-x64]: https://d.myani.org/v6.4.0/ani-6.4.0-windows-x86_64.zip\r\n\r\n[cf-win-aarch64]: https://d.myani.org/v6.4.0/ani-6.4.0-windows-aarch64.zip\r\n\r\n[cf-linux-x64]: https://d.myani.org/v6.4.0/ani-6.4.0-linux-x86_64.appimage\r\n\r\n[cf-mac-x64]: https://d.myani.org/v6.4.0/ani-6.4.0-macos-x86_64.zip\r\n\r\n[cf-mac-aarch64]: https://d.myani.org/v6.4.0/ani-6.4.0-macos-aarch64.dmg\r\n\r\n[cf-ios]: https://d.myani.org/v6.4.0/ani-6.4.0.ipa\r\n\r\n[cf-android]: https://d.myani.org/v6.4.0/ani-6.4.0-universal.apk\r\n\r\n[cf-android-arm64-v8a]: https://d.myani.org/v6.4.0/ani-6.4.0-arm64-v8a.apk\r\n\r\n[cf-android-armeabi-v7a]: https://d.myani.org/v6.4.0/ani-6.4.0-armeabi-v7a.apk\r\n\r\n[cf-android-x86_64]: https://d.myani.org/v6.4.0/ani-6.4.0-x86_64.apk\r\n\r\n[ghproxy-win-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-windows-x86_64.zip\r\n\r\n[ghproxy-win-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-windows-aarch64.zip\r\n\r\n[ghproxy-mac-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-macos-x86_64.zip\r\n\r\n[ghproxy-linux-x64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-linux-x86_64.appimage\r\n\r\n[ghproxy-mac-aarch64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-macos-aarch64.dmg\r\n\r\n[ghproxy-ios]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0.ios\r\n\r\n[ghproxy-android]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-universal.apk\r\n\r\n[ghproxy-android-arm64-v8a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-arm64-v8a.apk\r\n\r\n[ghproxy-android-armeabi-v7a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-armeabi-v7a.apk\r\n\r\n[ghproxy-android-x86_64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-6.4.0-x86_64.apk\r\n\r\n[github-android-tv]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-tv-6.4.0-universal.apk\r\n\r\n[github-android-tv-arm64-v8a]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-tv-6.4.0-arm64-v8a.apk\r\n\r\n[github-android-tv-armeabi-v7a]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-tv-6.4.0-armeabi-v7a.apk\r\n\r\n[github-android-tv-x86_64]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-tv-6.4.0-x86_64.apk\r\n\r\n[cf-android-tv]: https://d.myani.org/v6.4.0/ani-tv-6.4.0-universal.apk\r\n\r\n[cf-android-tv-arm64-v8a]: https://d.myani.org/v6.4.0/ani-tv-6.4.0-arm64-v8a.apk\r\n\r\n[cf-android-tv-armeabi-v7a]: https://d.myani.org/v6.4.0/ani-tv-6.4.0-armeabi-v7a.apk\r\n\r\n[cf-android-tv-x86_64]: https://d.myani.org/v6.4.0/ani-tv-6.4.0-x86_64.apk\r\n\r\n[ghproxy-android-tv]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-tv-6.4.0-universal.apk\r\n\r\n[ghproxy-android-tv-arm64-v8a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-tv-6.4.0-arm64-v8a.apk\r\n\r\n[ghproxy-android-tv-armeabi-v7a]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-tv-6.4.0-armeabi-v7a.apk\r\n\r\n[ghproxy-android-tv-x86_64]: https://ghfast.top/?q=https%3A%2F%2Fgithub.com%2Fopen-ani%2Fani%2Freleases%2Fdownload%2Fv6.4.0%2Fani-tv-6.4.0-x86_64.apk\r\n\r\n[macOS 无法打开解决方案]: https://myani.org/wiki/macos-unable-to-open\r\n\r\n[Windows下字体与背景颜色异常解决方案]: https://myani.org/wiki/windows-font-bg-color-issue\r\n\r\n[Linux 安装说明]: https://myani.org/wiki/linux-install\r\n\r\n[macOS Intel芯片版本安装教程]: https://myani.org/wiki/macos-intel-install\r\n\r\n[macos-intel-issue]: https://github.com/open-ani/animeko/issues/1345\r\n\r\n[linux-issue]: https://github.com/open-ani/animeko/issues/944\r\n\r\n[iOS 自签]: https://myani.org/wiki/ios-install\r\n\r\n|                  | 下载                                               | 常见问题                                        |\r\n|------------------|--------------------------------------------------|---------------------------------------------|\r\n| 安卓 手机/平板         | [主线][cf-android] / [备线][ghproxy-android]         |                                             |\r\n| 安卓 电视            | [主线][cf-android-tv] / [备线][ghproxy-android-tv]   |                                             |\r\n| iOS              | [主线][cf-ios] / [备线][ghproxy-ios]                 | 需要[自签][iOS 自签]                                  |\r\n| Windows          | [主线][cf-win-x64] / [备线][ghproxy-win-x64]         | 1. 目录不要有中文或者空格 <br/> 2. [显示异常][Windows下字体与背景颜色异常解决方案] |\r\n| Windows (ARM64)  | [主线][cf-win-aarch64] / [备线][ghproxy-win-aarch64] | 同 Windows                                                             |\r\n| macOS (M 系列芯片)   | [主线][cf-mac-aarch64] / [备线][ghproxy-mac-aarch64] | ⚠️ [安装后打不开][macOS 无法打开解决方案]                      |\r\n| macOS (Intel 芯片) | [主线][cf-mac-x64] / [备线][ghproxy-mac-x64]         | ⚠️ [安装教程][macOS Intel芯片版本安装教程]                    |\r\n| Linux AppImage   | [主线][cf-linux-x64] / [备线][ghproxy-linux-x64]     | ⚠️ [安装教程][Linux 安装说明]                        |\r\n\r\n[github-android-qr]: https://github.com/open-ani/ani/releases/download/v6.4.0/ani-6.4.0-universal.apk.github.qrcode.png\r\n\r\n[cf-android-qr]: https://d.myani.org/v6.4.0/ani-6.4.0-universal.apk.cloudflare.qrcode.png\r\n\r\n[cf-ios-qr]: https://d.myani.org/v6.4.0/ani-6.4.0.ipa.cloudflare.qrcode.png\r\n\r\n| 安卓 手机/平板                     | iOS IPA (需要[自签][iOS 自签])     | \r\n|------------------------------|--------------------------|\r\n| ![Cloudflare][cf-android-qr] | ![Cloudflare][cf-ios-qr] |\r\n\r\n\r\n<details>\r\n<summary> Android 细分架构下载 </summary>\r\n\r\n[//]: # (@formatter:off  因为\"版本\"前面不能换行)\r\n\r\n如果不知道自己是什么架构，建议下载 `universal` 版本。\r\n\r\n[//]: # (@formatter:on)\r\n\r\n| 处理器架构              | 适用于             | 下载                                                                                                      |\r\n|--------------------|-----------------|---------------------------------------------------------------------------------------------------------|\r\n| universal (推荐)     | 所有设备            | [主线][cf-android] / [备线][ghproxy-android] / [GitHub][github-android]                                     |\r\n| arm64-v8a (64 位)   | 几乎所有手机和平板       | [主线][cf-android-arm64-v8a] / [备线][ghproxy-android-arm64-v8a] / [GitHub][github-android-arm64-v8a]       |\r\n| armeabi-v7a (32 位) | 旧手机             | [主线][cf-android-armeabi-v7a] / [备线][ghproxy-android-armeabi-v7a] / [GitHub][github-android-armeabi-v7a] |\r\n| x86_64             | Chromebook 及模拟器 | [主线][cf-android-x86_64] / [备线][ghproxy-android-x86_64] / [GitHub][github-android-x86_64]                |\r\n\r\n电视版:\r\n\r\n| 处理器架构              | 适用于             | 下载                                                                                                                  |\r\n|--------------------|-----------------|---------------------------------------------------------------------------------------------------------------------|\r\n| universal (推荐)     | 所有电视和电视盒子       | [主线][cf-android-tv] / [备线][ghproxy-android-tv] / [GitHub][github-android-tv]                                        |\r\n| arm64-v8a (64 位)   | 大多数电视和电视盒子      | [主线][cf-android-tv-arm64-v8a] / [备线][ghproxy-android-tv-arm64-v8a] / [GitHub][github-android-tv-arm64-v8a]          |\r\n| armeabi-v7a (32 位) | 旧电视盒子           | [主线][cf-android-tv-armeabi-v7a] / [备线][ghproxy-android-tv-armeabi-v7a] / [GitHub][github-android-tv-armeabi-v7a]    |\r\n| x86_64             | 模拟器             | [主线][cf-android-tv-x86_64] / [备线][ghproxy-android-tv-x86_64] / [GitHub][github-android-tv-x86_64]                   |\r\n\r\n</details>\r\n"
         }
       ]
+    },
+    {
+      "name": "Delta",
+      "bundleIdentifier": "com.rileytestut.Delta",
+      "developerName": "Riley Testut",
+      "subtitle": "Classic games in your pocket.",
+      "versions": [
+        {
+          "version": "2.0.1",
+          "buildVersion": "178",
+          "date": "2026-10-22T09:00:00-04:00",
+          "localizedDescription": "iPhone Duo\n• Delta unfolds in all new ways to take full advantage of iPhone Duo\n• Optimized controller skins for every pose in both portrait and landscape\n• Supports Split View multitasking with other apps\n• Folding Duo puts DS games to sleep, just like closing the lid of a real DS\n\nSega Genesis\n• Delta does what Nintendon’t!\n• Sega Genesis games are now playable in Delta\n• New controller skins for iPhone and iPad recreate the classic Genesis controller look\n• Built-in support for Action Replay and GameGenie cheats\n\nLiquid Glass UI\n• Fresh new UI designed from the ground up for Liquid Glass\n• Fully adapts to all screen sizes from Duo to iPad\n• System icons mark every page in your Game Library\n• Default artwork now has a light, glassy look\n\nRetroAchievements\n• Sign in with your RetroAchievements account to earn achievements in any supported game\n• Supports Hardcore mode, which disables loading save states and using cheats\n• Shows your achievement progress when you launch a game\n\nRecents & Favorites\n• New \"Recently Played\" and \"Favorites\" pages in Game Library\n• Quickly jump back in to your most recently played games\n• Add games to \"Favorites\" via long-press for easy access\n\nAnimated Controller Skins\n• Controller skins come to life with support for fully animated buttons and controls\n• Supports 3rd-party skins, so skin creators can make their own \n• Try Delta’s new official animated GBA skin, designed by Caroline Moore\n\nAudio Settings\n• New audio settings to control how Delta handles other apps’ audio\n• \"Mix with Other Audio\" keeps music or podcasts playing alongside game audio\n• \"Pause Other Audio\" pauses everything else when a game starts\n\nGame Boy Color Palettes\n• Customize how your Game Boy games look with color palettes for original Game Boy games\n• Supports all the official color palettes from Game Boy Color\n\nCustom Fast Forward Speeds\n• Customize your experience with various Fast Forward speeds set per-game\n• Adjust your game’s default speed at any time from the Pause Menu or in Game Settings\n\nAdjustable Screen Position\n• Long-press to move your game screen wherever you like when playing with a controller\n• Easily move the screen above your favorite faceplate controllers\n\nDLC\n• Custom in-game experiences for classic Pokémon games\n• Unlock event items, receive rare Pokémon, and more\n• Supports all mainline GBA Pokémon games\n• First DLC coming soon!\n\nRedesigned Pause Menu\n• Fully redesigned & animated pause menu with Liquid Glass\n• Large, centered pause menu buttons make navigation simple\n• Dynamically adjusts pause menu layout to scale to all window sizes\n• Redesigned cheats screen with custom icons for additional customization\n\nRedesigned Settings\n• Reorganizes settings into more easily navigable hierarchy\n• Displays icons for all top-level settings\n• Redesigned controller input mapping screen for game controllers and keyboards\n• New Lil’ Settings and Advanced sections for additional customizations\n\nCustom Filters (Experimental Feature)\n• Experience your games just how you remember with new custom game filters\n• Set your filters per-system to change how games look across all your games\n• Choose from a set list of defaults (e.g. CRT) or import your own custom filters from the Files app\n\nEpilogue GB/SN Operator Support (Experimental Feature)\n• Use your GB/SN Operator devices with Delta, thanks to the Epilogue team\n• Connect game cartridges directly to your iPhone/iPad and play them natively \n• Reads and writes save files to cartridge\n• GB and SN operators support GBC/GBA and SNES games respectively\n• Blowing into cartridges optional\n\nMisc.\n• Added the ability to delete save states in bulk\n• Fixed issue causing audio crackling for SNES games\n• Fixed NES games occasionally opening to a black screen",
+          "downloadURL": "https://cdn.altstore.io/file/altstore/apps/delta/2_0_1.ipa",
+          "size": 207457043,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "versionDescription": "• Fixed crash when loading save states on iOS 17\n• Fixed displaying system name in dark text when remapping inputs on iOS 17",
+      "localizedDescription": "Delta is an all-in-one emulator for iOS. Delta builds upon the strengths of its predecessor, GBA4iOS, while expanding to include support for more game systems such as NES, SNES, and N64.\n\nFEATURES\n\nSupported Game Systems\n• Nintendo Entertainment System\n• Super Nintendo Entertainment System\n• Nintendo 64\n• Game Boy (Color)\n• Game Boy Advance\n• Nintendo DS\n• Sega Genesis\n• And plenty more to come!\n\nController Support\n• Supports PS4, PS5, Xbox One S, Xbox Series X, and MFi game controllers.\n• Supports bluetooth (and wired) keyboards, as well as the Apple Smart Keyboard.\n• Completely customize button mappings on a per-system, per-controller basis.\n• Map buttons to special “Quick Save”, “Quick Load,” and “Fast Forward” actions.\n\nSave States\n• Save and load save states for any game from the pause menu.\n• Lock save states to prevent them from being accidentally overwritten.\n• Automatically makes backup save states to ensure you never lose your progress.\n• Support for “Quick Saves,” save states that can be quickly saved/loaded with a single button press (requires external controller).\n\nCheats\n• Supports various types of cheat codes for each supported system:\n• NES: Game Genie\n• SNES: Game Genie, Pro Action Replay\n• N64: GameShark\n• GBC: Game Genie, GameShark\n• GBA: Action Replay, Code Breaker, GameShark\n• DS: Action Replay\n• Genesis: Action Replay, Game Genie\n\nDelta Sync\n• Sync your games, game saves, save states, cheats, controller skins, and controller mappings between devices.\n• View version histories of everything you sync and optionally restore them to earlier versions.\n• Supports both Google Drive and Dropbox.\n\nCustom Controller Skins\n• Beautiful built-in controller skins for all systems.\n• Import controller skins made by others, or even make your own to share with the world!\n• Supports animated buttons for even more immersion when playing games\n\nHold Button\n• Choose buttons for Delta to hold down on your behalf, freeing up your thumbs to press other buttons instead.\n• Perfect for games that typically require one button be held down constantly (ex: run button in Mario games, or the A button in Mario Kart).\n\nFast Forward\n• Speed through slower parts of games by running the game much faster than normal.\n• Easily enable or disable from the pause menu, or optionally with a mapped button on an external controller.\n• Customize speed per-game by long-pressing Fast Forward option in pause menu.\n\n3D/Haptic Touch\n• Use 3D or Haptic Touch to “peek” at games, save states, and cheat codes.\n• App icon shortcuts allow quick access to your most recently played games, or optionally customize the shortcuts to always include certain games.\n\nGame Artwork\n• Automatically displays appropriate box art for imported games.\n• Change a game’s artwork to anything you want, or select from the built-in game artwork database.\n\nRetroAchievements\n• Sign in with your RetroAchievements account to earn achievements in any supported game\n• Supports Hardcore mode, which disables loading save states and using cheats\n• Shows your achievement progress when launching a game\n\nMisc.\n• Gyroscope support (WarioWare: Twisted! only)\n• Microphone support (DS only)\n• Support for delta:// URL scheme to jump directly into a specific game.\n\n**Delta is in no way affiliated with Nintendo or Sega. The name “Nintendo” and all associated game console names are registered trademarks of Nintendo Co., Ltd. The name “Sega” and all associated game console names are registered trademarks of Sega Corporation.**",
+      "iconURL": "https://cdn.altstore.io/file/altstore/images/delta/Delta4.png",
+      "tintColor": "8A28F7",
+      "category": "games",
+      "permissions": [
+        {
+          "type": "photos",
+          "usageDescription": "Allows Delta to use images from your Photo Library as game artwork."
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "get-task-allow"
+          },
+          {
+            "name": "com.apple.developer.game-center"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "Microphone",
+            "usageDescription": "Delta uses your microphone to emulate the Nintendo DS microphone."
+          },
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Delta uses the local network to communicate with AltServer and enable JIT."
+          },
+          {
+            "name": "PhotoLibrary",
+            "usageDescription": "Allows Delta to use images from your Photo Library as game artwork."
+          }
+        ]
+      },
+      "screenshotURLs": [
+        "https://user-images.githubusercontent.com/705880/65600448-f7d9be00-df54-11e9-9e3e-d4c31296da94.PNG",
+        "https://user-images.githubusercontent.com/705880/65813009-f2ae8600-e183-11e9-9eb7-704effc11173.png",
+        "https://user-images.githubusercontent.com/705880/65601117-58b5c600-df56-11e9-9c19-9a5ba5da54cf.PNG",
+        "https://user-images.githubusercontent.com/705880/65601125-5b182000-df56-11e9-9e7e-261480e893c0.PNG"
+      ],
+      "screenshots": [
+        "https://user-images.githubusercontent.com/705880/277049094-8458028c-92e0-4e73-99de-5dd865b76487.PNG",
+        "https://user-images.githubusercontent.com/705880/277049686-975b9d37-140a-481e-8668-765acdd1dedb.PNG",
+        {
+          "imageURL": "https://user-images.githubusercontent.com/705880/277049716-5d043eac-4cf2-46c9-8dfe-daefc40d0325.PNG",
+          "width": 2556,
+          "height": 1179
+        },
+        "https://user-images.githubusercontent.com/705880/277049074-15aabbaf-58f3-4609-b578-60ac7539ced0.PNG",
+        "https://user-images.githubusercontent.com/705880/277049050-e0d90f06-1f38-4736-8c1b-d41ec45d201b.PNG",
+        "https://user-images.githubusercontent.com/705880/277049040-a4dcc9d0-561d-4f1e-87cb-ff03e542a6d7.png"
+      ]
+    },
+    {
+      "name": "UTM",
+      "bundleIdentifier": "com.utmapp.UTM",
+      "developerName": "osy",
+      "localizedDescription": "UTM is a full featured virtual machine host for iOS. In short, it allows you to run Windows, Android, and more on your iPhone and iPad.\nThis version requires using AltJIT. Install UTM SE for slower emulation without JIT.\n\n\nMore information at https://getutm.app/\n\nFeatures:\n\n• Emulate any Processor\n30+ processors supported by qemu including x86_64, ARM64, and RISC-V\n• Run any Operating System\nWindows, Linux, and more natively and securely on iOS within an App\n• Fast Emulation\nPara-virtualization with SPICE and JIT compilation with TCG\n• High Compatibility\niOS 14+ supported. Works on iPhone and iPad. No jailbreak needed\n• Free and Open Source\nUTM and its dependencies are all free and open source\n• Easy to Use\nConfigure and customize your VM in a native UI",
+      "iconURL": "https://alt.getutm.app/icon.png",
+      "versions": [
+        {
+          "version": "5.0.8",
+          "date": "2026-10-17T02:44:56Z",
+          "localizedDescription": "## Highlights\n* (macOS) **DirectX graphics support for Windows**: Modern accelerated graphics for Windows 11 is now available on UTM for the first time. The driver is still experimental and games compatibility is currently limited.\n* **Vulkan 1.3 graphics support for Linux**: Vulkan 1.3 is now supported on Linux guests with VirtIO Venus drivers in Mesa. Additionally, OpenGL 4.1 is supported with the new Apple Core OpenGL backend (macOS only).\n* **Snapshots**: Save your VM at any point and go back to it later from the new Snapshots tab. Works with QEMU VMs on macOS and iOS 26, and with Apple Virtualization VMs on macOS 27.\n* (macOS) **Apple Virtualization on macOS 27**: Pass USB devices through to your VM, turn on Secure Boot for Linux, run a VM without saving changes, and let VMs talk to each other with new networking modes.\n* (iOS) **Better touch controls**: Gestures respond immediately, with new middle-click and right-drag actions and a new drag-to-scroll touch mode.\n* (iOS) **iPhone Duo**: Fold your iPhone Duo like a laptop, and the bottom half becomes a keyboard or touchpad for your VM.\n\n## Notes\n* Suspended VMs may not resume correctly after updating. We recommend shutting down all VMs before you update UTM.\n* The minimum supported versions are now macOS 12 and iOS 15.\n* We now have a [development blog](https://blog.getutm.app)! Follow us for in-depth technical deep dives such as how we brought DirectX to QEMU.\n* (macOS) To use the new graphics driver for Windows 11, we recommend a fresh install because the driver is still experimental and its use could lead to instability in the system. During the install of the guest tools, you will be prompted to select the experimental graphics driver. If you wish to install the new driver on a system that already is running the older display only driver, you need to run the uninstall script provided on the guest tools install ISO first.\n* (macOS) Apple CoreGL backend does not support Vulkan or DirectX.\n* Linux desktop rendering in Vulkan does not work due to lack of support for indirect draws for geometry shaders. Please configure your guest to use the older VirGL Gallium driver.\n\n## Changes (v5.0.8)\n* Fixed several changes listed for v5.0.7 being left out of that build by mistake.\n* (macOS) Fixed Windows 3D acceleration on Apple Silicon Macs without Rosetta by falling back to DXMT\n* (macOS) QEMU: Fixed Windows installs from the USB CD drive stalling repeatedly, which made them much slower in v5.0.7 (#7970)\n\n## Changes (v5.0.7)\n* Updated the virglrenderer, MoltenVK and DXMT graphics backends with fixes for Windows 3D acceleration\n* QEMU: Windows guests now use the host display's refresh rate instead of always 60 Hz, which also fixes 3D acceleration failing on displays faster than 125 Hz (#7820)\n* QEMU: Fixed VirtIO GPU stalls that hung Windows at shutdown, stalled 3D benchmarks on Linux, and could leave the Windows 3D driver without a display\n* Snapshots: Fixed saving and restoring the state of VMs with compressed disks (#7916)\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS 27.1) Support for iPhone Duo: the VM toolbar sits in the outer display's camera strip, and a new laptop mode turns the bottom half of the folded screen into a keyboard or touchpad\n* (macOS) Fixed headless VMs keeping the Mac from sleeping after they were paused or stopped\n* (macOS) Closing a VM window or quitting UTM while a VM runs now confirms with \"Close\" or \"Quit\" instead of \"OK\"\n* (macOS) Fixed shaders using instancing or integer vertex attributes drawing incorrectly with the Apple Core OpenGL backend (#7944)\n* (macOS) Updated the D3DMetal graphics backend with fixes for DirectX 12\n* (macOS) Display: The option to use the area beside the camera housing in full screen is now available on macOS 12 and later (#6183)\n* (macOS) Wizard: Fixed the Name field's focus ring being clipped on the summary page (thanks @dnicolson)\n* (macOS 15) QEMU: Better performance on Apple Silicon with the Hypervisor.framework built-in interrupt controller\n* (macOS) Scripting: Force stopping a paused VM is now allowed\n* (macOS 27) AVF: Explain when a USB device such as a webcam or phone can't be passed through, instead of showing \"VZErrorDomain error -6\" (#7914)\n* (macOS) Guest Agent: Fixed an issue where clipboard sharing fails upon suspend-resume in macOS guests (you need to re-install the latest guest tools) (#7717)\n\n## Changes (v5.0.6)\n* Raised the minimum supported versions to macOS 12 and iOS 15 (#7758)\n* Updated the DXMT and MoltenVK graphics backends\n* Updated the KosmicKrisp Vulkan driver, which now requires macOS 26 or iOS 26\n* Home: The welcome screen now offers to open an existing VM instead of linking to the gallery\n* Snapshots: New Snapshots tab to save, overwrite, restore, rename and delete snapshots of QEMU and Apple VMs. Requires iOS 26 on iOS and macOS 27 for Apple VMs (#5484)\n* Settings: Custom QEMU arguments moved to their own page, and the full command line is shown as read-only text that can be copied (#489, #7604)\n* SPICE: Fixed microphone audio quality (#7751)\n* SPICE: Fixed display and input freezing when audio playback hangs under memory pressure (thanks @evan314159)\n* CocoaSpice: Fixed typing into the built-in serial terminal (#7814)\n* Terminal: Updated SwiftTerm with a new Metal renderer, and only web links printed by the guest can be opened\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS) Fixed the VM toolbar and external display on iOS 26 and iOS 27\n* (iOS 26) Reclaim Space, Compress, Resize and converting imported drives to qcow2 are now available on iOS (#4774)\n* (iOS 27) Confirm before closing the window of a running VM on iPad\n* (iOS) Display: Long press and pan gestures respond immediately, touches at the screen edges reach the guest, new middle click and right/middle drag actions, and a new \"Touch mode (drag to scroll)\" (#4738)\n* (iOS) Display: Redesigned the keyboard accessory bar to match the iOS 26 keyboard\n* (iOS) Input: Game controller Options and Home buttons can now be mapped\n* (iOS) Settings: Fixed selecting the KosmicKrisp Vulkan driver\n* (macOS) VoiceOver now announces file browse fields by their name (thanks @lprazdnik)\n* (macOS) Terminal: Added a find bar (Cmd-F)\n* (macOS 27) Display: New option to use the area beside the camera housing in full screen (#6183)\n* (macOS 27) Display: Hot Corners are turned off while a VM is in full screen\n* (macOS) Settings: Improved the notes field\n* (macOS 26) Settings: The \"New…\" device menu now matches the sidebar\n* (macOS) AVF: Sound input and output can be enabled separately, so \"Output Only\" no longer switches Bluetooth headphones to headset mode (#7875)\n* (macOS 26) AVF: New \"Shared Network (VM to VM)\" and \"Host Only\" networking modes (#6975, #7480) (thanks @lovon-spec)\n* (macOS 27) AVF: USB passthrough, also available from scripting and utmctl (#3778, #7777)\n* (macOS 27) AVF: Run without saving changes (#4201, #7326)\n* (macOS 27) AVF: Secure Boot option for UEFI guests (#7874)\n* (macOS) Scripting: Snapshots are now scriptable objects, and utmctl gains `snapshot` and `discard-state` commands\n* (macOS) Scripting: Create and install macOS VMs on the Apple backend (#6092) (thanks @meisenbarth)\n* (macOS 27) Scripting: Set up the user account, automatic login and Remote Login of a new macOS VM on first boot (#7757)\n* (macOS) Scripting: Fixed shared directories set with `update registry` failing to open on Apple VMs (thanks @atkinsam)\n* (macOS) Scripting: Fixed a crash when starting a VM after removing its displays with `update configuration` (#7882)\n\n## Changes (v5.0.5)\n* ~~Reverted minimum version requirement imposed by v5.0.4: once again we support versions down to macOS 11.3 and iOS 14.0. However, DirectX support is still limited to macOS 13.0 and iOS 16.0.~~\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* Config: For ARM64 configs, GICv3 is now selected by default. Previously this was only the case for > 8 vCPUs. This improves performance for higher vCPU counts < 8.\n* Downloader: Path traversal and symlink checks added when unpacking downloaded ZIP files\n* Wizard: scaling is now default to \"nearest\" when a \"classic\" computer emulation is created in the wizard and \"linear\" otherwise. Previously it was \"nearest\" for all configurations which led to poor scaling filter for anything with higher resolutions.\n* (iOS) Support DirectX 11 with DXMT. Note that due to older iOS version (which supports TrollStore + Hypervisor), compatibility of DirectX titles is worse than macOS.\n* (iOS) QEMU: Fixed MMIO BAR bug which prevented large hostmem window from working\n* (iOS) Config: Improved RAM limit detection\n* (macOS) DirectX 12 is now supported with D3DMetal backend (when available). You must (re)install the latest UTM guest tools experimental 3D graphics driver.\n* (macOS) Support holding down Caps Lock key when input capture is enabled (#7840) (thanks @lprazdnik)\n* (macOS) Settings: new options to gracefully power down all running VMs on exit (#7829) (thanks @vectorseven)\n* (macOS) Settings: support Cmd<->Opt swapping (#7837) (thanks @lprazdnik)\n* (macOS) Scripting: add snapshots commands to scripting interface (#7832) (thanks @naveenrajm7)\n* (macOS) AVF: Better error message when macOS guest version is too high (#7806) (thanks @sigitkusuma)\n\n## Changes (v5.0.4)\n* (macOS) Added support for Neptune backend in virglrenderer for DirectX support\n* Localization: Updated German (thanks @Benjamin123-tech)\n* Scripting: new reload config and VLAN commands (#7710, #7711) (thanks @GregOriol)\n* SPICE: Fixed various bugs in renderer that leads to performance and tearing issues\n* SPICE: Fixed a memory leak that could result in large amount of memory use by UTM\n* Updated USB icon (#7718) (thanks @tan9)\n* Fixed crash in UTMRegistry and memory leak in AVF installer (#7701) (thanks @Casey)\n\n## Changes (v5.0.3)\n* Fixed regression in GRUB rendering time due to new graphics backend\n* Fixed Vulkan issues on latest Wayland\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* Home: Confirm delete when using swipe left (#3086)\n* Home: Prevent duplicate VMs from appearing (#7533) (thanks @DevSecTim)\n* AVF: Fixed CPU spike and mic loss due to two audio devices (thanks @matapo)\n* Scripting: Added ability to get IP address from AVF machines (#7643) (thanks @hellcastter)\n* Scripting: Fixed \"update registry\" for AVM backend (#7664) (thanks @EkkoG)\n* Scripting: Improve USB device matching logic (thanks @TronickDev)\n\n## Changes (v5.0.2)\n* Environment variables are now logged when debug log is enabled\n* Fixed a regression in GL acceleration where desktop might not render correctly (#7626)\n* Added geometry shaders support to MoltenVK to enable DXVK (thanks @Anducalliew433) (#7575)\n* (iOS) Fixed an issue where EAGL backend boots into a black screen (#7587)\n* (iOS) Fixed a crash on iOS 15 due to incompatible symbols (#7593)\n* (iOS) Fixed verbose logging for graphics backend\n* (iOS) Fixed a crash when GL is enabled due to missing support for glDrawElementsInstancedBaseVertex (#7596)\n* (macOS) Fixed an issue when after resizing a window if the guest outputs a different resolution size, the wrong texture resolution is used leading to misaligned cursor and warped graphics (#5781)\n* (macOS) Fixed an issue where the window resizes to 0x0 when native scaling is enabled\n\n## Changes (v5.0.1)\n* CocoaSpice: Reworked Metal renderer to be faster and have lower latency\n* Fixed an issue where a BIOS file with a comma in the filename will fail to load\n* Default FPS will now be the maximum refresh rate of the display on macOS and iPadOS (iPhone with ProMotion will still have 60Hz as the default rate but can be overridden to 120Hz through settings)\n* (macOS) Fixed issue causing `HV_UNSUPPORTED` on startup with Vulkan enabled (#7579)\n* (iOS) Fixed resolution issue on external displays (#6040)\n* (iOS) Pinch to zoom will turn off automatically updating zoom from the guest (until reset with the resize button)\n* (iOS) Fixed external display menu not updating\n* (iOS) Fixed incorrect scale on external displays and connecting an external display will now automatically scale to fit\n* (iOS) Fixed an issue where powering off the VM will show the home screen but not terminate UTM in the background\n\n## Changes (v5.0.0)\n* Add Venus support for Vulkan (#4551)\n* Add Apple Core OpenGL support for OpenGL 4.1 (#4285) (thanks @startergo)\n\n## Issues\nPlease check the full list on [Github](https://github.com/utmapp/UTM/issues) and help report any bug you find that is not listed.\n\n## Installation\n\n* [iOS](https://docs.getutm.app/installation/ios/)\n* [macOS](https://docs.getutm.app/installation/macos/)\n\n| File | Description | Installation | JIT | Hypervisor | USB |\n|------|------------|--------------|-----|-----------|-----|\n| UTM.deb | Jailbroken iOS version | Open in Cydia, dpkg, or Sileo | Yes | Yes(1) | Yes |\n| UTM.dmg | macOS version | Mounting and copying UTM.app to /Applications | Yes | Yes | Yes |\n| UTM.ipa | Non-jailbroken iOS version (sideloading) | AltStore, etc (see guide) | Yes(2) | No | No |\n| UTM-HV.ipa | Non-jailbroken iOS version (TrollStore) | TrollStore | Yes | Yes(1) | Yes |\n| UTM-SE.ipa | Non-jailbroken iOS version (sideloading) | AltStore, enterprise signing, etc | No | No | No |\n| UTM-Remote.ipa | Remote client | Any | No | No | No |\n\n1. Hypervisor on iOS requires an M1 iPad or newer.\n2. Enabling JIT may require a separate JIT enabler such as [Jitterbug][2] or Jitstreamer.\n\n[1]: https://getutm.app/install/\n[2]: https://github.com/osy/Jitterbug\n",
+          "minOSVersion": "14.0",
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v5.0.8/UTM.ipa",
+          "size": 150556413
+        }
+      ],
+      "subtitle": "Virtual machines for iOS (with JIT support)",
+      "tintColor": "#1a2cc2",
+      "screenshotURLs": [
+        "https://alt.getutm.app/screen0.png",
+        "https://alt.getutm.app/screen1.png",
+        "https://alt.getutm.app/screen2.png",
+        "https://alt.getutm.app/screen3.png",
+        "https://alt.getutm.app/screen4.png",
+        "https://alt.getutm.app/screen5.png",
+        "https://alt.getutm.app/screen6.png"
+      ]
+    },
+    {
+      "name": "UTM SE",
+      "bundleIdentifier": "com.utmapp.UTM-SE",
+      "developerName": "osy",
+      "localizedDescription": "UTM is a full featured virtual machine host for iOS. In short, it allows you to run Windows, Android, and more on your iPhone and iPad.\nThis version runs on all iOS 14+ devices but lacks JIT support and is slower than regular UTM.\n\n\nMore information at https://getutm.app/\n\nFeatures:\n\n• Emulate any Processor\n30+ processors supported by qemu including x86_64, ARM64, and RISC-V\n• Run any Operating System\nWindows, Linux, and more natively and securely on iOS within an App\n• Fast Emulation\nPara-virtualization with SPICE and JIT compilation with TCG\n• High Compatibility\niOS 14+ supported. Works on iPhone and iPad. No jailbreak needed\n• Free and Open Source\nUTM and its dependencies are all free and open source\n• Easy to Use\nConfigure and customize your VM in a native UI",
+      "iconURL": "https://alt.getutm.app/icon.png",
+      "versions": [
+        {
+          "version": "5.0.8",
+          "date": "2026-10-17T02:44:56Z",
+          "localizedDescription": "## Highlights\n* (macOS) **DirectX graphics support for Windows**: Modern accelerated graphics for Windows 11 is now available on UTM for the first time. The driver is still experimental and games compatibility is currently limited.\n* **Vulkan 1.3 graphics support for Linux**: Vulkan 1.3 is now supported on Linux guests with VirtIO Venus drivers in Mesa. Additionally, OpenGL 4.1 is supported with the new Apple Core OpenGL backend (macOS only).\n* **Snapshots**: Save your VM at any point and go back to it later from the new Snapshots tab. Works with QEMU VMs on macOS and iOS 26, and with Apple Virtualization VMs on macOS 27.\n* (macOS) **Apple Virtualization on macOS 27**: Pass USB devices through to your VM, turn on Secure Boot for Linux, run a VM without saving changes, and let VMs talk to each other with new networking modes.\n* (iOS) **Better touch controls**: Gestures respond immediately, with new middle-click and right-drag actions and a new drag-to-scroll touch mode.\n* (iOS) **iPhone Duo**: Fold your iPhone Duo like a laptop, and the bottom half becomes a keyboard or touchpad for your VM.\n\n## Notes\n* Suspended VMs may not resume correctly after updating. We recommend shutting down all VMs before you update UTM.\n* The minimum supported versions are now macOS 12 and iOS 15.\n* We now have a [development blog](https://blog.getutm.app)! Follow us for in-depth technical deep dives such as how we brought DirectX to QEMU.\n* (macOS) To use the new graphics driver for Windows 11, we recommend a fresh install because the driver is still experimental and its use could lead to instability in the system. During the install of the guest tools, you will be prompted to select the experimental graphics driver. If you wish to install the new driver on a system that already is running the older display only driver, you need to run the uninstall script provided on the guest tools install ISO first.\n* (macOS) Apple CoreGL backend does not support Vulkan or DirectX.\n* Linux desktop rendering in Vulkan does not work due to lack of support for indirect draws for geometry shaders. Please configure your guest to use the older VirGL Gallium driver.\n\n## Changes (v5.0.8)\n* Fixed several changes listed for v5.0.7 being left out of that build by mistake.\n* (macOS) Fixed Windows 3D acceleration on Apple Silicon Macs without Rosetta by falling back to DXMT\n* (macOS) QEMU: Fixed Windows installs from the USB CD drive stalling repeatedly, which made them much slower in v5.0.7 (#7970)\n\n## Changes (v5.0.7)\n* Updated the virglrenderer, MoltenVK and DXMT graphics backends with fixes for Windows 3D acceleration\n* QEMU: Windows guests now use the host display's refresh rate instead of always 60 Hz, which also fixes 3D acceleration failing on displays faster than 125 Hz (#7820)\n* QEMU: Fixed VirtIO GPU stalls that hung Windows at shutdown, stalled 3D benchmarks on Linux, and could leave the Windows 3D driver without a display\n* Snapshots: Fixed saving and restoring the state of VMs with compressed disks (#7916)\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS 27.1) Support for iPhone Duo: the VM toolbar sits in the outer display's camera strip, and a new laptop mode turns the bottom half of the folded screen into a keyboard or touchpad\n* (macOS) Fixed headless VMs keeping the Mac from sleeping after they were paused or stopped\n* (macOS) Closing a VM window or quitting UTM while a VM runs now confirms with \"Close\" or \"Quit\" instead of \"OK\"\n* (macOS) Fixed shaders using instancing or integer vertex attributes drawing incorrectly with the Apple Core OpenGL backend (#7944)\n* (macOS) Updated the D3DMetal graphics backend with fixes for DirectX 12\n* (macOS) Display: The option to use the area beside the camera housing in full screen is now available on macOS 12 and later (#6183)\n* (macOS) Wizard: Fixed the Name field's focus ring being clipped on the summary page (thanks @dnicolson)\n* (macOS 15) QEMU: Better performance on Apple Silicon with the Hypervisor.framework built-in interrupt controller\n* (macOS) Scripting: Force stopping a paused VM is now allowed\n* (macOS 27) AVF: Explain when a USB device such as a webcam or phone can't be passed through, instead of showing \"VZErrorDomain error -6\" (#7914)\n* (macOS) Guest Agent: Fixed an issue where clipboard sharing fails upon suspend-resume in macOS guests (you need to re-install the latest guest tools) (#7717)\n\n## Changes (v5.0.6)\n* Raised the minimum supported versions to macOS 12 and iOS 15 (#7758)\n* Updated the DXMT and MoltenVK graphics backends\n* Updated the KosmicKrisp Vulkan driver, which now requires macOS 26 or iOS 26\n* Home: The welcome screen now offers to open an existing VM instead of linking to the gallery\n* Snapshots: New Snapshots tab to save, overwrite, restore, rename and delete snapshots of QEMU and Apple VMs. Requires iOS 26 on iOS and macOS 27 for Apple VMs (#5484)\n* Settings: Custom QEMU arguments moved to their own page, and the full command line is shown as read-only text that can be copied (#489, #7604)\n* SPICE: Fixed microphone audio quality (#7751)\n* SPICE: Fixed display and input freezing when audio playback hangs under memory pressure (thanks @evan314159)\n* CocoaSpice: Fixed typing into the built-in serial terminal (#7814)\n* Terminal: Updated SwiftTerm with a new Metal renderer, and only web links printed by the guest can be opened\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS) Fixed the VM toolbar and external display on iOS 26 and iOS 27\n* (iOS 26) Reclaim Space, Compress, Resize and converting imported drives to qcow2 are now available on iOS (#4774)\n* (iOS 27) Confirm before closing the window of a running VM on iPad\n* (iOS) Display: Long press and pan gestures respond immediately, touches at the screen edges reach the guest, new middle click and right/middle drag actions, and a new \"Touch mode (drag to scroll)\" (#4738)\n* (iOS) Display: Redesigned the keyboard accessory bar to match the iOS 26 keyboard\n* (iOS) Input: Game controller Options and Home buttons can now be mapped\n* (iOS) Settings: Fixed selecting the KosmicKrisp Vulkan driver\n* (macOS) VoiceOver now announces file browse fields by their name (thanks @lprazdnik)\n* (macOS) Terminal: Added a find bar (Cmd-F)\n* (macOS 27) Display: New option to use the area beside the camera housing in full screen (#6183)\n* (macOS 27) Display: Hot Corners are turned off while a VM is in full screen\n* (macOS) Settings: Improved the notes field\n* (macOS 26) Settings: The \"New…\" device menu now matches the sidebar\n* (macOS) AVF: Sound input and output can be enabled separately, so \"Output Only\" no longer switches Bluetooth headphones to headset mode (#7875)\n* (macOS 26) AVF: New \"Shared Network (VM to VM)\" and \"Host Only\" networking modes (#6975, #7480) (thanks @lovon-spec)\n* (macOS 27) AVF: USB passthrough, also available from scripting and utmctl (#3778, #7777)\n* (macOS 27) AVF: Run without saving changes (#4201, #7326)\n* (macOS 27) AVF: Secure Boot option for UEFI guests (#7874)\n* (macOS) Scripting: Snapshots are now scriptable objects, and utmctl gains `snapshot` and `discard-state` commands\n* (macOS) Scripting: Create and install macOS VMs on the Apple backend (#6092) (thanks @meisenbarth)\n* (macOS 27) Scripting: Set up the user account, automatic login and Remote Login of a new macOS VM on first boot (#7757)\n* (macOS) Scripting: Fixed shared directories set with `update registry` failing to open on Apple VMs (thanks @atkinsam)\n* (macOS) Scripting: Fixed a crash when starting a VM after removing its displays with `update configuration` (#7882)\n\n## Changes (v5.0.5)\n* ~~Reverted minimum version requirement imposed by v5.0.4: once again we support versions down to macOS 11.3 and iOS 14.0. However, DirectX support is still limited to macOS 13.0 and iOS 16.0.~~\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* Config: For ARM64 configs, GICv3 is now selected by default. Previously this was only the case for > 8 vCPUs. This improves performance for higher vCPU counts < 8.\n* Downloader: Path traversal and symlink checks added when unpacking downloaded ZIP files\n* Wizard: scaling is now default to \"nearest\" when a \"classic\" computer emulation is created in the wizard and \"linear\" otherwise. Previously it was \"nearest\" for all configurations which led to poor scaling filter for anything with higher resolutions.\n* (iOS) Support DirectX 11 with DXMT. Note that due to older iOS version (which supports TrollStore + Hypervisor), compatibility of DirectX titles is worse than macOS.\n* (iOS) QEMU: Fixed MMIO BAR bug which prevented large hostmem window from working\n* (iOS) Config: Improved RAM limit detection\n* (macOS) DirectX 12 is now supported with D3DMetal backend (when available). You must (re)install the latest UTM guest tools experimental 3D graphics driver.\n* (macOS) Support holding down Caps Lock key when input capture is enabled (#7840) (thanks @lprazdnik)\n* (macOS) Settings: new options to gracefully power down all running VMs on exit (#7829) (thanks @vectorseven)\n* (macOS) Settings: support Cmd<->Opt swapping (#7837) (thanks @lprazdnik)\n* (macOS) Scripting: add snapshots commands to scripting interface (#7832) (thanks @naveenrajm7)\n* (macOS) AVF: Better error message when macOS guest version is too high (#7806) (thanks @sigitkusuma)\n\n## Changes (v5.0.4)\n* (macOS) Added support for Neptune backend in virglrenderer for DirectX support\n* Localization: Updated German (thanks @Benjamin123-tech)\n* Scripting: new reload config and VLAN commands (#7710, #7711) (thanks @GregOriol)\n* SPICE: Fixed various bugs in renderer that leads to performance and tearing issues\n* SPICE: Fixed a memory leak that could result in large amount of memory use by UTM\n* Updated USB icon (#7718) (thanks @tan9)\n* Fixed crash in UTMRegistry and memory leak in AVF installer (#7701) (thanks @Casey)\n\n## Changes (v5.0.3)\n* Fixed regression in GRUB rendering time due to new graphics backend\n* Fixed Vulkan issues on latest Wayland\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* Home: Confirm delete when using swipe left (#3086)\n* Home: Prevent duplicate VMs from appearing (#7533) (thanks @DevSecTim)\n* AVF: Fixed CPU spike and mic loss due to two audio devices (thanks @matapo)\n* Scripting: Added ability to get IP address from AVF machines (#7643) (thanks @hellcastter)\n* Scripting: Fixed \"update registry\" for AVM backend (#7664) (thanks @EkkoG)\n* Scripting: Improve USB device matching logic (thanks @TronickDev)\n\n## Changes (v5.0.2)\n* Environment variables are now logged when debug log is enabled\n* Fixed a regression in GL acceleration where desktop might not render correctly (#7626)\n* Added geometry shaders support to MoltenVK to enable DXVK (thanks @Anducalliew433) (#7575)\n* (iOS) Fixed an issue where EAGL backend boots into a black screen (#7587)\n* (iOS) Fixed a crash on iOS 15 due to incompatible symbols (#7593)\n* (iOS) Fixed verbose logging for graphics backend\n* (iOS) Fixed a crash when GL is enabled due to missing support for glDrawElementsInstancedBaseVertex (#7596)\n* (macOS) Fixed an issue when after resizing a window if the guest outputs a different resolution size, the wrong texture resolution is used leading to misaligned cursor and warped graphics (#5781)\n* (macOS) Fixed an issue where the window resizes to 0x0 when native scaling is enabled\n\n## Changes (v5.0.1)\n* CocoaSpice: Reworked Metal renderer to be faster and have lower latency\n* Fixed an issue where a BIOS file with a comma in the filename will fail to load\n* Default FPS will now be the maximum refresh rate of the display on macOS and iPadOS (iPhone with ProMotion will still have 60Hz as the default rate but can be overridden to 120Hz through settings)\n* (macOS) Fixed issue causing `HV_UNSUPPORTED` on startup with Vulkan enabled (#7579)\n* (iOS) Fixed resolution issue on external displays (#6040)\n* (iOS) Pinch to zoom will turn off automatically updating zoom from the guest (until reset with the resize button)\n* (iOS) Fixed external display menu not updating\n* (iOS) Fixed incorrect scale on external displays and connecting an external display will now automatically scale to fit\n* (iOS) Fixed an issue where powering off the VM will show the home screen but not terminate UTM in the background\n\n## Changes (v5.0.0)\n* Add Venus support for Vulkan (#4551)\n* Add Apple Core OpenGL support for OpenGL 4.1 (#4285) (thanks @startergo)\n\n## Issues\nPlease check the full list on [Github](https://github.com/utmapp/UTM/issues) and help report any bug you find that is not listed.\n\n## Installation\n\n* [iOS](https://docs.getutm.app/installation/ios/)\n* [macOS](https://docs.getutm.app/installation/macos/)\n\n| File | Description | Installation | JIT | Hypervisor | USB |\n|------|------------|--------------|-----|-----------|-----|\n| UTM.deb | Jailbroken iOS version | Open in Cydia, dpkg, or Sileo | Yes | Yes(1) | Yes |\n| UTM.dmg | macOS version | Mounting and copying UTM.app to /Applications | Yes | Yes | Yes |\n| UTM.ipa | Non-jailbroken iOS version (sideloading) | AltStore, etc (see guide) | Yes(2) | No | No |\n| UTM-HV.ipa | Non-jailbroken iOS version (TrollStore) | TrollStore | Yes | Yes(1) | Yes |\n| UTM-SE.ipa | Non-jailbroken iOS version (sideloading) | AltStore, enterprise signing, etc | No | No | No |\n| UTM-Remote.ipa | Remote client | Any | No | No | No |\n\n1. Hypervisor on iOS requires an M1 iPad or newer.\n2. Enabling JIT may require a separate JIT enabler such as [Jitterbug][2] or Jitstreamer.\n\n[1]: https://getutm.app/install/\n[2]: https://github.com/osy/Jitterbug\n",
+          "minOSVersion": "14.0",
+          "downloadURL": "https://github.com/utmapp/UTM/releases/download/v5.0.8/UTM-SE.ipa",
+          "size": 237108214
+        }
+      ],
+      "subtitle": "Virtual machines for iOS (without JIT support)",
+      "tintColor": "#1a2cc2",
+      "screenshotURLs": [
+        "https://alt.getutm.app/screen0.png",
+        "https://alt.getutm.app/screen1.png",
+        "https://alt.getutm.app/screen2.png",
+        "https://alt.getutm.app/screen3.png",
+        "https://alt.getutm.app/screen4.png",
+        "https://alt.getutm.app/screen5.png",
+        "https://alt.getutm.app/screen6.png"
+      ]
+    },
+    {
+      "name": "Aidoku",
+      "bundleIdentifier": "app.aidoku.Aidoku",
+      "developerName": "Aidoku",
+      "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes",
+      "iconURL": "https://github.com/Aidoku.png",
+      "versions": [
+        {
+          "version": "0.9",
+          "date": "2026-10-16",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+          "size": 14753154,
+          "minOSVersion": "15.0",
+          "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes"
+        }
+      ]
+    },
+    {
+      "name": "Geode",
+      "bundleIdentifier": "com.geode.launcher",
+      "developerName": "Geode SDK Team",
+      "subtitle": "Geode, now on iOS!",
+      "localizedDescription": "Geode, has come to iOS!",
+      "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
+      "tintColor": "#272727",
+      "category": "games",
+      "screenshots": [
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-1.png",
+          "width": 1242,
+          "height": 2208
+        },
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-2.png",
+          "width": 2208,
+          "height": 1242
+        },
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-3.png",
+          "width": 2208,
+          "height": 1242
+        }
+      ],
+      "versions": [
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.5",
+          "localizedDescription": "Massive bug fix update! Including the fix for iOS 27 devices not being able to run Geode!\r\n\r\n- Fixed **iOS 27** compatibility\r\n- Fixed importing mods in JIT-Less not being signed (https://github.com/geode-sdk/ios-launcher/issues/180)\r\n- Fixed iPhone SE devices from not being able to tap the Import Certificate button on the setup\r\n- Fixed restarting not working in LiveContainer JIT-Less\r\n- Changed the \"You need to update the Helper\" message to explain whether the Helper was actually updated or not\r\n- Attempt to fix the \"first time setup\" on Enterprise Mode from reappearing (due to IPA being removed from temporary directory)\r\n- Use new release API endpoint  for downloading Geode (for those who can't access github.com)\r\n- Added safe mode restarting\r\n- Added metadata information in the About section in settings\r\n- Added in settings: Open crashlogs (Opens the crashlogs folder), Download and redownload (Deletes Geode and redownloads it, usually fixing issues if geode is missing in GD)\r\n- Added custom JIT enabler\r\n- Added skipping the intro setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.4...v1.5.5",
+          "date": "2026-09-15T07:26:49Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.5/com.geode.launcher_1.5.5.ipa",
+          "size": 13256824
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.4",
+          "localizedDescription": "Sapphire SDK!\r\n\r\n- Replaced default logo with Sapphire SDK\r\n- Fixed PDF rendering for iOS 18+ (hopefully)\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.3...v1.5.4",
+          "date": "2026-04-01T07:09:04Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.4/com.geode.launcher_1.5.4.ipa",
+          "size": 13242128
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.3",
+          "localizedDescription": "An important bug fix that fixes mods that require static hook patching, and more!\r\n\r\n- Made iOS 26 use JIT-Less by default on the setup\r\n- Disabled Automatic Launch for Enterprise Mode\r\n- Disabled Launch without Patching for non-developers, requiring Developer Mode to use\r\n- Fixed static hook patching causing Geometry Dash to not launch anymore\r\n- Fixed the wrong link for the PC guide on the setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.2...v1.5.3",
+          "date": "2026-03-15T20:06:48Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.3/com.geode.launcher_1.5.3.ipa",
+          "size": 10354018
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.2",
+          "localizedDescription": "This fixes the infinite checking for update problem...\r\n\r\n- Added Force Update back (with warning)\r\n- Fixed TrollStore (TIPA) version from crashing upon launch\r\n- Fixed checking for updates not ending and taking forever\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.1...v1.5.2",
+          "date": "2026-02-24T01:54:11Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.2/com.geode.launcher_1.5.2.ipa",
+          "size": 10354103
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.1",
+          "localizedDescription": "A short update that fixes an issue with the wrong offset, as I forgot to change it before\r\n\r\n- Fixed Enterprise Mode from looping to a \"You must launch the Helper with the launcher\"\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.0...v1.5.1",
+          "date": "2026-02-23T01:50:53Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.1/com.geode.launcher_1.5.1.ipa",
+          "size": 10352389
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.security.application-groups",
+          "get-task-allow",
+          "com.apple.private.MobileContainerManager.allowed",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSMicrophoneUsageDescription": "A mod you are using is requesting this permission.",
+          "NSCameraUsageDescription": "A mod you are using is requesting this permission.",
+          "NSLocalNetworkUsageDescription": "This permission is needed for accessing the JIT server."
+        }
+      }
+    },
+    {
+      "name": "StikPair",
+      "bundleIdentifier": "com.stik.StikPair",
+      "developerName": "StikDebug",
+      "subtitle": "Requires iOS 27+",
+      "localizedDescription": "A simple SwiftUI iOS app that creates a pairing file on-device, using iOS 27+ wireless pairing.  Note: Requires iOS 27+.",
+      "iconURL": "https://github.com/StikDebug/StikPair/blob/main/App/Assets.xcassets/AppLogo.imageset/StikPair-iOS-Default-1024%401x.png?raw=true",
+      "tintColor": "#3B86F7",
+      "screenshots": {
+        "iphone": [
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/pair1.png"
+          },
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/pair2.png"
+          },
+          {
+            "width": 1290,
+            "height": 2796,
+            "imageURL": "https://stikdebug.xyz/assets/source/pair3.png"
+          }
+        ]
+      },
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "StikPair needs access to devices on your local network so the it can pair with your device.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "StikPair uses location to stay running in the background. This can be turned off in the main view.",
+          "NSLocationWhenInUseUsageDescription": "StikPair uses location to stay running in the background and maintain your connection. This can be turned off in the main view."
+        }
+      },
+      "versions": [
+        {
+          "version": "1.2.0",
+          "date": "2026-08-25",
+          "localizedDescription": "Added Apple TV wireless pairing.",
+          "downloadURL": "https://github.com/StikDebug/StikPair/releases/download/v1.2.0/StikPair.ipa",
+          "size": 7735750,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "beta": false,
+      "name": "LiveContainer",
+      "bundleIdentifier": "com.kdt.livecontainer",
+      "developerName": "LiveContainer Team",
+      "subtitle": "Run iOS apps without actually installing them!",
+      "versionDescription": "LiveContainer 3.8.0\r \n> [!Warning]\r\n> The standalone version requires SideStore 0.6.2+ or AltStore 2.2.1+ for installation.\r\n> To install LiveContainer with built-in SideStore (\"LiveContainer+SideStore.ipa\"), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r \nNew Features\r \nStorage Management\r \n• Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\r\n• Added per-app storage details, including app bundle size, container sizes, and last-used date.\r\n• Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\r \nMultiple LiveContainers\r\n• Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (1367)\r \nShare to Apps in LiveContainer\r\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (1357)\r \nMultitasking\r \n• Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (1208)\r\n• Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (1228, 1250)\r\n• Added more multitask window animations and improved native-window scene handling.\r\n• URL schemes and \"open-url\" payloads can be passed to already-running multitask apps and native windows.\r \nJIT\r\n• Added StosDebug support as a JIT enabler.\r \nTweakLoader\r\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\r \nImprovements\r\n• Added support for manually setting a container's IDFV. (1194)\r\n• IDFV spoofing works even when Tweakloader is not loaded.\r\n• Reworked signing logic for tweaks and app installation, with multithreaded signing support.\r\n• Download alerts now block tab switching while a download is in progress.\r\n• Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\r\n• Add a \"Clear Notification\" button (1388)\r\n• Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (1417)\r \nBug Fixes\r \n• Fixed \"livecontainer://open-url\" dropping the deep link when launching an app from a cold start. (1339)\r\n• Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (1209)\r\n• Fixed a crash when opening Container Preferences if the app did not contain an \"en.lproj\" path. (1239)\r\n• Fixed apps and AltStore sources not being searchable in some cases. (1365, 1368)\r\n• Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (1347)\r\n• Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (1386)\r\n• Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (1430)\r\n• Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (1300, 1310, 1329)\r\n• Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (1402, 844, 870)\r\n• Added support for iOS 27 developer beta. (1394, 1417, 1416)\r\n• Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (1415)\r \nLocalization\r \n• Updated translations. Added Spanish translation by @Deci8BelioS\r \nCredits\r \nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\r \nGreat thanks to everyone who helped translate LiveContainer.",
+      "localizedDescription": "Run iOS apps without actually installing them!",
+      "iconURL": "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/AppIcon1024.png",
+      "tintColor": "#0784FC",
+      "category": "utilities",
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/LiveContainer/LiveContainer/main/screenshots/1.png"
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.security.application-groups",
+          "get-task-allow",
+          "keychain-access-groups",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.developer.healthkit.background-delivery",
+          "com.apple.developer.healthkit",
+          "com.apple.developer.healthkit.access"
+        ],
+        "privacy": {
+          "LSRequiresIPhoneOS": "The guest app is requesting for this permission.",
+          "NFCReaderUsageDescription": "The guest app is requesting for this permission.",
+          "NSAppleMusicUsageDescription": "The guest app is requesting for this permission.",
+          "NSBluetoothAlwaysUsageDescription": "The guest app is requesting for this permission.",
+          "NSBluetoothPeripheralUsageDescription": "The guest app is requesting for this permission.",
+          "NSCalendarsFullAccessUsageDescription": "The guest app is requesting for this permission.",
+          "NSCalendarsWriteOnlyAccessUsageDescription": "The guest app is requesting for this permission.",
+          "NSCameraUsageDescription": "The guest app is requesting for this permission.",
+          "NSContactsUsageDescription": "The guest app is requesting for this permission.",
+          "NSFaceIDUsageDescription": "The guest app is requesting for this permission.",
+          "NSFallDetectionUsageDescription": "The guest app is requesting for this permission.",
+          "NSGKFriendListUsageDescription": "The guest app is requesting for this permission.",
+          "NSHealthClinicalHealthRecordsShareUsageDescription": "The guest app is requesting for this permission.",
+          "NSHealthRequiredReadAuthorizationTypeIdentifiers": "The guest app is requesting for this permission.",
+          "NSHomeKitUsageDescription": "The guest app is requesting for this permission.",
+          "NSIdentityUsageDescription": "The guest app is requesting for this permission.",
+          "NSLocalNetworkUsageDescription": "The guest app is requesting for this permission.",
+          "NSLocationDefaultAccuracyReduced": "The guest app is requesting for this permission.",
+          "NSLocationTemporaryUsageDescriptionDictionary": "The guest app is requesting for this permission.",
+          "NSLocationUsageDescription": "The guest app is requesting for this permission.",
+          "NSLocationWhenInUseUsageDescription": "The guest app is requesting for this permission.",
+          "NSMicrophoneUsageDescription": "The guest app is requesting for this permission.",
+          "NSMotionUsageDescription": "The guest app is requesting for this permission.",
+          "NSNearbyInteractionAllowOnceUsageDescription": "The guest app is requesting for this permission.",
+          "NSNearbyInteractionUsageDescription": "The guest app is requesting for this permission.",
+          "NSPhotoLibraryAddUsageDescription": "The guest app is requesting for this permission.",
+          "NSPhotoLibraryUsageDescription": "The guest app is requesting for this permission.",
+          "NSRemindersFullAccessUsageDescription": "The guest app is requesting for this permission.",
+          "NSSensorKitUsageDescription": "The guest app is requesting for this permission.",
+          "NSSiriUsageDescription": "The guest app is requesting for this permission.",
+          "NSSpeechRecognitionUsageDescription": "The guest app is requesting for this permission.",
+          "NSUserTrackingUsageDescription": "The guest app is requesting for this permission.",
+          "SBAppUsesLocalNotifications": "The guest app is requesting for this permission.",
+          "UIApplicationSceneManifest": "The guest app is requesting for this permission.",
+          "NSHealthUpdateUsageDescription": "The guest app is requesting for this permission.",
+          "NSHealthShareUsageDescription": "The guest app is requesting for this permission.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "The guest app is requesting for this permission."
+        }
+      },
+      "versions": [
+        {
+          "version": "3.8.0",
+          "date": "2026-07-17T07:44:20Z",
+          "localizedDescription": "LiveContainer 3.8.0\r \n> [!Warning]\r\n> The standalone version requires SideStore 0.6.2+ or AltStore 2.2.1+ for installation.\r\n> To install LiveContainer with built-in SideStore (\"LiveContainer+SideStore.ipa\"), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r \nNew Features\r \nStorage Management\r \n• Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\r\n• Added per-app storage details, including app bundle size, container sizes, and last-used date.\r\n• Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\r \nMultiple LiveContainers\r\n• Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (1367)\r \nShare to Apps in LiveContainer\r\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (1357)\r \nMultitasking\r \n• Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (1208)\r\n• Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (1228, 1250)\r\n• Added more multitask window animations and improved native-window scene handling.\r\n• URL schemes and \"open-url\" payloads can be passed to already-running multitask apps and native windows.\r \nJIT\r\n• Added StosDebug support as a JIT enabler.\r \nTweakLoader\r\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\r \nImprovements\r\n• Added support for manually setting a container's IDFV. (1194)\r\n• IDFV spoofing works even when Tweakloader is not loaded.\r\n• Reworked signing logic for tweaks and app installation, with multithreaded signing support.\r\n• Download alerts now block tab switching while a download is in progress.\r\n• Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\r\n• Add a \"Clear Notification\" button (1388)\r\n• Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (1417)\r \nBug Fixes\r \n• Fixed \"livecontainer://open-url\" dropping the deep link when launching an app from a cold start. (1339)\r\n• Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (1209)\r\n• Fixed a crash when opening Container Preferences if the app did not contain an \"en.lproj\" path. (1239)\r\n• Fixed apps and AltStore sources not being searchable in some cases. (1365, 1368)\r\n• Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (1347)\r\n• Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (1386)\r\n• Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (1430)\r\n• Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (1300, 1310, 1329)\r\n• Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (1402, 844, 870)\r\n• Added support for iOS 27 developer beta. (1394, 1417, 1416)\r\n• Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (1415)\r \nLocalization\r \n• Updated translations. Added Spanish translation by @Deci8BelioS\r \nCredits\r \nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\r \nGreat thanks to everyone who helped translate LiveContainer.",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer.ipa",
+          "size": 4707271
+        },
+        {
+          "version": "3.7.2",
+          "date": "2026-02-27T04:18:41Z",
+          "localizedDescription": "> [!Warning]\r\n> The standalone version requires SideStore 0.6.2+ or AltStore 2.2.1+ for installation.\r\n> To install LiveContainer with built-in SideStore (LiveContainer+SideStore.ipa), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r \n>[!Note]\r\n> This a minor release that solves the following issues in version 3.7.0 and adds the following features. For more information, please see [3.7.0 release note](https://github.com/LiveContainer/LiveContainer/releases/tag/3.7.0).\r \nBug Fixes\r \n• Fix an issue where built-in SideStore may freeze on launch (1158)\r\n• Fix the ipa of another LiveContainer not generating in LiveContainer+SideStore builds after SideStore's massive codebase change (1184)\r\n• Fix the new Launch App Shortcut does not work below iOS 18 (1159)\r\n• The Launch App Shortcut now reports meaningful errors\r\n• Fix crash when using external container in multitasking mode\r\n• Fix process hangs when debugging multitask private apps\r \nNew Features\r\n• The \"Tap top of the view to scroll to top\" action can be passed through to multitasking guest apps.",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.7.2/LiveContainer.ipa",
+          "size": 4523860
+        },
+        {
+          "version": "3.7.0",
+          "date": "2026-02-19T03:17:54Z",
+          "localizedDescription": "LiveContainer 3.7.0\r \n> [!Warning]\r\n> The standalone version requires SideStore 0.6.2+ or AltStore 2.2.1+ for installation.\r\n> We recommend installing LiveContainer + SideStore using [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\r \nHappy Spring Festival / Lunar New Year! After six months of development, we’re excited to release LiveContainer 3.7.0. This update introduces several powerful new features, including the Launch App Shortcut, iOS 26 JIT script support, external containers, native icon generation, and more.\r \n\r\nNew Features\r \nLaunch App Shortcut\r \n> [!Note]\r\n> This feature requires LiveContainer to be installed with at least the LaunchAppExtension and LaunchAppExtensionHelper extension. iOS 16+ is supported.\r \nA new extension allows apps to launch instantly without opening the LiveContainer main interface (for apps that are not locked, hidden, or JIT-required). Once configured, the shortcut prepares the runtime environment and selects an available LiveContainer instance to launch the app directly.\r \nThis reduces extra relaunches and jumps and typically saves 1~2 seconds per launch.\r \nSee the [setup guide](https://livecontainer.github.io/docs/guides/add-to-home-screen) for instructions.\r \nJIT\r \nSupport for iOS 26 JIT scripts has been added by @Vishal. Scripts can be configured in app-specific settings and loaded automatically on iOS 26+.\r \nThe “StikDebug in another LiveContainer” option has been fixed, allowing StikDebug to run within LiveContainer. When launching a JIT-required app, LiveContainer will automatically detect StikDebug, launch it in an available container, and pass all required parameters — including scripts — to enable JIT.\r \nIn addition, when enabling JIT for multitasked app, LiveContainer will prioritize launching StikDebug as a multitask app to save app slot usage. (TODO: this doesn’t automatically minimize StikDebug after enabling JIT, might be added later)\r \nBe sure to convert StikDebug into a shared app before use.\r \n\r\nExternal Containers\r \n> [!Note]\r\n> Containers stored on external media (portable drives, SMB shares, etc.) are unsupported by many apps and may cause instability or crashes.\r \nYou can now use external folders as app containers. This is useful if you want to manage app data through a file manager while still accessing it in LiveContainer, or if you want maintain container access when an app is shared.\r \nTo configure this, open:\r \nApp-Specific Settings → Select External Data Folder\r \nNative Icons\r \nLiveContainer now generates icons using native iOS libraries. On iOS 18+, this enables proper Light, Dark, and Original (Liquid Glass) icon rendering. These icons can also be saved for home screen shortcuts.\r \nMultitasking Improvements\r \n* Added “Skip app terminate screen” (by @boa-z)\r\n* Added ”Single Window Mode” to minimize other apps when a maximized app is brought to front\r\n* Launch URL schemes can now be passed to multitasking apps. Passing URL between multitask apps can be controlled via ”Redirect URL to Host” switch\r\n* Launching Private Apps is now possible. By default, apps launched with private container is only given sandbox access to its own data container folder. You can change it in developer settings.\r\n* Changed animations a little bit\r \nAltStore Source Support\r \nBasic AltSource support has been implemented by @StephenDev0. Sources can be added using:\r \n\"\"\"\r\nlivecontainer://sources?url=\r\n\"\"\"\r \nOther Additions\r \n* App remarks are now supported (by @WingCH)\r\n* Decrypted apps can now be installed via \"itms-services\" links (by @WingCH)\r \nBug Fixes\r \n* Fixed iOS 26.4b1 compatibility (1152)\r\n* Fixed crashes caused by \"-[NSUserDefaults synchronize]\" returning NO\r\n* Fixed signing crashes when apps contain too many libraries (1135)\r\n* Fixed signing failure when not enough space is available to insert HM_DYLIB in Mach-O headers (951)\r\n* Fixed signing issues when bundle IDs contain emoji (1130)\r\n* Fixed some apps getting incorrect status bar height (759)\r\n* Fixed malfunctions after clearing cache or removing the TEMP directory (1040, 1125, 884)\r\n* Game mode is now disabled by default (can be enabled by reinstalling another LiveContainer instance)\r\n* Fixed incorrect handling of \"sidestore://\" URLs\r\n* Fixed WebKit cookie persistence issues (888)\r\n* Improved multitasking dock tap responsiveness\r\n* Fixed playback interruptions in multitasking PiP mode\r\n* Improved app list color tinting to be always readable\r \nRemoved Features\r\n* 32-bit app support: @khanhduytran0 currently don’t have time for LiveExec32 R&D yet, contributions welcome. We might rollback later using an existing engine such as touchHLE.\r \n•--\r \nCredits\r \nMany thanks to the contributors who continue improving translations:\r \n* Traditional Chinese — Jack Black\r\n* Italian — @Checkm8ra1n\r\n* Turkish — @sekertr\r\n* Vietnamese — @khanhduytran0\r\n* Portuguese — @DaniTrox\r\n* Arabic — dlshad2\r\n* French — @p-sage\r\n* German — @binnichtaktiv for improving German translation quality\r\n* Japanese — @naolad\r\n* Swedish — @se2crid\r\n",
+          "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.7.0/LiveContainer.ipa",
+          "size": 4521039
+        }
+      ]
+    },
+    {
+      "name": "Feather",
+      "bundleIdentifier": "thewonderofyou.Feather",
+      "developerName": "Samara",
+      "iconURL": "https://github.com/khcrysalis/Feather/blob/v1.x/iOS/Resources/Icons/Main/Mac@3x.png?raw=true",
+      "localizedDescription": "Feather is a free on-device iOS application manager/installer built with UIKit for quality.",
+      "subtitle": "On-device signing application",
+      "tintColor": "848ef9",
+      "versions": [
+        {
+          "version": "2.9.0",
+          "date": "2026-07-05T02:11:53Z",
+          "size": 12598584,
+          "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa"
+        }
+      ],
+      "appPermissions": {},
+      "screenshotURLs": [
+        "https://github.com/khcrysalis/Feather/blob/v1.x/Images/Library.png?raw=true",
+        "https://github.com/khcrysalis/Feather/blob/v1.x/Images/Repos.png?raw=true",
+        "https://github.com/khcrysalis/Feather/blob/v1.x/Images/Sign.png?raw=true",
+        "https://github.com/khcrysalis/Feather/blob/v1.x/Images/Store.png?raw=true"
+      ]
+    },
+    {
+      "name": "DolphiniOS (Public Beta)",
+      "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
+      "developerName": "OatmealDome",
+      "subtitle": "Test the latest DolphiniOS.",
+      "localizedDescription": "DolphiniOS is a port of the popular Dolphin emulator to iOS. Dolphin lets you play your favourite GameCube and Wii software with enhancements like higher resolutions, save states, and more. You can even play all of Nintendo's classics from past consoles through the Wii's Virtual Console library.\n\nPlease note that devices with A8 processors and older are not compatible.",
+      "iconURL": "https://cdn.oatmealdome.me/dolphinios/AppIcon.appiconset/BetaAppStore.png",
+      "tintColor": "ffbb3d",
+      "screenshotURLs": [
+        "https://cdn.oatmealdome.me/dolphinios/altstore/screenshots/screenshot_6s_1.PNG",
+        "https://cdn.oatmealdome.me/dolphinios/altstore/screenshots/screenshot_6s_2.PNG",
+        "https://cdn.oatmealdome.me/dolphinios/altstore/screenshots/screenshot_6s_3_reup.PNG",
+        "https://cdn.oatmealdome.me/dolphinios/altstore/screenshots/screenshot_6s_4_edit.png"
+      ],
+      "beta": false,
+      "versions": [
+        {
+          "version": "5.0.0b6",
+          "date": "2026-06-16T21:42:57.0000000Z",
+          "localizedDescription": "Beta 6 adds support for JIT on non-jailbroken devices running iOS 26.6 and iOS 27 beta.",
+          "downloadURL": "https://github.com/OatmealDome/dolphin-ios/releases/download/v5.0.0b6/Non-Jailbroken.ipa",
+          "size": 17963367,
+          "minOSVersion": "14.0",
+          "maxOSVersion": "99.0"
+        }
+      ],
+      "versionDescription": "Beta 6 adds support for JIT on non-jailbroken devices running iOS 26.6 and iOS 27 beta."
+    },
+    {
+      "name": "Retro Sekai!",
+      "bundleIdentifier": "com.lila.retrosekai.beta",
+      "developerName": "0x1b1b",
+      "subtitle": "Project Sekai but RETRO STYLE.",
+      "localizedDescription": "RetroSekai is in beta! Join the Discord server: https://discord.gg/bVnBx9rDwU\n\nWelcome to RetroSekai!\n\nRetroSekai is a private server for the popular game Project Sekai (プロセカ, officially HATSUNE MIKU: COLORFUL STAGE) that brings back the game's 2.8.0 version. This version is the last version that has the game's \"old UI\", a nostalgic and cool UI that was modernized after version 3.0.0 (also known as the 3rd anniversary update).\n\nFor more information, join our Discord! You can ask questions or discuss RetroSekai with others.\n\nDeveloper: 0x1b1b",
+      "iconURL": "https://repo.untitledcharts.com/assets/retrosekai/icon.png",
+      "tintColor": "#AE34EB",
+      "category": "games",
+      "screenshotURLs": [
+        "https://repo.untitledcharts.com/assets/retrosekai/title.png",
+        "https://repo.untitledcharts.com/assets/retrosekai/gameplay.png"
+      ],
+      "versions": [
+        {
+          "version": "2026.0.1",
+          "buildVersion": "2026.0.1",
+          "date": "2026-03-19",
+          "localizedDescription": "More English translations, and a data reset!",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai_2026_0_1.ipa",
+          "size": 159727169,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "2026.0.0",
+          "buildVersion": "2026.0.0",
+          "date": "2026-03-06",
+          "localizedDescription": "RetroSEKAI v2 is out, featuring a new rewrite and English translations.",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai.ipa",
+          "size": 158859297,
+          "minOSVersion": "11.0"
+        },
+        {
+          "version": "2.8.0",
+          "buildVersion": "140",
+          "date": "2026-02-04",
+          "localizedDescription": "Welcome to RetroSekai. Listed on AltStore/SideStore.",
+          "downloadURL": "https://repo.untitledcharts.com/assets/ipas/retrosekai.ipa",
+          "size": 154019955,
+          "minOSVersion": "11.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.game-center",
+          "aps-environment"
+        ],
+        "privacy": {
+          "NSPhotoLibraryAddUsageDescription": "RetroSekai needs access to your Photo Library in order to save screenshots taken during virtual live events. / バーチャルライブで撮影したスクリーンショットを保存できるようにします",
+          "NSCameraUsageDescription": "RetroSekai needs access to your phone's camera in order to scan QR codes.",
+          "NSPhotoLibraryUsageDescription": "RetroSekai needs access to your Photo Library in order to save screenshots taken during virtual live events. / バーチャルライブで撮影したスクリーンショットを保存できるようにします",
+          "NSUserTrackingUsageDescription": "\"tracking\" but we disable it, it's still part of the app though (sob)."
+        }
+      }
+    },
+    {
+      "name": "Provenance",
+      "bundleIdentifier": "com.provenance-emu.provenance",
+      "developerName": "Provenance-EMU",
+      "subtitle": "Multi-system retro emulator for iOS & tvOS",
+      "localizedDescription": "Provenance supports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more. Features iCloud sync, controller skins, RetroAchievements, and a beautiful native UI.",
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "tintColor": "8A2BE2",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "3.3.0",
+          "date": "2026-03-14",
+          "localizedDescription": "What's New in 3.3.0\n\nThis is a big one. Four months of work since 3.2.1 covering iCloud sync, a completely revamped tvOS interface, video filters, and a ton of core and stability fixes.\n\n☁️ iCloud / CloudKit Sync\n- ROMs, save states, BIOS files, and artwork now sync across devices via iCloud\n- Real-time download progress indicators when loading cloud save states\n- Auto BIOS sync on game load when available in iCloud\n- ROM metadata syncs alongside files\n- Artwork syncs after library updates\n- CloudKit records management tab in Settings\n- iCloud upsell UI for new users with empty libraries\n- Sync queue pauses during emulation and resumes after\n\n📺 New tvOS UI (Default)\n- Completely redesigned tvOS interface now enabled by default\n- RetroWave-themed side menu with smooth animations\n- Save states browser accessible from the main UI with artwork and core name\n- \"View All\" saves section with per-system filtering\n- TopShelf v2: recent games and save states with artwork and timestamps\n- Cheats UI in the pause menu\n- Game \"More Info\" panel\n- Log viewer tab\n- Import status view in side menu\n- Search with persistent history\n- Dozens of focus, navigation, and theming fixes throughout\n\n🎨 Video Filters & Shaders\n- Unified filter pipeline works across native and RetroArch cores\n- GB and VHS filters improved\n- Filters accessible from the pause menu\n- RetroArch GLES 3D cores now supported (Vecx/GLiden, etc.)\n- Dolphin shader/filter support\n- PPSSPP filter support\n\n🎮 Core & Controller Fixes\n- **RetroArch**: Fixed player index mapping for MFi, PS4, and Xbox controllers; PS4 start/select fixed; 32x controls added; GameCube controller responder added\n- **Mupen64Plus**: Fixed PS4 start button; fixed tvOS scaling and placement; better save error messages\n- **Dolphin**: Fixed Vulkan landscape rendering\n- **GenPluGX**: Added CHD support; added wide-screen GameGear core\n- **PicoDrive**: Fixed crash on unload; fixed 32x controller mapping\n- **FCEUmm**: Fixed start/select button mapping\n- **Mednafen**: Fixed DualShock/DualSense pause/play button mapping\n- **GameBatte / TGDB Dual**: Fixed PSX/Xbox pause/select button mapping\n\n🐛 Bug Fixes & Stability\n- Fixed multiple app hangs from main-thread Realm access (moved to background)\n- Fixed crash in pause menu when closing core\n- Fixed potential crash if audio ring buffer init fails\n- Fixed crash in share/import extension\n- Fixed aspect ratio issues in Stella and some other cores\n- Fixed FPS label appearing in screenshots\n- Fixed artwork not refreshing in game library after sync\n- Fixed game importer re-queuing already-imported items\n- Fixed Realm contentless core crash\n- Fixed \"Continue\" carousel metadata mismatch\n- Skin selector refreshes orientation previews on rotation change\n- ManicSkin/DeltaSkin files can now be opened directly f",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
+          "size": 1076407494
+        },
+        {
+          "version": "3.2.1",
+          "date": "2025-11-23",
+          "localizedDescription": "**Full Changelog**: https://github.com/Provenance-Emu/Provenance/compare/3.2.0...3.2.1\n\nBug fixes:\n\n- iPad skins fixed\n- Joystick in default skin fixed in landscape\n- Atari Lynx Retroach controls fixed\n- RetroAchievements login fixed\n- Skin selection and import UIs fixed\n- Skin rotation issues fixed\n- Skin previews fixed",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.2.1/Provenance-3.2.1-iOS.ipa",
+          "size": 1068698720
+        },
+        {
+          "version": "3.2.0",
+          "date": "2025-11-20",
+          "localizedDescription": "Release 3.2.0\n\nWe're excited to announce Provenance 3.2.0, a major update focused on performance, skins, and quality of life improvements. This release brings highly requested features and fixes that make Provenance faster and more enjoyable than ever.\n\n🎨 Skins: Now Free for Everyone!\n\nThe biggest news: **Full skin support is now available to all users—no Provenance Plus required!** We believe everyone should enjoy customizing their gaming experience. However, if you love what we're building, please consider supporting the project through [Provenance Plus](https://apps.apple.com/us/app/provenance-app/id1596862805) or [Patreon](https://www.patreon.com/provenance).\n\nWhat's New with Skins\n\n- **Full Manic and Delta Skin Support** for all systems (except 3DS and DS—those are coming soon!)\n- **Dramatically Improved Performance**: Faster rendering, loading, and smoother UI\n- **Fixed Rotation Issues**: No more slow redraws when changing orientation\n- **Memory Optimizations**: More efficient skin storage and rendering\n- **RetroArch Core Support**: Skins now work across all emulator cores\n- **Enhanced Skin Browser**: Faster, more responsive skin selection and preview\n\n⚡ Performance Improvements\n\nLibrary & UI\n- **Faster Main Library**: Significantly improved scrolling and navigation performance\n- **Optimized Rendering Loop**: Better frame pacing and smoother gameplay across all cores\n\nCore Performance\n- **Dreamcast/Flycast Enhancements**:\n  - Faster emulation speed\n  - Windows CE-based games now supported\n  - Full networking support enabled\n- **emuThreeDS (3DS Core)**: Performance bump and reduced graphic glitches\n- **PPSSPP**: More options exposed, layout fixes, and full skin support\n\nROM Management\n- **Rewritten ROM Importer**:\n  - Batch processing for multiple imports\n  - Significantly improved artwork matching—more comprehensive, faster, and more accurate\n  - Much faster and more reliable with fewer errors\n  - Fixed bug where existing ROMs were repeatedly re-imported\n  - Eliminated erroneous duplicate imports\n  - **7zip Archive Support**: Fixed large 7zip archive handling\n- **MAME/CPS ZIP Support**: Drop MAME/CPS1,2,3 ZIP files directly into imports or the MAME/CPS ROMs folder—they'll import and load correctly!\n\n🐛 Major Bug Fixes\n\nCore Stability\n- **GameCube/Wii (Dolphin) Improvements**:\n  - Fixed flickering after pause/resume\n  - Fixed mis-mapped button inputs\n  - Corrected inverted settings\n  - Faster access to overclock/underclock settings\n  - Performance improvements matching dedicated emulator apps\n- **Atari ST**: No longer crashes at boot\n- **Vectrex**: Fixed core booting and blank video output\n- **Mednafen**: Fixed static audio in CHD files with FLAC compression\n- **Odyssey2**: Added numpad button support (can now select game number at boot)\n- **Atar",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.2.0/Provenance-3.2.0-iOS.ipa",
+          "size": 1067861327
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "com.apple.developer.icloud-services"
+          },
+          {
+            "name": "com.apple.developer.icloud-container-identifiers"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Used to discover and connect to local network game servers for netplay."
+          },
+          {
+            "name": "Camera",
+            "usageDescription": "Used to scan QR codes for importing game data."
+          }
+        ]
+      }
     }
-  ],
-  "identifier": "local.githubreleases.stars",
-  "sourceURL": "https://loloshilele.github.io/GitHubReleases-Source/apps.json"
+  ]
 }
