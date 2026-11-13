@@ -9,7 +9,11 @@ on:
       - github_client.py
       - source-icon.jpg
       - test_github_catalog.py
+      - test_public_source_workflow.py
       - .github/workflows/refresh-source.yml
+  schedule:
+    # UTC 00:23, 04:23, ...: every four hours, avoiding the busiest top of the hour.
+    - cron: '23 */4 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -30,7 +34,24 @@ jobs:
         with:
           persist-credentials: false
       - name: Test GitHub release collection
-        run: python3 -m unittest test_github_catalog -v
+        run: python3 -m unittest test_github_catalog test_public_source_workflow -v
+      - name: Reject stale queued runs
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
+          SOURCE_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          request = urllib.request.Request(
+              'https://api.github.com/repos/' + os.environ['SOURCE_REPO'] + '/git/ref/heads/main',
+              headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'],
+                       'User-Agent': 'IPA-Source-Publisher'})
+          with urllib.request.urlopen(request, timeout=30) as response:
+              current = json.load(response)['object']['sha']
+          if current != os.environ['EXPECTED_SHA']:
+              raise RuntimeError('Default branch changed after checkout; skip this stale run')
+          PY
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -38,10 +59,37 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 source_catalog.py --stars-owner loloshilele --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
+      - name: Refuse to publish an incomplete GitHub scan
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          source = json.loads(Path('_site/apps.json').read_text(encoding='utf-8'))
+          report = json.loads(Path('_site/catalog-report.json').read_text(encoding='utf-8'))
+          stars_url = 'https://github.com/loloshilele?tab=stars'
+          scans = [item for item in report.get('sources', []) if item.get('url') == stars_url]
+          if len(scans) != 1 or scans[0].get('status') != 'complete':
+              raise RuntimeError('Stars scan was not complete; keep the previous public source')
+          failures = [item for item in report.get('sources', [])
+                      if item.get('repository') and item.get('status') == 'failed']
+          if failures:
+              for item in failures:
+                  print('Incomplete repository scan:', item.get('repository'), item.get('status'))
+              raise RuntimeError('Some GitHub repositories failed to scan; keep the previous public source')
+          for item in report.get('sources', []):
+              if item.get('repository') and (item.get('status') == 'metadata_failed' or item.get('failures')):
+                  print('IPA metadata could not be read; retry in a later run:', item['repository'])
+          if not source.get('apps'):
+              raise RuntimeError('Source is empty; keep the previous public source')
+          print('STARS_REPOSITORIES=' + str(scans[0].get('repositories', 0)))
+          print('VALID_APPS=' + str(len(source['apps'])))
+          PY
       - name: Preserve generated public snapshot
         env:
           GH_TOKEN: ${{ github.token }}
           SOURCE_REPO: ${{ github.repository }}
+          EXPECTED_SHA: ${{ github.sha }}
         run: |
           python3 - <<'PY'
           import json, os, urllib.request
@@ -55,6 +103,8 @@ jobs:
               with urllib.request.urlopen(req,timeout=30) as response:
                   return json.load(response)
           head=api('/git/ref/heads/main')['object']['sha']
+          if head != os.environ['EXPECTED_SHA']:
+              raise RuntimeError('Default branch changed during the scan; keep the newer snapshot')
           commit=api('/git/commits/'+head)
           files=['apps.json','index.html','catalog-report.json']
           tree=api('/git/trees','POST',{'base_tree':commit['tree']['sha'],'tree':[
@@ -74,15 +124,17 @@ jobs:
         run: |
           python3 - <<'PY'
           import json,time,urllib.request
+          from pathlib import Path
           import source_catalog as catalog
+          expected=json.loads(Path('_site/apps.json').read_text(encoding='utf-8'))
           url='https://loloshilele.github.io/GitHubReleases-Source/apps.json'
           for attempt in range(18):
               try:
                   with urllib.request.urlopen(url+'?verify='+str(time.time_ns()),timeout=15) as response:
                       status=response.status; data=json.load(response)
                   assert status==200 and data.get('apps')
+                  assert data == expected, 'The live source does not match this run'
                   assert data.get('iconURL', '').endswith('/source-icon.jpg')
-                  assert any(a.get('githubRepository') == 'Predidit/Kazumi' for a in data['apps'])
                   with urllib.request.urlopen(data['iconURL'], timeout=15) as icon:
                       assert icon.status == 200 and icon.read(2) == bytes.fromhex('ffd8')
                   assert all(catalog.recent(v.get('date')) and catalog.public_https(v['downloadURL'])
