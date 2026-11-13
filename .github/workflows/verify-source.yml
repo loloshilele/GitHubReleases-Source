@@ -1,33 +1,24 @@
 name: Verify Public Source
 on:
   push:
-    branches: [main]
+    paths: [apps.json]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
     steps:
-      - name: Verify live HTTPS source
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Check maintained snapshot
         run: |
           python3 - <<'PY'
-          import json, time, urllib.request
-          url = 'https://loloshilele.github.io/GitHubReleases-Source/apps.json'
-          for attempt in range(18):
-              try:
-                  with urllib.request.urlopen(url, timeout=15) as response:
-                      status = response.status
-                      data = json.load(response)
-                  assert status == 200 and data.get('apps'), 'empty source'
-                  assert all(v['downloadURL'].startswith('https://github.com/') for a in data['apps'] for v in a.get('versions', []))
-                  print(f'HTTP {status}; apps={len(data["apps"])}; all downloads point to GitHub')
-                  print(url)
-                  break
-              except Exception as error:
-                  if attempt == 17:
-                      raise
-                  print(f'Waiting for Pages propagation: {type(error).__name__}')
-                  time.sleep(10)
+          import json
+          import source_catalog as c
+          d=json.load(open('apps.json'))
+          assert d['apps']
+          assert all(c.recent(v.get('date')) and c.public_https(v['downloadURL']) for a in d['apps'] for v in a['versions'])
+          print('Snapshot apps:', len(d['apps']))
           PY

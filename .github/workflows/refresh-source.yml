@@ -1,0 +1,86 @@
+name: Refresh Public IPA Source
+on:
+  push:
+    branches: [main]
+    paths:
+      - source_catalog.py
+      - .github/workflows/refresh-source.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: public-source-refresh
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Use workflow deployment for Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT repos/${{ github.repository }}/pages -f build_type=workflow
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Collect maintained apps from developer sources
+        run: python3 source_catalog.py --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
+      - name: Preserve generated public snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+          base='https://api.github.com/repos/'+os.environ['SOURCE_REPO']
+          def api(path, method='GET', payload=None):
+              req=urllib.request.Request(base+path, method=method,
+                  data=json.dumps(payload).encode() if payload is not None else None,
+                  headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],
+                           'Content-Type':'application/json','User-Agent':'IPA-Source-Publisher'})
+              with urllib.request.urlopen(req,timeout=30) as response:
+                  return json.load(response)
+          head=api('/git/ref/heads/main')['object']['sha']
+          commit=api('/git/commits/'+head)
+          files=['apps.json','index.html','catalog-report.json']
+          tree=api('/git/trees','POST',{'base_tree':commit['tree']['sha'],'tree':[
+              {'path':p,'mode':'100644','type':'blob','content':Path('_site',p).read_text(encoding='utf-8')} for p in files]})
+          updated=api('/git/commits','POST',{'message':'chore: refresh maintained public IPA apps',
+              'tree':tree['sha'],'parents':[head]})
+          api('/git/refs/heads/main','PATCH',{'sha':updated['sha'],'force':False})
+          print('Published snapshot commit:',updated['sha'])
+          PY
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy public source
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify live source and release dates
+        run: |
+          python3 - <<'PY'
+          import json,time,urllib.request
+          import source_catalog as catalog
+          url='https://loloshilele.github.io/GitHubReleases-Source/apps.json'
+          for attempt in range(18):
+              try:
+                  with urllib.request.urlopen(url+'?verify='+str(time.time_ns()),timeout=15) as response:
+                      status=response.status; data=json.load(response)
+                  assert status==200 and data.get('apps')
+                  assert all(catalog.recent(v.get('date')) and catalog.public_https(v['downloadURL'])
+                             for a in data['apps'] for v in a.get('versions',[]))
+                  print(f'LIVE_HTTP={status}; APPS={len(data["apps"])}; all releases <=365 days')
+                  break
+              except Exception:
+                  if attempt==17: raise
+                  time.sleep(10)
+          PY
