@@ -247,14 +247,18 @@ def main():
     parser.add_argument('--seed', default='apps.json')
     parser.add_argument('--out', default='_site')
     parser.add_argument('--base', default='')
+    parser.add_argument('--stars-owner', default='')
     args = parser.parse_args()
     path = Path(args.seed)
     seed = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
     from github_catalog import collect_repositories
-    github_apps, github_reports = collect_repositories(seed, datetime.now(timezone.utc), MAX_AGE_DAYS)
+    github_apps, github_reports = collect_repositories(seed, datetime.now(timezone.utc), MAX_AGE_DAYS, owner=args.stars_owner)
     seed['apps'] = (seed.get('apps') or []) + github_apps
     source, report = collect(seed)
     report['sources'].extend(github_reports)
+    report['github_repositories'] = len([r for r in github_reports if r.get('repository')])
+    for entry in github_reports:
+        print('GITHUB_SCAN=' + json.dumps(entry, ensure_ascii=False))
     if args.base:
         source['sourceURL'] = args.base.rstrip('/') + '/apps.json'
         source['iconURL'] = args.base.rstrip('/') + '/source-icon.jpg'

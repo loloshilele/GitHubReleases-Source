@@ -5,6 +5,8 @@ on:
     paths:
       - source_catalog.py
       - github_catalog.py
+      - ipa_metadata.py
+      - github_client.py
       - source-icon.jpg
       - test_github_catalog.py
       - .github/workflows/refresh-source.yml
@@ -19,7 +21,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -33,7 +35,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Collect maintained apps from developer sources
-        run: python3 source_catalog.py --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 source_catalog.py --stars-owner loloshilele --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
       - name: Preserve generated public snapshot
         env:
           GH_TOKEN: ${{ github.token }}
