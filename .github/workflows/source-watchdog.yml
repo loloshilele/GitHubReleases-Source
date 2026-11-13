@@ -1,0 +1,32 @@
+name: Public Source Watchdog
+on:
+  schedule:
+    - cron: '53 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - source_watchdog.py
+      - test_source_recovery.py
+      - .github/workflows/source-watchdog.yml
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: public-source-watchdog
+  cancel-in-progress: false
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Test health and recovery decisions
+        run: python3 -m unittest test_source_recovery -v
+      - name: Check source and restart stalled refresh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 source_watchdog.py
+

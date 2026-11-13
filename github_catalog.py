@@ -2,6 +2,7 @@
 from __future__ import annotations
 import copy
 import json
+import http.client
 import os
 import re
 import time
@@ -34,7 +35,7 @@ def api_json(path):
             if exc.code not in (403, 429, 500, 502, 503, 504) or attempt == 2:
                 raise
             time.sleep(min(int(exc.headers.get('Retry-After', '2')), 10))
-        except (OSError, TimeoutError):
+        except (OSError, TimeoutError, http.client.HTTPException):
             if attempt == 2:
                 raise
             time.sleep(attempt + 1)
@@ -62,7 +63,7 @@ def starred_repositories(owner, getter=None):
 def releases(repo):
     rows = pages('/repos/' + repo + '/releases')
     for release in rows:
-        if len(release.get('assets') or []) >= 100:
+        if len(release.get('assets') or []) >= 30:
             release['assets'] = pages('/repos/' + repo + '/releases/' + str(release['id']) + '/assets')
     return rows
 
@@ -87,7 +88,7 @@ def collect_repositories(seed, now, days, loader=None, inspector=None,
             names.extend(stars)
             reports.append({'url': 'https://github.com/' + owner + '?tab=stars',
                             'status': 'complete', 'repositories': len(stars)})
-        except (OSError, ValueError, RuntimeError) as exc:
+        except (OSError, ValueError, RuntimeError, http.client.HTTPException) as exc:
             reports.append({'url': 'https://github.com/' + owner + '?tab=stars',
                             'status': 'failed', 'error': str(exc)})
     unique = {}
@@ -95,7 +96,7 @@ def collect_repositories(seed, now, days, loader=None, inspector=None,
         if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', name):
             continue
         unique.setdefault(name.lower(), name)
-    def scan(repo):
+    def scan_once(repo):
         report = {'url': 'https://github.com/' + repo + '/releases', 'repository': repo,
                   'accepted': 0, 'ipa_assets': 0, 'failures': [], 'duplicates': []}
         apps = {}
@@ -147,16 +148,33 @@ def collect_repositories(seed, now, days, loader=None, inspector=None,
                                                          'reason': 'Same Bundle ID; prefer complete unsigned IPA'})
                             continue
                         apps[bundle] = app
-                    except (OSError, ValueError, RuntimeError, KeyError, zipfile.BadZipFile) as exc:
+                    except (OSError, ValueError, RuntimeError, KeyError, zipfile.BadZipFile, http.client.HTTPException) as exc:
                         report['failures'].append({'asset': asset.get('name'), 'error': str(exc)})
                 if apps:
                     break
             report['accepted'] = len(apps)
             report['status'] = ('included' if apps else 'metadata_failed' if report['failures']
                                 else 'no_ipa' if candidates else 'no_recent_release')
-        except (OSError, ValueError, RuntimeError) as exc:
+        except (OSError, ValueError, RuntimeError, http.client.HTTPException) as exc:
             report.update(status='failed', error=str(exc))
         return list(apps.values()), report
+    def scan(repo):
+        found, report = scan_once(repo)
+        report['attempts'] = 1
+        if report.get('status') in ('failed', 'metadata_failed') or report.get('failures'):
+            time.sleep(1)
+            retry_found, retry_report = scan_once(repo)
+            retry_report['attempts'] = 2
+            retry_report['recovered'] = retry_report.get('status') == 'included' and not retry_report.get('failures')
+            # Do not discard applications already read successfully if a retry gets worse.
+            by_bundle = {app['bundleIdentifier']: app for app in found}
+            by_bundle.update({app['bundleIdentifier']: app for app in retry_found})
+            found = list(by_bundle.values())
+            report = retry_report
+            report['accepted'] = len(found)
+            if found and report.get('status') == 'failed':
+                report['status'] = 'partial'
+        return found, report
     apps = []
     with ThreadPoolExecutor(max_workers=4) as pool:
         for found, report in pool.map(scan, unique.values()):

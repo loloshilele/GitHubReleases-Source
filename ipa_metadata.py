@@ -1,5 +1,6 @@
 """Bounded ZIP range inspection with temporary-download fallback (stdlib)."""
 import io
+import http.client
 import plistlib
 import tempfile
 import urllib.request
@@ -76,7 +77,7 @@ def inspect_ipa(url, size):
     try:
         with RemoteZip(url, '', size) as reader, zipfile.ZipFile(reader) as archive:
             metadata = read_metadata(archive)
-    except (OSError, RuntimeError, ValueError, zipfile.BadZipFile):
+    except (OSError, RuntimeError, ValueError, zipfile.BadZipFile, http.client.HTTPException):
         opener = urllib.request.build_opener(PublicRedirect())
         with tempfile.TemporaryFile() as target:
             with opener.open(urllib.request.Request(url, headers={'User-Agent': 'GitHubReleases-Source'}), timeout=90) as response:

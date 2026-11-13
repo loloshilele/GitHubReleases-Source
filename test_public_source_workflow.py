@@ -63,10 +63,11 @@ class PublicSourceWorkflowTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertIn('keep the previous public source', result.stderr)
 
-    def test_failed_repository_scan_does_not_publish(self):
+    def test_failed_repository_does_not_block_other_updates(self):
         result = self.run_guard(self.report(extra=[{'repository': 'owner/repo', 'status': 'failed'}]))
-        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('owner/repo', result.stdout)
+        self.assertIn('publish other updates', result.stdout)
 
     def test_empty_source_does_not_publish(self):
         result = self.run_guard(self.report(), {'apps': []})

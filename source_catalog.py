@@ -6,6 +6,7 @@ import copy
 import html
 import ipaddress
 import json
+import os
 import re
 import time
 import urllib.request
@@ -231,9 +232,11 @@ def write_site(output, source, report):
         shutil.copyfile(icon, output / 'source-icon.jpg')
     atomic_json(output / 'apps.json', source)
     atomic_json(output / 'catalog-report.json', report)
+    from source_status import render_status
+    (output / 'status.html').write_text(render_status(source, report), encoding='utf-8')
     page = ('<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1"><title>IPA 源</title>'
-            '<h1>GitHub Stars IPA 源</h1>'
+            '<h1>GitHub Stars IPA 源</h1><p><a href="status.html">查看同步状态与未收录原因</a></p>'
             f'<p>{len(source["apps"])} 个应用，仅展示最近 {report["max_age_days"]} 天有发布的版本。</p>'
             '<p>在手机软件源中添加此链接的完整地址：</p><a href="apps.json">apps.json</a>'
             '<p>应用直接从开发者的 GitHub 或官方下载地址获取，不依赖电脑开机。</p>'
@@ -251,12 +254,23 @@ def main():
     args = parser.parse_args()
     path = Path(args.seed)
     seed = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+    previous_report_path = path.with_name('catalog-report.json')
+    try:
+        previous_report = json.loads(previous_report_path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        previous_report = {}
     from github_catalog import collect_repositories
     github_apps, github_reports = collect_repositories(seed, datetime.now(timezone.utc), MAX_AGE_DAYS, owner=args.stars_owner)
     seed['apps'] = (seed.get('apps') or []) + github_apps
     source, report = collect(seed)
     report['sources'].extend(github_reports)
     report['github_repositories'] = len([r for r in github_reports if r.get('repository')])
+    from source_status import enrich_report
+    enrich_report(source, report, previous_report)
+    run_id = os.environ.get('GITHUB_RUN_ID')
+    repository = os.environ.get('GITHUB_REPOSITORY')
+    if run_id and repository:
+        report['run_url'] = f'https://github.com/{repository}/actions/runs/{run_id}'
     for entry in github_reports:
         print('GITHUB_SCAN=' + json.dumps(entry, ensure_ascii=False))
     if args.base:

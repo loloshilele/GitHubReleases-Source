@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - source_catalog.py
+      - source_status.py
+      - test_source_recovery.py
       - github_catalog.py
       - ipa_metadata.py
       - github_client.py
@@ -34,7 +36,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Test GitHub release collection
-        run: python3 -m unittest test_github_catalog test_public_source_workflow -v
+        run: python3 -m unittest test_github_catalog test_public_source_workflow test_source_recovery -v
       - name: Reject stale queued runs
         env:
           EXPECTED_SHA: ${{ github.sha }}
@@ -56,6 +58,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Collect maintained apps from developer sources
+        id: collect
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 source_catalog.py --stars-owner loloshilele --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
+      - name: Retry interrupted collection once
+        if: steps.collect.outcome == 'failure'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 source_catalog.py --stars-owner loloshilele --seed apps.json --out _site --base "${{ steps.pages.outputs.base_url }}"
@@ -76,7 +85,7 @@ jobs:
           if failures:
               for item in failures:
                   print('Incomplete repository scan:', item.get('repository'), item.get('status'))
-              raise RuntimeError('Some GitHub repositories failed to scan; keep the previous public source')
+              print('Individual repositories deferred; preserve valid cached apps and publish other updates')
           for item in report.get('sources', []):
               if item.get('repository') and (item.get('status') == 'metadata_failed' or item.get('failures')):
                   print('IPA metadata could not be read; retry in a later run:', item['repository'])
@@ -106,7 +115,7 @@ jobs:
           if head != os.environ['EXPECTED_SHA']:
               raise RuntimeError('Default branch changed during the scan; keep the newer snapshot')
           commit=api('/git/commits/'+head)
-          files=['apps.json','index.html','catalog-report.json']
+          files=['apps.json','index.html','status.html','catalog-report.json']
           tree=api('/git/trees','POST',{'base_tree':commit['tree']['sha'],'tree':[
               {'path':p,'mode':'100644','type':'blob','content':Path('_site',p).read_text(encoding='utf-8')} for p in files]})
           updated=api('/git/commits','POST',{'message':'chore: refresh maintained public IPA apps',
@@ -134,6 +143,8 @@ jobs:
                       status=response.status; data=json.load(response)
                   assert status==200 and data.get('apps')
                   assert data == expected, 'The live source does not match this run'
+                  with urllib.request.urlopen(url.rsplit('/',1)[0]+'/status.html?verify='+str(time.time_ns()),timeout=15) as page:
+                      assert page.status == 200 and '同步状态' in page.read().decode('utf-8')
                   assert data.get('iconURL', '').endswith('/source-icon.jpg')
                   with urllib.request.urlopen(data['iconURL'], timeout=15) as icon:
                       assert icon.status == 200 and icon.read(2) == bytes.fromhex('ffd8')
@@ -144,4 +155,27 @@ jobs:
               except Exception:
                   if attempt==17: raise
                   time.sleep(10)
+          PY
+      - name: Keep diagnosis even when a run fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-diagnosis-${{ github.run_id }}-${{ github.run_attempt }}
+          path: _site/catalog-report.json
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Write synchronization summary
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          report_path=Path('_site/catalog-report.json')
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a',encoding='utf-8') as summary:
+              summary.write('### Source synchronization\n\n')
+              if report_path.exists():
+                  report=json.loads(report_path.read_text(encoding='utf-8'))
+                  summary.write('Apps: '+str(report.get('app_count',0))+'; health: '+str(report.get('health',{}))+'\n')
+              else:
+                  summary.write('No snapshot generated; previous deployment remains available.\n')
           PY
