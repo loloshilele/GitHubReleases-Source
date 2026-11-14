@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T11:36:35.818405+00:00",
+  "generated_at": "2026-11-14T18:17:45.304880+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -308,8 +308,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 35,
-      "eligible_releases": 24,
+      "releases_scanned": 36,
+      "eligible_releases": 25,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -393,7 +393,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 144,
-      "eligible_releases": 48,
+      "eligible_releases": 47,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -619,8 +619,8 @@
     "github_failed": 0,
     "github_included": 7,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-14T11:36:35.818405+00:00",
+    "last_complete_scan_at": "2026-11-14T18:17:45.304880+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43590804106"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43625746173"
 }
