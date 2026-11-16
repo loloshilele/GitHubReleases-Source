@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T06:47:24.284104+00:00",
+  "generated_at": "2026-11-16T17:31:12.071627+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 33
+      "repositories": 50
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,256 @@
           "version": "2.4.4"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/mylazily/ziyuanzhan/releases",
+      "repository": "mylazily/ziyuanzhan",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/haojun19980728-prog/libretv-source-list/releases",
+      "repository": "haojun19980728-prog/libretv-source-list",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/tickmao/Novel/releases",
+      "repository": "tickmao/Novel",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/sxyazi/yazi/releases",
+      "repository": "sxyazi/yazi",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 33,
+      "eligible_releases": 6,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/zed-industries/zed/releases",
+      "repository": "zed-industries/zed",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 1324,
+      "eligible_releases": 121,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/tailscale/tailscale/releases",
+      "repository": "tailscale/tailscale",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 168,
+      "eligible_releases": 28,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/OthmanAdi/planning-with-files/releases",
+      "repository": "OthmanAdi/planning-with-files",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 127,
+      "eligible_releases": 127,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/sickn33/agentic-awesome-skills/releases",
+      "repository": "sickn33/agentic-awesome-skills",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 260,
+      "eligible_releases": 258,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/bloc97/Anime4K/releases",
+      "repository": "bloc97/Anime4K",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 16,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/gotson/komga/releases",
+      "repository": "gotson/komga",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 453,
+      "eligible_releases": 20,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/Kareadita/Kavita/releases",
+      "repository": "Kareadita/Kavita",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 78,
+      "eligible_releases": 6,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/Suwayomi/Suwayomi-Server/releases",
+      "repository": "Suwayomi/Suwayomi-Server",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 65,
+      "eligible_releases": 7,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/hectorqin/reader/releases",
+      "repository": "hectorqin/reader",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/SideStore/SideStore/releases",
+      "repository": "SideStore/SideStore",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 22,
+      "eligible_releases": 3,
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "SideStore",
+          "bundleIdentifier": "com.SideStore.SideStore",
+          "version": "0.7.0-20260911.328+6032424a"
+        }
+      ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/StikDebug/StikDebug/releases",
+      "repository": "StikDebug/StikDebug",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 10,
+      "eligible_releases": 10,
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "StikDebug",
+          "bundleIdentifier": "com.stik.stikdebug",
+          "version": "3.2.2"
+        }
+      ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/seedds/nxnative/releases",
+      "repository": "seedds/nxnative",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 0,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/majd/ipatool/releases",
+      "repository": "majd/ipatool",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 41,
+      "eligible_releases": 9,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -266,8 +516,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 67,
-      "eligible_releases": 67,
+      "releases_scanned": 69,
+      "eligible_releases": 69,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -308,8 +558,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 36,
-      "eligible_releases": 25,
+      "releases_scanned": 38,
+      "eligible_releases": 27,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -612,15 +862,15 @@
       "retained_apps": 0
     }
   ],
-  "app_count": 22,
-  "github_repositories": 33,
+  "app_count": 23,
+  "github_repositories": 50,
   "health": {
-    "github_repositories": 33,
+    "github_repositories": 50,
     "github_failed": 0,
-    "github_included": 7,
+    "github_included": 9,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-16T06:47:24.284104+00:00",
+    "last_complete_scan_at": "2026-11-16T17:31:12.071627+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43819128870"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43919070041"
 }

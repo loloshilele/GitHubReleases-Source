@@ -249,7 +249,7 @@
         {
           "version": "2.3.2",
           "date": "2026-10-28T13:00:00-04:00",
-          "localizedDescription": "This update fixes 503 and -80046 errors when sideloading and refreshing apps.\n\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.",
+          "localizedDescription": "This update fixes 503 and -80046 errors when sideloading and refreshing apps.\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first\n\nPREVIOUS UPDATE\n\nNEW\n\nRandomize Bundle IDs\n• New experimental feature in AltStore’s settings\n• Randomizes bundle IDs for sideloaded apps\n\nIMPROVED\n• Improved error messages for common Remote AltServer connection issues\n\nFIXED\n• Fixed error -80045 when sideloading and refreshing apps\n• Fixed 2FA codes not appearing when signing in (thanks @IgoSzaFIIT!)\n• Fixed \"BGTaskSchedulerErrorDomain error 3\" alert when setting up Remote AltServer on iOS 27+\n• Fixed apps not refreshing in background\n• Fixed asking to sign-in before setting up Remote AltServer",
           "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3_2.ipa",
           "size": 40614848,
           "sha256": "579e7343c911af87c31c31ede646af30f257edc34914ea49e3cd381116ef2189",
@@ -258,7 +258,7 @@
         {
           "version": "2.3.1",
           "date": "2026-10-21T11:00:00-04:00",
-          "localizedDescription": "This update fixes error -80045 when sideloading and refreshing apps.\n\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.",
+          "localizedDescription": "This update fixes error -80045 when sideloading and refreshing apps.\n⚠️ You may need to manually install this update by re-installing AltStore with AltServer. You do NOT need to delete AltStore first.\n\nNEW\nRandomize Bundle IDs\n• New experimental feature in AltStore’s settings\n• Randomizes bundle IDs for sideloaded apps\n\nIMPROVED\n• Improved error messages for common Remote AltServer connection issues\n\nFIXED\n• Fixed error -80045 when sideloading and refreshing apps\n• Fixed 2FA codes not appearing when signing in (thanks @IgoSzaFIIT!)\n• Fixed \"BGTaskSchedulerErrorDomain error 3\" alert when setting up Remote AltServer on iOS 27+\n• Fixed apps not refreshing in background\n• Fixed asking to sign-in before setting up Remote AltServer",
           "downloadURL": "https://cdn.altstore.io/file/altstore/apps/altstore/2_3_1.ipa",
           "size": 40614481,
           "sha256": "30c33e049e35ae164b8f58bca9f73f03b90baa5c091ad35b2b01ecf70b6ddf72",
@@ -361,6 +361,32 @@
       ]
     },
     {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StikDebug",
+      "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+      "iconURL": "https://github.com/StikDebug.png",
+      "versions": [
+        {
+          "version": "3.2.2",
+          "date": "2026-11-08T22:05:57Z",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+          "size": 16924687,
+          "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "StikDebug/StikDebug",
+      "githubAsset": [
+        "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+        16924687,
+        "sha256:2f238d89ba828d41b7830e4b1bae44ee6fd04e50d3d8c0ffe15ad47bd66af170",
+        "2026-11-08T22:07:37Z"
+      ]
+    },
+    {
       "name": "Mona - HRT journal",
       "bundleIdentifier": "com.deliacheminot.mona",
       "developerName": "Délia Cheminot",
@@ -440,52 +466,6 @@
       }
     },
     {
-      "name": "StikDebug",
-      "bundleIdentifier": "com.stik.stikdebug",
-      "developerName": "StikDebug",
-      "subtitle": "On-device JIT enabler and device toolbox.",
-      "localizedDescription": "An on-device debugger and developer toolbox for iOS versions 17.4+ powered by idevice.  Note: Requires LocalDevVPN, cannot be natively used inside LiveContainer to enable JIT for the same LiveContainer.",
-      "iconURL": "https://github.com/StikDebug/StikDebug/blob/main/assets/StikDebug.png?raw=true",
-      "tintColor": "#3B86F7",
-      "screenshots": {
-        "iphone": [
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/home.png"
-          },
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/scripts.png"
-          },
-          {
-            "width": 1290,
-            "height": 2796,
-            "imageURL": "https://stikdebug.xyz/assets/source/settings.png"
-          }
-        ]
-      },
-      "appPermissions": {
-        "entitlements": [],
-        "privacy": {
-          "NSLocalNetworkUsageDescription": "StikDebug needs access to devices on your local network so it can connect to the ip of the target device.",
-          "NSLocationAlwaysAndWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings.",
-          "NSLocationWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your connection. This can be turned off in settings."
-        }
-      },
-      "versions": [
-        {
-          "version": "3.2.2",
-          "date": "2026-11-08",
-          "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\nFull Changelog: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
-          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
-          "size": 16924687,
-          "minOSVersion": "17.4"
-        }
-      ]
-    },
-    {
       "name": "Animeko",
       "bundleIdentifier": "org.animeko.animeko",
       "developerName": "open-ani",
@@ -528,7 +508,7 @@
         }
       ],
       "versionDescription": "• Fixed crash when loading save states on iOS 17\n• Fixed displaying system name in dark text when remapping inputs on iOS 17",
-      "localizedDescription": "Delta is an all-in-one emulator for iOS. Delta builds upon the strengths of its predecessor, GBA4iOS, while expanding to include support for more game systems such as NES, SNES, and N64.\n\nFEATURES\n\nSupported Game Systems\n• Nintendo Entertainment System\n• Super Nintendo Entertainment System\n• Nintendo 64\n• Game Boy (Color)\n• Game Boy Advance\n• Nintendo DS\n• Sega Genesis\n• And plenty more to come!\n\nController Support\n• Supports PS4, PS5, Xbox One S, Xbox Series X, and MFi game controllers.\n• Supports bluetooth (and wired) keyboards, as well as the Apple Smart Keyboard.\n• Completely customize button mappings on a per-system, per-controller basis.\n• Map buttons to special “Quick Save”, “Quick Load,” and “Fast Forward” actions.\n\nSave States\n• Save and load save states for any game from the pause menu.\n• Lock save states to prevent them from being accidentally overwritten.\n• Automatically makes backup save states to ensure you never lose your progress.\n• Support for “Quick Saves,” save states that can be quickly saved/loaded with a single button press (requires external controller).\n\nCheats\n• Supports various types of cheat codes for each supported system:\n• NES: Game Genie\n• SNES: Game Genie, Pro Action Replay\n• N64: GameShark\n• GBC: Game Genie, GameShark\n• GBA: Action Replay, Code Breaker, GameShark\n• DS: Action Replay\n• Genesis: Action Replay, Game Genie\n\nDelta Sync\n• Sync your games, game saves, save states, cheats, controller skins, and controller mappings between devices.\n• View version histories of everything you sync and optionally restore them to earlier versions.\n• Supports both Google Drive and Dropbox.\n\nCustom Controller Skins\n• Beautiful built-in controller skins for all systems.\n• Import controller skins made by others, or even make your own to share with the world!\n• Supports animated buttons for even more immersion when playing games\n\nHold Button\n• Choose buttons for Delta to hold down on your behalf, freeing up your thumbs to press other buttons instead.\n• Perfect for games that typically require one button be held down constantly (ex: run button in Mario games, or the A button in Mario Kart).\n\nFast Forward\n• Speed through slower parts of games by running the game much faster than normal.\n• Easily enable or disable from the pause menu, or optionally with a mapped button on an external controller.\n• Customize speed per-game by long-pressing Fast Forward option in pause menu.\n\n3D/Haptic Touch\n• Use 3D or Haptic Touch to “peek” at games, save states, and cheat codes.\n• App icon shortcuts allow quick access to your most recently played games, or optionally customize the shortcuts to always include certain games.\n\nGame Artwork\n• Automatically displays appropriate box art for imported games.\n• Change a game’s artwork to anything you want, or select from the built-in game artwork database.\n\nRetroAchievements\n• Sign in with your RetroAchievements account to earn achievements in any supported game\n• Supports Hardcore mode, which disables loading save states and using cheats\n• Shows your achievement progress when launching a game\n\nMisc.\n• Gyroscope support (WarioWare: Twisted! only)\n• Microphone support (DS only)\n• Support for delta:// URL scheme to jump directly into a specific game.\n\n**Delta is in no way affiliated with Nintendo or Sega. The name “Nintendo” and all associated game console names are registered trademarks of Nintendo Co., Ltd. The name “Sega” and all associated game console names are registered trademarks of Sega Corporation.**",
+      "localizedDescription": "Delta is an all-in-one emulator for iOS and iPadOS. Delta builds upon the strengths of its predecessor, GBA4iOS, while expanding to include support for more game systems such as NES, SNES, N64, Nintendo DS, and Sega Genesis.\n\nFEATURES\n\nSupported Game Systems\n• Nintendo Entertainment System\n• Super Nintendo Entertainment System\n• Nintendo 64\n• Game Boy (Color)\n• Game Boy Advance\n• Nintendo DS\n• Sega Genesis\n\nOnline Multiplayer\n• Play online-compatible Nintendo DS games with friends around the world!\n• Connect via community Nintendo WFC servers.\n• Choose one of the default servers, or provide a custom DNS.\n\nController Support\n• Nintendo Switch Pro controllers, Joy-Cons\n• Nintendo Switch Online controllers (NES, SNES, N64)\n• PS4, PS5\n• Xbox One S, Xbox Series X\n• MFi game controllers\n• Bluetooth & wired keyboards\n\nRetroAchievements\n• Sign in with your RetroAchievements account to earn achievements in any supported game.\n• Supports Hardcore mode, which disables loading save states and using cheats.\n• Shows your achievement progress when launching a game.\n\nSave States\n• Save and load save states for any game from the pause menu.\n• Lock save states to prevent them from being accidentally overwritten.\n• Automatically makes backup save states to ensure you never lose your progress.\n• Support for “Quick Saves,” save states that can be quickly saved/loaded with a single button press (requires external controller).\n\nCheats\n• Supports various types of cheat codes for each supported system:\n• NES: Game Genie\n• SNES: Game Genie, Pro Action Replay\n• N64: GameShark\n• GBC: Game Genie, GameShark\n• GBA: Action Replay, Code Breaker, GameShark\n• DS: Action Replay\n• Genesis: Action Replay, Game Genie\n\nDelta Sync\n• Sync your games, game saves, save states, cheats, controller skins, and controller mappings between devices.\n• View version histories of everything you sync and optionally restore them to earlier versions.\n• Supports both Google Drive and Dropbox.\n\nCustom Controller Skins\n• Beautiful built-in controller skins for all systems.\n• Import controller skins made by others, or even make your own to share with the world!\n• Supports animated buttons for even more immersion when playing games.\n\nHold Button\n• Choose buttons for Delta to hold down on your behalf, freeing up your thumbs to press other buttons instead.\n• Perfect for games that typically require one button be held down constantly (ex: run button in Mario games, or the A button in Mario Kart).\n\nFast Forward\n• Speed through slower parts of games by running the game much faster than normal.\n• Easily enable or disable from the pause menu, or optionally with a mapped button on an external controller.\n• Customize speed per-game by long-pressing Fast Forward option in pause menu.\n\n3D/Haptic Touch\n• Use 3D or Haptic Touch to “peek” at games, save states, and cheat codes.\n• App icon shortcuts allow quick access to your most recently played games, or optionally customize the shortcuts to always include certain games.\n\nGame Artwork\n• Automatically displays appropriate box art for imported games.\n• Change a game’s artwork to anything you want, or select from the built-in game artwork database.\n\nMisc.\n• Gyroscope support (WarioWare: Twisted! only)\n• Microphone support (DS only)\n• Support for delta:// URL scheme to jump directly into a specific game.\n\nDelta Terms of Use: https://altstore.io/terms\n\n**Delta is in no way affiliated with Nintendo or Sega. The name “Nintendo” and all associated game console names are registered trademarks of Nintendo Co., Ltd. The name “Sega” and all associated game console names are registered trademarks of Sega Corporation.**",
       "iconURL": "https://cdn.altstore.io/file/altstore/images/delta/Delta4.png",
       "tintColor": "8A28F7",
       "category": "games",
@@ -661,6 +641,32 @@
         14753154,
         "sha256:473e28cda194e57434f2a9e3ad26abbc8f9c18784047eb0e931a51b47df8970c",
         "2026-10-16T22:24:47Z"
+      ]
+    },
+    {
+      "name": "SideStore",
+      "bundleIdentifier": "com.SideStore.SideStore",
+      "developerName": "SideStore",
+      "localizedDescription": "## Build Info\r\n\r\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\r\nBuilt at (UTC date): `2026-09-11`\r\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\r\nVersion: `0.7.0-20260911.328+6032424a`\r\n\r\n#### What's Changed:\r\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\r\n\r\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+      "iconURL": "https://github.com/SideStore.png",
+      "versions": [
+        {
+          "version": "0.7.0-20260911.328+6032424a",
+          "date": "2026-09-15T11:12:49Z",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+          "size": 27770821,
+          "localizedDescription": "## Build Info\r\n\r\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\r\nBuilt at (UTC date): `2026-09-11`\r\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\r\nVersion: `0.7.0-20260911.328+6032424a`\r\n\r\n#### What's Changed:\r\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\r\n\r\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+          "isPrerelease": false,
+          "buildVersion": "0700",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "SideStore/SideStore",
+      "githubAsset": [
+        "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+        27770821,
+        "sha256:e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
+        "2026-09-15T11:12:45Z"
       ]
     },
     {
