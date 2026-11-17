@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T13:37:57.966365+00:00",
+  "generated_at": "2026-11-17T23:34:13.242533+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 51
+      "repositories": 52
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,20 @@
           "version": "2.4.4"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/SideloadLabs/EeveeSpotifyReincarnated/releases",
+      "repository": "SideloadLabs/EeveeSpotifyReincarnated",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 2,
+      "eligible_releases": 2,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -240,8 +254,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 260,
-      "eligible_releases": 258,
+      "releases_scanned": 261,
+      "eligible_releases": 259,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -461,7 +475,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 29,
-      "eligible_releases": 18,
+      "eligible_releases": 17,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -536,8 +550,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 70,
-      "eligible_releases": 70,
+      "releases_scanned": 71,
+      "eligible_releases": 71,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -578,8 +592,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 44,
-      "eligible_releases": 33,
+      "releases_scanned": 48,
+      "eligible_releases": 37,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -719,7 +733,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 35,
-      "eligible_releases": 8,
+      "eligible_releases": 7,
       "status": "included",
       "attempts": 1,
       "published_apps": [
@@ -883,14 +897,14 @@
     }
   ],
   "app_count": 24,
-  "github_repositories": 51,
+  "github_repositories": 52,
   "health": {
-    "github_repositories": 51,
+    "github_repositories": 52,
     "github_failed": 0,
     "github_included": 10,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-17T13:37:57.966365+00:00",
+    "last_complete_scan_at": "2026-11-17T23:34:13.242533+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44094577740"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44200434784"
 }
