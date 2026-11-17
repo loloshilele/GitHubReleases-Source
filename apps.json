@@ -5,6 +5,31 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "### 新增\r\n- 脱壳完成后自动弹出分享面板\r\n- 下载改用 SQLite 存储，增量写入\r\n\r\n### 改进\r\n- 代理 / VPN 环境下获取 App 不再长时间卡住：网络失败后自动切换直连重试\r\n",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.6.7",
+          "date": "2026-11-17T11:03:51Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/APP_2.6.7/APP_2.6.7.ipa",
+          "size": 46908635,
+          "localizedDescription": "### 新增\r\n- 脱壳完成后自动弹出分享面板\r\n- 下载改用 SQLite 存储，增量写入\r\n\r\n### 改进\r\n- 代理 / VPN 环境下获取 App 不再长时间卡住：网络失败后自动切换直连重试\r\n",
+          "isPrerelease": false,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/APP_2.6.7/APP_2.6.7.ipa",
+        46908635,
+        "sha256:7e6c48fce6a2ced3a41a759586ff02ff2fb60b266b971cd670d77627a81ce0c0",
+        "2026-11-17T11:01:48Z"
+      ]
+    },
+    {
       "name": "UTM",
       "bundleIdentifier": "com.utmapp.UTM",
       "developerName": "osy",
@@ -58,31 +83,6 @@
         "https://alt.getutm.app/screen4.png",
         "https://alt.getutm.app/screen5.png",
         "https://alt.getutm.app/screen6.png"
-      ]
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "## 2.6.6\r\n\r\n### 修复：硬编码groups导致，个别证书脱壳失败问题\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/590034b4-19c5-42ae-99f9-3064b5430efe\" />\r\n",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.6.6",
-          "date": "2026-11-16T13:50:16Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.6.6/APP_2.6.6.ipa",
-          "size": 45449454,
-          "localizedDescription": "## 2.6.6\r\n\r\n### 修复：硬编码groups导致，个别证书脱壳失败问题\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/590034b4-19c5-42ae-99f9-3064b5430efe\" />\r\n",
-          "isPrerelease": false,
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.6.6/APP_2.6.6.ipa",
-        45449454,
-        "sha256:7ff087c89c67b8f6baa3512efa10f943d0898cebb06b52cefe463e3049cccdab",
-        "2026-11-16T13:45:36Z"
       ]
     },
     {
