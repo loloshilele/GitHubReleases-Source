@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T18:40:37.949650+00:00",
+  "generated_at": "2026-11-17T02:59:08.719499+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -48,7 +48,7 @@
     },
     {
       "url": "https://neoarz.github.io/Countdown-App/Countdown.json",
-      "error": "Expecting property name enclosed in double quotes: line 30 column 9 (char 1746)"
+      "error": "Illegal trailing comma before end of object: line 29 column 25 (char 1736)"
     },
     {
       "url": "https://altstore.oatmealdome.me",
@@ -80,7 +80,7 @@
     },
     {
       "url": "https://alt.thatstel.la/",
-      "error": "Expecting value: line 29 column 13 (char 3558)"
+      "error": "Illegal trailing comma before end of array: line 28 column 112 (char 3544)"
     },
     {
       "url": "https://raw.githubusercontent.com/delia-cheminot/mona-hrt/refs/heads/main/ios_source.json",
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 50
+      "repositories": 51
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -111,6 +111,26 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "version": "2.4.4"
+        }
+      ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/pxx917144686/APP/releases",
+      "repository": "pxx917144686/APP",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 41,
+      "eligible_releases": 17,
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "APP",
+          "bundleIdentifier": "com.pxx917144686.App",
+          "version": "2.6.6"
         }
       ],
       "retained_apps": 0
@@ -862,15 +882,15 @@
       "retained_apps": 0
     }
   ],
-  "app_count": 23,
-  "github_repositories": 50,
+  "app_count": 24,
+  "github_repositories": 51,
   "health": {
-    "github_repositories": 50,
+    "github_repositories": 51,
     "github_failed": 0,
-    "github_included": 9,
+    "github_included": 10,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-16T18:40:37.949650+00:00",
+    "last_complete_scan_at": "2026-11-17T02:59:08.719499+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/43931222019"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44006835105"
 }
