@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T23:34:13.242533+00:00",
+  "generated_at": "2026-11-18T07:42:49.986710+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 52
+      "repositories": 53
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,20 @@
           "version": "2.4.4"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/watsonbox/exportify/releases",
+      "repository": "watsonbox/exportify",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 1,
+      "eligible_releases": 0,
+      "status": "no_recent_release",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -136,15 +150,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 42,
-      "eligible_releases": 18,
+      "releases_scanned": 43,
+      "eligible_releases": 19,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.6.7"
+          "version": "2.6.8"
         }
       ],
       "retained_apps": 0
@@ -421,20 +435,20 @@
       "failures": [],
       "duplicates": [
         {
-          "asset": "iPadn-2.1.3-lite-unsigned.ipa",
+          "asset": "iPadn-2.2.0-lite-unsigned.ipa",
           "bundleIdentifier": "app.local.iPadn",
           "reason": "Same Bundle ID; prefer complete unsigned IPA"
         }
       ],
-      "releases_scanned": 19,
-      "eligible_releases": 19,
+      "releases_scanned": 20,
+      "eligible_releases": 20,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
-          "version": "2.1.3"
+          "version": "2.2.0"
         }
       ],
       "retained_apps": 0
@@ -550,8 +564,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 71,
-      "eligible_releases": 71,
+      "releases_scanned": 73,
+      "eligible_releases": 73,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -592,8 +606,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 48,
-      "eligible_releases": 37,
+      "releases_scanned": 56,
+      "eligible_releases": 45,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -846,8 +860,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 288,
-      "eligible_releases": 146,
+      "releases_scanned": 289,
+      "eligible_releases": 147,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -897,14 +911,14 @@
     }
   ],
   "app_count": 24,
-  "github_repositories": 52,
+  "github_repositories": 53,
   "health": {
-    "github_repositories": 52,
+    "github_repositories": 53,
     "github_failed": 0,
     "github_included": 10,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-17T23:34:13.242533+00:00",
+    "last_complete_scan_at": "2026-11-18T07:42:49.986710+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44200434784"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44260949846"
 }
