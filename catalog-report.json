@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T13:29:19.792111+00:00",
+  "generated_at": "2026-11-19T23:06:40.220028+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -190,11 +190,16 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 45,
-      "eligible_releases": 21,
+      "releases_scanned": 46,
+      "eligible_releases": 22,
       "status": "included",
       "attempts": 1,
       "published_apps": [
+        {
+          "name": "APP",
+          "bundleIdentifier": "app.bamboo3965.leo5976",
+          "version": "2.7.1"
+        },
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
@@ -267,7 +272,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 1328,
-      "eligible_releases": 122,
+      "eligible_releases": 121,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -281,7 +286,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 168,
-      "eligible_releases": 28,
+      "eligible_releases": 27,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -576,8 +581,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 117,
-      "eligible_releases": 116,
+      "releases_scanned": 118,
+      "eligible_releases": 117,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -900,8 +905,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 289,
-      "eligible_releases": 147,
+      "releases_scanned": 291,
+      "eligible_releases": 148,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -950,15 +955,15 @@
       "retained_apps": 0
     }
   ],
-  "app_count": 27,
+  "app_count": 28,
   "github_repositories": 55,
   "health": {
     "github_repositories": 55,
     "github_failed": 0,
     "github_included": 12,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-19T13:29:19.792111+00:00",
+    "last_complete_scan_at": "2026-11-19T23:06:40.220028+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44533828735"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44634676801"
 }

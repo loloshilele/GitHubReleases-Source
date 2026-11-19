@@ -6,6 +6,31 @@
   "apps": [
     {
       "name": "APP",
+      "bundleIdentifier": "app.bamboo3965.leo5976",
+      "developerName": "pxx917144686",
+      "localizedDescription": "### 新增\r\n- 新增：签名功能\r\n",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.7.1",
+          "date": "2026-11-19T16:26:55Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.1/APP_2.7.1.ipa",
+          "size": 51365880,
+          "localizedDescription": "### 新增\r\n- 新增：签名功能\r\n",
+          "isPrerelease": false,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.7.1/APP_2.7.1.ipa",
+        51365880,
+        "sha256:025260c32cbbdb01c3c7d6c229e88d62811db97e097ce626ccb937f66c9117f5",
+        "2026-11-19T18:15:26Z"
+      ]
+    },
+    {
+      "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
       "localizedDescription": "### 新增\r\n- 新增：搜索标签页—“下架应用”搜索入口\r\n- 新增：下载标签页—“脱壳功能日志显示”\r\n\r\n### 改进\r\n- 改进：下载标签页-安装按钮（因为，api.palera.in失效了，换新方法触发安装）",
