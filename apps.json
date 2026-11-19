@@ -5,6 +5,54 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "bundleIdentifier": "eu.pokemmo.client",
+      "developerName": "PokeMMO",
+      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
+      "localizedDescription": "PokeMMO is a free to play mmorpg, come join a growing community as you level up and discover new monsters. Available now on PC, Android, iOS, Mac, and Linux.",
+      "name": "PokeMMO",
+      "screenshotURLs": [
+        "https://pokemmo.com/build/images/screenshot/c.b5d935d8.png",
+        "https://pokemmo.com/build/images/screenshot/b.3a233486.png",
+        "https://pokemmo.com/build/images/screenshot/d.4080dd9c.png",
+        "https://pokemmo.com/build/images/screenshot/e.ed0aa85b.png",
+        "https://pokemmo.com/build/images/screenshot/a.debf11f5.png"
+      ],
+      "tintColor": "73ACE2",
+      "versions": [
+        {
+          "version": "35119",
+          "date": "2026-11-19T01:07:41+00:00",
+          "downloadURL": "https://dl.pokemmo.com/PokeMMO-Client.ipa?r=35119",
+          "size": 133893685
+        }
+      ]
+    },
+    {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "<img width=\"1320\" height=\"1021\" alt=\"image\" src=\"https://github.com/user-attachments/assets/16528a1c-f8f4-4504-847c-a86404e74e9b\" />\r\n",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.6.9",
+          "date": "2026-11-18T18:00:09Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.6.9/APP_2.6.9.ipa",
+          "size": 47223193,
+          "localizedDescription": "<img width=\"1320\" height=\"1021\" alt=\"image\" src=\"https://github.com/user-attachments/assets/16528a1c-f8f4-4504-847c-a86404e74e9b\" />\r\n",
+          "isPrerelease": false,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.6.9/APP_2.6.9.ipa",
+        47223193,
+        "sha256:36aa368d0261f1b8ec35d43ebc5766640402dc7a1333e754b1ebab139d750220",
+        "2026-11-18T18:00:02Z"
+      ]
+    },
+    {
       "name": "pikapika",
       "bundleIdentifier": "opensource.pikapika",
       "developerName": "ComicSparks",
@@ -34,15 +82,15 @@
       "name": "Wax",
       "bundleIdentifier": "opensource.wax",
       "developerName": "ComicSparks",
-      "localizedDescription": "1.3.21",
+      "localizedDescription": "<!--\r\n\r\n- Method 1：[Buy a cup of cappuccino / 买一杯卡布奇诺 / カプチーノを一杯買う / 카푸치노 한 잔 사기 / Comprar una taza de capuchino / Acheter une tasse de cappuccino](https://github.com/niuhuan/crops/releases/tag/v.0.0.1)\r\n\r\n-->\r\n支持了合集\r\n发电功能已经恢复,  订单有一小时到几天延迟 \r\n[用爱发电](https://github.com/niuhuan/crops/releases/tag/v.0.0.1) 限时活动, 填写推荐人, 双方多拿时长\r\n\r\n若在软件里点了“网络加速”买了年费加速器, 并且知道怎么加群, 请联系管理员领取赠送的发电\r\n\r\nThe author will not publish this software’s source code or build artifacts through any channel other than GitHub. This project is provided solely for programming communication and learning purposes. Please comply with all applicable laws and regulations in your jurisdiction. The author assumes no responsibility for any actions or consequences arising from your downloading, using, or distributing the source code or build artifacts of this project; any resulting legal disputes or liabilities shall be borne solely by you.\r\n\r\n作者不会在 GitHub 以外的任何渠道发布本软件的源代码或构建产物。本项目仅用于编程交流与学习之目的。请您遵守所在地适用的法律法规。对于您下载、使用、传播本项目源代码或构建产物所引发的任何行为与后果，作者不承担任何责任；由此产生的任何法律纠纷或责任均由您自行承担。\r\n\r\n作者は、GitHub 以外のいかなる手段でも本ソフトウェアのソースコードまたはビルド成果物を公開しません。本プロジェクトは、プログラミングに関する交流および学習目的のみに提供されます。居住地域で適用される法令を遵守してください。本プロジェクトのソースコードまたはビルド成果物のダウンロード、使用、配布等に起因する一切の行為および結果について、作者は責任を負いません。これにより生じたいかなる法的紛争または責任も、利用者ご自身が負担するものとします。\r\n\r\n작성자는 GitHub 이외의 어떠한 경로로도 본 소프트웨어의 소스 코드 및 빌드 산출물을 배포하지 않습니다. 본 프로젝트는 프로그래밍 교류 및 학습 목적에 한하여 제공됩니다. 거주 지역의 관련 법률 및 규정을 준수하시기 바랍니다. 본 프로젝트의 소스 코드 또는 빌드 산출물을 다운로드, 사용, 배포하는 행위로 인해 발생하는 모든 행위 및 결과에 대해 작성자는 어떠한 책임도 지지 않으며, 이로 인해 발생하는 모든 법적 분쟁 및 책임은 전적으로 사용자 본인에게 있습니다.\r\n\r\nEl autor no publicará el código fuente ni los artefactos de compilación de este software por ningún canal distinto de GitHub. Este proyecto se proporciona únicamente con fines de comunicación y aprendizaje de programación. Cumpla las leyes y normativas aplicables en su jurisdicción. El autor no asume responsabilidad alguna por las acciones o consecuencias derivadas de la descarga, uso o distribución del código fuente o de los artefactos de compilación de este proyecto; cualquier disputa o responsabilidad legal resultante será asumida exclusivamente por usted.\r\n\r\nL’auteur ne publiera pas le code source ni les artefacts de compilation de ce logiciel par un autre canal que GitHub. Ce projet est fourni uniquement à des fins d’échange et d’apprentissage en programmation. Veuillez respecter les lois et réglementations applicables dans votre juridiction. L’auteur décline toute responsabilité quant aux actes ou conséquences résultant du téléchargement, de l’utilisation ou de la diffusion du code source ou des artefacts de compilation de ce projet ; tout litige ou toute responsabilité juridique en découlant sera entièrement à votre charge.\r\n\r\n-----\r\n\r\n882299=\r\n\r\nPlease enter the above content into the application. / 请输入以上内容进入应用程序 / アプリケーションに入るには、上記の内容を入力してください。 / 애플리케이션에 들어가려면 위 내용을 입력하세요. / Para entrar en la aplicación, introduzca el contenido anterior. / Pour accéder à l’application, veuillez saisir le contenu ci-dessus.\r\n\r\n-----\r\n\r\nSupport & contribute / 支持和发电 / 支援と応援 / 지원 및 후원 / Apoyar y contribuir / Soutenir et contribuer\r\n\r\n- Method 2：PATREON\r\n  - SETP 1:  [Join / 入会 / 入会する / 가입 / Unirse / Adhérer](https://www.patreon.com/checkout/niuhuan?rid=9701586)\r\n  - STEP 2: [Link / 绑定 / 連携 / 연결 / Vincular / Lier](https://6ib4vimleel7ljjuf3o6ovevmi0hsekc.lambda-url.us-west-2.on.aws/gen_login_url?scheme=wax)\r\n  -  TIPS: (There may be up to a 1-hour delay. If it shows that you haven't contributed, refresh after a while. After that, it will renew automatically.) If the app cannot be opened automatically, please find the entry at the very bottom of the lightning icon section inside the app. If you have any issues, please open an issue in time. / （可能有最多1小时延迟，如果显示没有发电过一会儿要刷一下，之后就是自动续期了）。若无法自动打开APP，请到软件内闪电图标最下方寻找入口。有问题及时提出issue。 / （最大で1時間程度の遅延が発生する場合があります。発電していないと表示される場合は、しばらくしてから更新してください。その後は自動更新になります。）自動的にアプリを開けない場合は、アプリ内の稲妻アイコンの一番下にある入口をご確認ください。問題があれば、早めに Issue を作成してください。 / (최대 1시간 정도 지연될 수 있습니다. 발전한 적이 없다고 표시되면 잠시 후 새로고침해 보세요. 이후에는 자동 갱신",
       "iconURL": "https://github.com/ComicSparks.png",
       "versions": [
         {
           "version": "1.3.21",
           "date": "2026-11-18T15:20:46Z",
           "downloadURL": "https://github.com/ComicSparks/wax/releases/download/v1.3.21/wax-v1.3.21-ios-nosign.ipa",
-          "size": 16771964,
-          "localizedDescription": "1.3.21",
+          "size": 16783711,
+          "localizedDescription": "<!--\r\n\r\n- Method 1：[Buy a cup of cappuccino / 买一杯卡布奇诺 / カプチーノを一杯買う / 카푸치노 한 잔 사기 / Comprar una taza de capuchino / Acheter une tasse de cappuccino](https://github.com/niuhuan/crops/releases/tag/v.0.0.1)\r\n\r\n-->\r\n支持了合集\r\n发电功能已经恢复,  订单有一小时到几天延迟 \r\n[用爱发电](https://github.com/niuhuan/crops/releases/tag/v.0.0.1) 限时活动, 填写推荐人, 双方多拿时长\r\n\r\n若在软件里点了“网络加速”买了年费加速器, 并且知道怎么加群, 请联系管理员领取赠送的发电\r\n\r\nThe author will not publish this software’s source code or build artifacts through any channel other than GitHub. This project is provided solely for programming communication and learning purposes. Please comply with all applicable laws and regulations in your jurisdiction. The author assumes no responsibility for any actions or consequences arising from your downloading, using, or distributing the source code or build artifacts of this project; any resulting legal disputes or liabilities shall be borne solely by you.\r\n\r\n作者不会在 GitHub 以外的任何渠道发布本软件的源代码或构建产物。本项目仅用于编程交流与学习之目的。请您遵守所在地适用的法律法规。对于您下载、使用、传播本项目源代码或构建产物所引发的任何行为与后果，作者不承担任何责任；由此产生的任何法律纠纷或责任均由您自行承担。\r\n\r\n作者は、GitHub 以外のいかなる手段でも本ソフトウェアのソースコードまたはビルド成果物を公開しません。本プロジェクトは、プログラミングに関する交流および学習目的のみに提供されます。居住地域で適用される法令を遵守してください。本プロジェクトのソースコードまたはビルド成果物のダウンロード、使用、配布等に起因する一切の行為および結果について、作者は責任を負いません。これにより生じたいかなる法的紛争または責任も、利用者ご自身が負担するものとします。\r\n\r\n작성자는 GitHub 이외의 어떠한 경로로도 본 소프트웨어의 소스 코드 및 빌드 산출물을 배포하지 않습니다. 본 프로젝트는 프로그래밍 교류 및 학습 목적에 한하여 제공됩니다. 거주 지역의 관련 법률 및 규정을 준수하시기 바랍니다. 본 프로젝트의 소스 코드 또는 빌드 산출물을 다운로드, 사용, 배포하는 행위로 인해 발생하는 모든 행위 및 결과에 대해 작성자는 어떠한 책임도 지지 않으며, 이로 인해 발생하는 모든 법적 분쟁 및 책임은 전적으로 사용자 본인에게 있습니다.\r\n\r\nEl autor no publicará el código fuente ni los artefactos de compilación de este software por ningún canal distinto de GitHub. Este proyecto se proporciona únicamente con fines de comunicación y aprendizaje de programación. Cumpla las leyes y normativas aplicables en su jurisdicción. El autor no asume responsabilidad alguna por las acciones o consecuencias derivadas de la descarga, uso o distribución del código fuente o de los artefactos de compilación de este proyecto; cualquier disputa o responsabilidad legal resultante será asumida exclusivamente por usted.\r\n\r\nL’auteur ne publiera pas le code source ni les artefacts de compilation de ce logiciel par un autre canal que GitHub. Ce projet est fourni uniquement à des fins d’échange et d’apprentissage en programmation. Veuillez respecter les lois et réglementations applicables dans votre juridiction. L’auteur décline toute responsabilité quant aux actes ou conséquences résultant du téléchargement, de l’utilisation ou de la diffusion du code source ou des artefacts de compilation de ce projet ; tout litige ou toute responsabilité juridique en découlant sera entièrement à votre charge.\r\n\r\n-----\r\n\r\n882299=\r\n\r\nPlease enter the above content into the application. / 请输入以上内容进入应用程序 / アプリケーションに入るには、上記の内容を入力してください。 / 애플리케이션에 들어가려면 위 내용을 입력하세요. / Para entrar en la aplicación, introduzca el contenido anterior. / Pour accéder à l’application, veuillez saisir le contenu ci-dessus.\r\n\r\n-----\r\n\r\nSupport & contribute / 支持和发电 / 支援と応援 / 지원 및 후원 / Apoyar y contribuir / Soutenir et contribuer\r\n\r\n- Method 2：PATREON\r\n  - SETP 1:  [Join / 入会 / 入会する / 가입 / Unirse / Adhérer](https://www.patreon.com/checkout/niuhuan?rid=9701586)\r\n  - STEP 2: [Link / 绑定 / 連携 / 연결 / Vincular / Lier](https://6ib4vimleel7ljjuf3o6ovevmi0hsekc.lambda-url.us-west-2.on.aws/gen_login_url?scheme=wax)\r\n  -  TIPS: (There may be up to a 1-hour delay. If it shows that you haven't contributed, refresh after a while. After that, it will renew automatically.) If the app cannot be opened automatically, please find the entry at the very bottom of the lightning icon section inside the app. If you have any issues, please open an issue in time. / （可能有最多1小时延迟，如果显示没有发电过一会儿要刷一下，之后就是自动续期了）。若无法自动打开APP，请到软件内闪电图标最下方寻找入口。有问题及时提出issue。 / （最大で1時間程度の遅延が発生する場合があります。発電していないと表示される場合は、しばらくしてから更新してください。その後は自動更新になります。）自動的にアプリを開けない場合は、アプリ内の稲妻アイコンの一番下にある入口をご確認ください。問題があれば、早めに Issue を作成してください。 / (최대 1시간 정도 지연될 수 있습니다. 발전한 적이 없다고 표시되면 잠시 후 새로고침해 보세요. 이후에는 자동 갱신",
           "isPrerelease": false,
           "buildVersion": "25",
           "minOSVersion": "13.0"
@@ -51,9 +99,9 @@
       "githubRepository": "ComicSparks/wax",
       "githubAsset": [
         "https://github.com/ComicSparks/wax/releases/download/v1.3.21/wax-v1.3.21-ios-nosign.ipa",
-        16771964,
-        "sha256:0a5bcf80db92d502ed987e5048aab164069bc434a424766751f4dfb735f4ee3f",
-        "2026-11-18T15:30:41Z"
+        16783711,
+        "sha256:b7289977aed2e5038074dc76f117ed89d2c70f82591a94ca8ff4feb916d4ceab",
+        "2026-11-18T23:56:55Z"
       ]
     },
     {
@@ -165,31 +213,6 @@
       ]
     },
     {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 新增，下载页面-右下角“脱壳文件管理器”\r\n- 新增，“台湾繁体中文语言包”+解决台湾Apple ID错误显示美国\r\n- 新增，自定义底部栏顺序功能\r\n\r\n<img width=\"1320\" height=\"1549\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1381b32f-55b8-49ea-a123-61c483d5256d\" />\r\n\r\n<img width=\"1320\" height=\"984\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3339811d-b982-4984-8efd-ad9c36f34045\" />\r\n<img width=\"1320\" height=\"1975\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c392db93-c09c-482e-95d3-59ddd2a9d271\" />\r\n",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.6.8",
-          "date": "2026-11-18T05:10:30Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.6.8/APP_2.6.8.ipa",
-          "size": 47207448,
-          "localizedDescription": "### 新增\r\n- 新增，下载页面-右下角“脱壳文件管理器”\r\n- 新增，“台湾繁体中文语言包”+解决台湾Apple ID错误显示美国\r\n- 新增，自定义底部栏顺序功能\r\n\r\n<img width=\"1320\" height=\"1549\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1381b32f-55b8-49ea-a123-61c483d5256d\" />\r\n\r\n<img width=\"1320\" height=\"984\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3339811d-b982-4984-8efd-ad9c36f34045\" />\r\n<img width=\"1320\" height=\"1975\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c392db93-c09c-482e-95d3-59ddd2a9d271\" />\r\n",
-          "isPrerelease": false,
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.6.8/APP_2.6.8.ipa",
-        47207448,
-        "sha256:673794c543c630c42cc6bd90050afff7ed8ed295f43dc61e164f0170d90afe00",
-        "2026-11-18T05:09:24Z"
-      ]
-    },
-    {
       "name": "Jasmine",
       "bundleIdentifier": "opensource.jasmine",
       "developerName": "ComicSparks",
@@ -213,29 +236,6 @@
         15371835,
         "sha256:583896a7ac20fb72daad331496c97bcedb72722023809dcbd007a313720fbb1c",
         "2026-11-16T08:00:42Z"
-      ]
-    },
-    {
-      "bundleIdentifier": "eu.pokemmo.client",
-      "developerName": "PokeMMO",
-      "iconURL": "https://pokemmo.com/build/images/altstore.f5930b35.png",
-      "localizedDescription": "PokeMMO is a free to play mmorpg, come join a growing community as you level up and discover new monsters. Available now on PC, Android, iOS, Mac, and Linux.",
-      "name": "PokeMMO",
-      "screenshotURLs": [
-        "https://pokemmo.com/build/images/screenshot/c.b5d935d8.png",
-        "https://pokemmo.com/build/images/screenshot/b.3a233486.png",
-        "https://pokemmo.com/build/images/screenshot/d.4080dd9c.png",
-        "https://pokemmo.com/build/images/screenshot/e.ed0aa85b.png",
-        "https://pokemmo.com/build/images/screenshot/a.debf11f5.png"
-      ],
-      "tintColor": "73ACE2",
-      "versions": [
-        {
-          "version": "35061",
-          "date": "2026-11-14T01:06:23+00:00",
-          "downloadURL": "https://dl.pokemmo.com/PokeMMO-Client.ipa?r=35061",
-          "size": 133946930
-        }
       ]
     },
     {

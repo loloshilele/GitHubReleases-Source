@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T17:21:52.689852+00:00",
+  "generated_at": "2026-11-19T01:55:08.787041+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 56
+      "repositories": 55
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -131,26 +131,6 @@
           "name": "pikapika",
           "bundleIdentifier": "opensource.pikapika",
           "version": "1.8.27"
-        }
-      ],
-      "retained_apps": 0
-    },
-    {
-      "url": "https://github.com/ComicSparks/jasmine/releases",
-      "repository": "ComicSparks/jasmine",
-      "accepted": 1,
-      "ipa_assets": 1,
-      "failures": [],
-      "duplicates": [],
-      "releases_scanned": 86,
-      "eligible_releases": 11,
-      "status": "included",
-      "attempts": 1,
-      "published_apps": [
-        {
-          "name": "Jasmine",
-          "bundleIdentifier": "opensource.jasmine",
-          "version": "1.7.24"
         }
       ],
       "retained_apps": 0
@@ -210,15 +190,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 43,
-      "eligible_releases": 19,
+      "releases_scanned": 44,
+      "eligible_releases": 20,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.6.8"
+          "version": "2.6.9"
         }
       ],
       "retained_apps": 0
@@ -286,7 +266,7 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 1325,
+      "releases_scanned": 1328,
       "eligible_releases": 122,
       "status": "no_ipa",
       "attempts": 1,
@@ -328,8 +308,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 261,
-      "eligible_releases": 259,
+      "releases_scanned": 262,
+      "eligible_releases": 260,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -549,7 +529,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 29,
-      "eligible_releases": 17,
+      "eligible_releases": 16,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -596,8 +576,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 113,
-      "eligible_releases": 112,
+      "releases_scanned": 117,
+      "eligible_releases": 116,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -666,8 +646,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 64,
-      "eligible_releases": 53,
+      "releases_scanned": 66,
+      "eligible_releases": 55,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -971,14 +951,14 @@
     }
   ],
   "app_count": 27,
-  "github_repositories": 56,
+  "github_repositories": 55,
   "health": {
-    "github_repositories": 56,
+    "github_repositories": 55,
     "github_failed": 0,
-    "github_included": 13,
+    "github_included": 12,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-18T17:21:52.689852+00:00",
+    "last_complete_scan_at": "2026-11-19T01:55:08.787041+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44357699156"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44440395202"
 }
