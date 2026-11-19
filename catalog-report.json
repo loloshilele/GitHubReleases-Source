@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T01:55:08.787041+00:00",
+  "generated_at": "2026-11-19T13:29:19.792111+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -103,7 +103,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 141,
-      "eligible_releases": 52,
+      "eligible_releases": 50,
       "status": "included",
       "attempts": 1,
       "published_apps": [
@@ -190,15 +190,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 44,
-      "eligible_releases": 20,
+      "releases_scanned": 45,
+      "eligible_releases": 21,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.6.9"
+          "version": "2.7.0"
         }
       ],
       "retained_apps": 0
@@ -646,8 +646,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 66,
-      "eligible_releases": 55,
+      "releases_scanned": 74,
+      "eligible_releases": 63,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -675,7 +675,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 42,
-      "eligible_releases": 9,
+      "eligible_releases": 8,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -731,7 +731,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 144,
-      "eligible_releases": 44,
+      "eligible_releases": 43,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -957,8 +957,8 @@
     "github_failed": 0,
     "github_included": 12,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-19T01:55:08.787041+00:00",
+    "last_complete_scan_at": "2026-11-19T13:29:19.792111+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44440395202"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44533828735"
 }
