@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T23:06:40.220028+00:00",
+  "generated_at": "2026-11-20T07:29:29.358067+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 55
+      "repositories": 56
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,20 @@
           "version": "2.4.4"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/readest/readest/releases",
+      "repository": "readest/readest",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 109,
+      "eligible_releases": 27,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -595,8 +609,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 40,
-      "eligible_releases": 40,
+      "releases_scanned": 42,
+      "eligible_releases": 42,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -609,8 +623,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 73,
-      "eligible_releases": 73,
+      "releases_scanned": 74,
+      "eligible_releases": 74,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -665,8 +679,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 51,
-      "eligible_releases": 43,
+      "releases_scanned": 52,
+      "eligible_releases": 44,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -956,14 +970,14 @@
     }
   ],
   "app_count": 28,
-  "github_repositories": 55,
+  "github_repositories": 56,
   "health": {
-    "github_repositories": 55,
+    "github_repositories": 56,
     "github_failed": 0,
     "github_included": 12,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-19T23:06:40.220028+00:00",
+    "last_complete_scan_at": "2026-11-20T07:29:29.358067+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44634676801"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44695260842"
 }
