@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:27:22.472042+00:00",
+  "generated_at": "2026-11-20T17:02:30.915705+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-20T16:27:22.472042+00:00",
+    "last_complete_scan_at": "2026-11-20T17:02:30.915705+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44773441308"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44779222679"
 }
