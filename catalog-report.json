@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:29:29.358067+00:00",
+  "generated_at": "2026-11-20T16:27:22.472042+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 56
+      "repositories": 58
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -111,6 +111,46 @@
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
           "version": "2.4.4"
+        }
+      ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/ccch1mneyyy/dsh-Go/releases",
+      "repository": "ccch1mneyyy/dsh-Go",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 19,
+      "eligible_releases": 19,
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "DSH Go",
+          "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
+          "version": "1.2.0"
+        }
+      ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/imxieyi/Kernarium/releases",
+      "repository": "imxieyi/Kernarium",
+      "accepted": 1,
+      "ipa_assets": 1,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 2,
+      "eligible_releases": 1,
+      "status": "included",
+      "attempts": 1,
+      "published_apps": [
+        {
+          "name": "Andarium",
+          "bundleIdentifier": "com.imxieyi.andarium",
+          "version": "1.0"
         }
       ],
       "retained_apps": 0
@@ -204,15 +244,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 46,
-      "eligible_releases": 22,
+      "releases_scanned": 47,
+      "eligible_releases": 23,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "app.bamboo3965.leo5976",
-          "version": "2.7.1"
+          "version": "2.7.2"
         },
         {
           "name": "APP",
@@ -285,8 +325,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 1328,
-      "eligible_releases": 121,
+      "releases_scanned": 1330,
+      "eligible_releases": 122,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -494,20 +534,20 @@
       "failures": [],
       "duplicates": [
         {
-          "asset": "iPadn-2.2.1-lite-unsigned.ipa",
+          "asset": "iPadn-2.3.0-lite-unsigned.ipa",
           "bundleIdentifier": "app.local.iPadn",
           "reason": "Same Bundle ID; prefer complete unsigned IPA"
         }
       ],
-      "releases_scanned": 21,
-      "eligible_releases": 21,
+      "releases_scanned": 22,
+      "eligible_releases": 22,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
-          "version": "2.2.1"
+          "version": "2.3.0"
         }
       ],
       "retained_apps": 0
@@ -665,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 74,
-      "eligible_releases": 63,
+      "releases_scanned": 76,
+      "eligible_releases": 65,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -969,15 +1009,15 @@
       "retained_apps": 0
     }
   ],
-  "app_count": 28,
-  "github_repositories": 56,
+  "app_count": 30,
+  "github_repositories": 58,
   "health": {
-    "github_repositories": 56,
+    "github_repositories": 58,
     "github_failed": 0,
-    "github_included": 12,
+    "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-20T07:29:29.358067+00:00",
+    "last_complete_scan_at": "2026-11-20T16:27:22.472042+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44695260842"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44773441308"
 }
