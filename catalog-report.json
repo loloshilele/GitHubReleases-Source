@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T12:48:56.532637+00:00",
+  "generated_at": "2026-11-21T21:43:10.719237+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -423,8 +423,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 65,
-      "eligible_releases": 7,
+      "releases_scanned": 67,
+      "eligible_releases": 9,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -534,20 +534,20 @@
       "failures": [],
       "duplicates": [
         {
-          "asset": "iPadn-2.3.2-lite-unsigned.ipa",
+          "asset": "iPadn-2.3.3-lite-unsigned.ipa",
           "bundleIdentifier": "app.local.iPadn",
           "reason": "Same Bundle ID; prefer complete unsigned IPA"
         }
       ],
-      "releases_scanned": 24,
-      "eligible_releases": 24,
+      "releases_scanned": 25,
+      "eligible_releases": 25,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
-          "version": "2.3.2"
+          "version": "2.3.3"
         }
       ],
       "retained_apps": 0
@@ -705,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 77,
-      "eligible_releases": 66,
+      "releases_scanned": 81,
+      "eligible_releases": 70,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-21T12:48:56.532637+00:00",
+    "last_complete_scan_at": "2026-11-21T21:43:10.719237+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44905718390"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44952933295"
 }
