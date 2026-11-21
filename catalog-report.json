@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T17:02:30.915705+00:00",
+  "generated_at": "2026-11-21T01:36:22.686837+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "url": "https://stikdebug.xyz/index.json",
-      "accepted": 2
+      "accepted": 1
     },
     {
       "url": "https://github.com/LiveContainer/LiveContainer/releases/download/1.0/apps.json",
@@ -122,15 +122,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 19,
-      "eligible_releases": 19,
+      "releases_scanned": 20,
+      "eligible_releases": 20,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "DSH Go",
           "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
-          "version": "1.2.0"
+          "version": "1.3.0"
         }
       ],
       "retained_apps": 0
@@ -244,15 +244,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 47,
-      "eligible_releases": 23,
+      "releases_scanned": 48,
+      "eligible_releases": 24,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "app.bamboo3965.leo5976",
-          "version": "2.7.2"
+          "version": "2.7.3"
         },
         {
           "name": "APP",
@@ -353,8 +353,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 127,
-      "eligible_releases": 127,
+      "releases_scanned": 128,
+      "eligible_releases": 128,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -367,8 +367,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 262,
-      "eligible_releases": 260,
+      "releases_scanned": 263,
+      "eligible_releases": 261,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1009,15 +1009,15 @@
       "retained_apps": 0
     }
   ],
-  "app_count": 30,
+  "app_count": 32,
   "github_repositories": 58,
   "health": {
     "github_repositories": 58,
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-20T17:02:30.915705+00:00",
+    "last_complete_scan_at": "2026-11-21T01:36:22.686837+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44779222679"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/44851099462"
 }
