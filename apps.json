@@ -6,6 +6,116 @@
   "apps": [
     {
       "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "### 新增\r\n- 新增：独立的脱壳功能，标签页。\r\n\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd42423c-adbd-4aca-880d-7000c8e6f399\" />\r\n",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.7.4",
+          "date": "2026-11-21T09:26:56Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
+          "size": 51620712,
+          "localizedDescription": "### 新增\r\n- 新增：独立的脱壳功能，标签页。\r\n\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd42423c-adbd-4aca-880d-7000c8e6f399\" />\r\n",
+          "isPrerelease": false,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
+        51620712,
+        "sha256:2f9f54d5a495366d1dbc04c0aaf0f21affc97624e348da3d2cd82bad9f36bea3",
+        "2026-11-21T09:25:01Z"
+      ]
+    },
+    {
+      "name": "iPadn",
+      "bundleIdentifier": "app.local.iPadn",
+      "developerName": "mengangs",
+      "localizedDescription": "## iPadn 2.3.2\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.2** 修复与体验优化版：全面补全**「已购项目」历史与已下架应用**并大幅提升同步速度，解决切换账号后已购应用图标卡在灰色占位的问题，修复 **TestFlight** 登录误报「暂不支持多个受信任号码」与设备身份缓存失效，并修正深色模式下设置页「可更新」标签看不清的对比度问题。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **完整同步「已购项目」历史记录与已下架应用**\r\n  - 在原有 DMAP 活跃目录同步的基础上，接入 Apple 完整购买历史接口（`/commerce/account/purchases`，自动处理 pod/cookie 握手、401/403 会话静默刷新与多语言购买日期解析），并与 DMAP 结果智能合并，找回大量历史与已下架应用（含俄区等地区已下架应用）。\r\n  - 首次全量历史同步改用 **6 路并发** 拉取（并在列表顶部实时显示 `已完成/总年份` 进度），大幅缩短多年账号等待时间；同步完成后自动记录进度，日常刷新仅增量扫描当年记录，几秒即可完成；右上角菜单亦支持随时手动触发「同步完整购买历史」。\r\n- **修复切换账号后已购列表图标一直加载不出来**\r\n  - 修复切换 Apple 账号后，后台防抖更新商店地区时误中止 `loadOwnedArtwork()` 拉取任务的竞态问题；改为按账号自身地区与 `地区|AppID` 维度去重、单批拉取量由 20 提升至 50，切号进入「已购」页可稳定补齐全部上架应用图标，并保留已有缓存不闪烁。\r\n- **修复 TestFlight 登录误报「暂时无法完成验证」与设备槽失效**\r\n  - 修复过期本地 `iphone` 设备槽缓存触发 `rinfo=67437824` 导致 `no usable iphone identity` 无法继续验证的问题：检测到异常后自动清空过期设备槽并重新向 Apple 申请，仍异常时回退使用新配设备尝试 GSA 登录。\r\n  - 修复前端错误分类将 `\"no usable iphone identity\"` 中的 `\"iphone\"` 误匹配为 `\"phone\"` 而提示「暂不支持选择多个受信任号码」的 Bug。\r\n- **修复深色模式下「可更新」标签白底白字看不清**\r\n  - 修正「账号 › 设置」行右侧更新提示胶囊在深色模式下的前景色（由硬编码白色改为自适应 `UX.onAccent` 配合 `UX.tint`），浅色与深色模式下文字对比度均清晰可辨。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.2-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.2-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.2** is a targeted fix and quality-of-life update: it recovers missing historical & delisted apps in **Purchased** with fast concurrent syncing, fixes purchased app icons getting stuck on gray placeholders after switching accounts, resolves a false **TestFlight** \"multiple trusted phone numbers\" verification error & stale device slot deadlock, and fixes Dark Mode contrast on the Settings update badge. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2.3.1\r\n\r\n- **Complete Purchase History & Delisted App Recovery**\r\n  - Complements the fast DMAP active-catalog sync with Apple's full `/commerce/account/purchases` purchase history endpoint (supporting pod/cookie handshakes, automatic 401/403 silent session refresh, and multi-locale purchase dates), merging both sources so older and delisted apps appear reliably alongside active ones.\r\n  - Uses **6 concurrent workers** with inline year-by-year progress for the initial full-history backfill, then persists sync state so subsequent refreshes only scan the current year incrementally in a few seconds; a **Sync Full Purchase History** option is also available in the top-right menu.\r\n- **Fixed Purchased List Icons Staying Gray After Account Switch**\r\n  - Eliminated a race condition where the debounced storefront-country sync aborted `loadOwnedArtwork()` right after switching accounts, scoped deduplication per storefront (`country|appId`), raised batch size from 20 to 50, and preserved cached icon URLs across history merges.\r\n- **Fixed TestFlight False \"Multiple Trusted Phone Numbers\" Error & Device Provisioning**\r\n  - Automatically wipes and re-provisions stale cached `iphone` device slots returning `rinfo=67437824` (with fallback to the freshly provisioned device instead of deadlocking locally).\r\n  - Tig",
+      "iconURL": "https://github.com/mengangs.png",
+      "versions": [
+        {
+          "version": "2.3.2",
+          "date": "2026-11-21T07:16:08Z",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.3.2/iPadn-2.3.2-unsigned.ipa",
+          "size": 46607676,
+          "localizedDescription": "## iPadn 2.3.2\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.2** 修复与体验优化版：全面补全**「已购项目」历史与已下架应用**并大幅提升同步速度，解决切换账号后已购应用图标卡在灰色占位的问题，修复 **TestFlight** 登录误报「暂不支持多个受信任号码」与设备身份缓存失效，并修正深色模式下设置页「可更新」标签看不清的对比度问题。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **完整同步「已购项目」历史记录与已下架应用**\r\n  - 在原有 DMAP 活跃目录同步的基础上，接入 Apple 完整购买历史接口（`/commerce/account/purchases`，自动处理 pod/cookie 握手、401/403 会话静默刷新与多语言购买日期解析），并与 DMAP 结果智能合并，找回大量历史与已下架应用（含俄区等地区已下架应用）。\r\n  - 首次全量历史同步改用 **6 路并发** 拉取（并在列表顶部实时显示 `已完成/总年份` 进度），大幅缩短多年账号等待时间；同步完成后自动记录进度，日常刷新仅增量扫描当年记录，几秒即可完成；右上角菜单亦支持随时手动触发「同步完整购买历史」。\r\n- **修复切换账号后已购列表图标一直加载不出来**\r\n  - 修复切换 Apple 账号后，后台防抖更新商店地区时误中止 `loadOwnedArtwork()` 拉取任务的竞态问题；改为按账号自身地区与 `地区|AppID` 维度去重、单批拉取量由 20 提升至 50，切号进入「已购」页可稳定补齐全部上架应用图标，并保留已有缓存不闪烁。\r\n- **修复 TestFlight 登录误报「暂时无法完成验证」与设备槽失效**\r\n  - 修复过期本地 `iphone` 设备槽缓存触发 `rinfo=67437824` 导致 `no usable iphone identity` 无法继续验证的问题：检测到异常后自动清空过期设备槽并重新向 Apple 申请，仍异常时回退使用新配设备尝试 GSA 登录。\r\n  - 修复前端错误分类将 `\"no usable iphone identity\"` 中的 `\"iphone\"` 误匹配为 `\"phone\"` 而提示「暂不支持选择多个受信任号码」的 Bug。\r\n- **修复深色模式下「可更新」标签白底白字看不清**\r\n  - 修正「账号 › 设置」行右侧更新提示胶囊在深色模式下的前景色（由硬编码白色改为自适应 `UX.onAccent` 配合 `UX.tint`），浅色与深色模式下文字对比度均清晰可辨。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.2-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.2-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.2** is a targeted fix and quality-of-life update: it recovers missing historical & delisted apps in **Purchased** with fast concurrent syncing, fixes purchased app icons getting stuck on gray placeholders after switching accounts, resolves a false **TestFlight** \"multiple trusted phone numbers\" verification error & stale device slot deadlock, and fixes Dark Mode contrast on the Settings update badge. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2.3.1\r\n\r\n- **Complete Purchase History & Delisted App Recovery**\r\n  - Complements the fast DMAP active-catalog sync with Apple's full `/commerce/account/purchases` purchase history endpoint (supporting pod/cookie handshakes, automatic 401/403 silent session refresh, and multi-locale purchase dates), merging both sources so older and delisted apps appear reliably alongside active ones.\r\n  - Uses **6 concurrent workers** with inline year-by-year progress for the initial full-history backfill, then persists sync state so subsequent refreshes only scan the current year incrementally in a few seconds; a **Sync Full Purchase History** option is also available in the top-right menu.\r\n- **Fixed Purchased List Icons Staying Gray After Account Switch**\r\n  - Eliminated a race condition where the debounced storefront-country sync aborted `loadOwnedArtwork()` right after switching accounts, scoped deduplication per storefront (`country|appId`), raised batch size from 20 to 50, and preserved cached icon URLs across history merges.\r\n- **Fixed TestFlight False \"Multiple Trusted Phone Numbers\" Error & Device Provisioning**\r\n  - Automatically wipes and re-provisions stale cached `iphone` device slots returning `rinfo=67437824` (with fallback to the freshly provisioned device instead of deadlocking locally).\r\n  - Tig",
+          "isPrerelease": false,
+          "buildVersion": "38",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "githubRepository": "mengangs/ipadn",
+      "githubAsset": [
+        "https://github.com/mengangs/ipadn/releases/download/v2.3.2/iPadn-2.3.2-unsigned.ipa",
+        46607676,
+        "sha256:8dbee0642e816d0a3bc72d46b5103bb9d4959c4c699efc8dd0bc1a1e45e01bba",
+        "2026-11-21T07:16:07Z"
+      ]
+    },
+    {
+      "name": "iCube",
+      "bundleIdentifier": "com.joemattiello.iCube",
+      "developerName": "Provenance Emu",
+      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
+      "iconURL": "https://icube-emu.com/icon-1024.png",
+      "tintColor": "#3B82F6",
+      "category": "games",
+      "screenshots": [
+        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
+        "https://icube-emu.com/screenshots/iphone/search.jpg",
+        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "546",
+          "date": "2026-11-21T07:01:24.859Z",
+          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-546/Non-Jailbroken.ipa",
+          "size": 124780512,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "localizedDescription": "- 重新设计播放页的选集与评论面板\r\n- 番剧详情页的评分编辑在窄屏上改为底部面板\r\n- 追番页头部随列表滚动，竖屏可显示更多内容 (#2859)\r\n- 优化 Material 3 Expressive 组件的选中配色与过渡动画\r\n- 精简各页面的说明文案\r\n- 修复 Linux 下部分 NVIDIA 设备画面偏移到左下角的问题 (#2838)\r\n- 修复 Windows 启动后画面偶发拉伸的问题",
+      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
+      "versions": [
+        {
+          "version": "2.4.5",
+          "date": "2026-11-21T05:56:21Z",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.5/Kazumi_ios_2.4.5_no_sign.ipa",
+          "size": 30370674,
+          "localizedDescription": "- 重新设计播放页的选集与评论面板\r\n- 番剧详情页的评分编辑在窄屏上改为底部面板\r\n- 追番页头部随列表滚动，竖屏可显示更多内容 (#2859)\r\n- 优化 Material 3 Expressive 组件的选中配色与过渡动画\r\n- 精简各页面的说明文案\r\n- 修复 Linux 下部分 NVIDIA 设备画面偏移到左下角的问题 (#2838)\r\n- 修复 Windows 启动后画面偶发拉伸的问题",
+          "isPrerelease": false,
+          "buildVersion": "20405",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "Predidit/Kazumi",
+      "githubAsset": [
+        "https://github.com/Predidit/Kazumi/releases/download/2.4.5/Kazumi_ios_2.4.5_no_sign.ipa",
+        30370674,
+        "sha256:29f63290d92c9cb5a4e854972a16e9a3c9d85e7641b6ebbc030b2efa4fae974f",
+        "2026-11-21T05:56:20Z"
+      ]
+    },
+    {
+      "name": "APP",
       "bundleIdentifier": "app.bamboo3965.leo5976",
       "developerName": "pxx917144686",
       "localizedDescription": "### 改进\r\n- 优化UI + 参考Google Chrome 预加载，提升切换速度\r\n",
@@ -28,6 +138,51 @@
         "sha256:7148637b7786492a0e6e79f44583a1c77029bdbe8f738c2ad06d888ef4072d9a",
         "2026-11-21T00:03:49Z"
       ]
+    },
+    {
+      "name": "Provenance Alpha",
+      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
+      "developerName": "Provenance-EMU",
+      "subtitle": "Latest dev builds - test new features early",
+      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "tintColor": "FF6B35",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "3.4.0",
+          "buildVersion": "11285",
+          "marketingVersion": "3.4.0-alpha.20261121.e0f5945",
+          "date": "2026-11-21",
+          "localizedDescription": "Alpha build e0f5945 · 2026-11-21\n\nChanges in this build:\n• feat(sharing): a library's games are a cover grid\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
+          "size": 785330665,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "com.apple.developer.icloud-services"
+          },
+          {
+            "name": "com.apple.developer.icloud-container-identifiers"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Used to discover and connect to local network game servers for netplay."
+          },
+          {
+            "name": "Camera",
+            "usageDescription": "Used to scan QR codes for importing game data."
+          }
+        ]
+      }
     },
     {
       "name": "DSH Go",
@@ -53,65 +208,6 @@
         126020561,
         "sha256:f0e6f32b7d4610d8dfe4de73ba31f059ee3c6a963166560158f5ca1f9d12c15b",
         "2026-11-20T20:35:34Z"
-      ]
-    },
-    {
-      "name": "iPadn",
-      "bundleIdentifier": "app.local.iPadn",
-      "developerName": "mengangs",
-      "localizedDescription": "## iPadn 2.3.0\r\n\r\n**目录 / Contents**：[简体中文](#-官方频道与反馈迁移公告) · [TestFlight 安全与免责](#-testflight-实验性说明安全提示与免责声明) · [English](#english) · [TestFlight Disclaimer](#testflight-experimental-notice-security--disclaimer)\r\n\r\n> **版本跨度说明**：自上一版 GitHub Release（**v2.2.1**）以来，项目在本地完成了 **20+ 次连续功能与稳定性迭代**，现统一合并发布为 **v2.3.0**。本次最大的变化是从零构建并集成了全新的 **TestFlight 模块（实验性）**，同时完善了应用内更新版本选择、本地化名称显示与官方 Telegram 社区体系。\r\n\r\n安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 📢 官方频道与反馈迁移公告\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)（点击加入获取首发布与讨论）\r\n- **发布节奏说明**：iPadn 继续保持**免费开源**，GitHub 仍会同步更新与发布源码；自 **v2.3.0** 起，新版本安装包与源码归档会**优先在官方 Telegram 频道发布**（GitHub 发布略慢一步）。\r\n- **GitHub Issues 停止受理（历史 Issues 保留只读归档）**：由于个人维护精力有限，为提升排查与沟通效率，**GitHub Issues 已停止接受新反馈，原有历史 Issues 仅作只读归档保留**。所有新版本使用交流、TestFlight 问题排查与 BUG 反馈，请统一前往官方 Telegram 频道**对应版本贴文评论区**提交。\r\n\r\n---\r\n\r\n### 🆚 相比 v2.2.1 的核心新增与累积改进\r\n\r\n#### 1. 全新 TestFlight 商店与安装体系（实验性新功能）\r\n- **独立 TestFlight 主页（「账号 › TestFlight」）**：采用原生 Store 风格与动态环境背景，按「测试中 / 平台不兼容 / 以往测试」三栏分类展示，支持搜索、本地化中文名及多账号切换。\r\n- **高速下载、SINF 注入与统一安装协调（`InstallCoordinator`）**：支持实时下载速度与 ETA 进度卡片；自带与账号绑定的 SINF，通过 **原生安装** 可免解密免重签直接运行（亦支持 OTA 或导出保存，安装前自动检测 App Group 权限）。\r\n- **与「下载」「应用包」及本机解密打通**：TestFlight 已下载项目支持自动投影到「下载」列表与专业模式「应用包」页，支持按单个构建区分目录并接入 `FairPlayCore` 解密定位与产物标记。\r\n- **TestFlight 专属网络与诊断（`TFNet`）**：内置「跟随系统 / 强制直连 / 强制代理」三种模式；系统代理异常时自动尝试一次直连旁路；提供 DoH 路径检测、Fake-IP 命中判定、脱敏日志自动轮转与一键复制诊断功能。\r\n- **架构隔离与稳定性加固**：TestFlight（Mac/akd 作用域）与主站 iOS 解密会话严格按 DSID 分离存储，互不串号；全链路通过 `TFInvariants` 与 `StoreContextBuilder` 强校验请求不变量与同源 Cookie。\r\n\r\n#### 2. 应用内更新与全局体验优化\r\n- **应用更新弹窗新增版本选择（`AppUpdateView`）**：发现新版本时可直接切换选择 **标准版 / 精简版**、查看对应体积与变更日志并及时弹窗提醒。\r\n- **中文名称显示与界面细节打磨**：商店列表、TestFlight 详情页、下载管理与专业模式「应用包」列表全面接入本地化名称优先显示，补充包体元数据展示与快捷复制 `Bundle ID` 等细节优化。\r\n- **官方频道直达入口（11 种语言同步）**：在「账号 › 设置 › 支持 iPadn」下方及支持详情页新增官方 Telegram 频道入口（`https://t.me/ipadn_official`），同步更新全部 11 种界面语言说明。\r\n\r\n---\r\n\r\n### ⚠️ TestFlight 实验性说明、安全提示与免责声明\r\n\r\n- **实验性与不稳定性提示**：TestFlight 为本次大跨度重构后推出的**全新实验性功能**。其高度依赖 Apple 服务端接口策略、账号当前测试资格、本地代理/DNS 规则以及设备原生安装配对状态，可能存在登录过期、风控二次验证、个别应用详情解析异常或下载中断等不稳定情况。\r\n- **可见范围与历史构建限制**：受 Apple TestFlight 服务端策略限制，目前仅可下载当前账号拥有测试资格且尚未过期/未移除的活跃 iOS/iPadOS 构建；已过期/已下架的「以往测试」或仅限其他平台（Mac / tvOS / visionOS 等）的构建仅作列表展示，不支持回溯历史 TF 旧版本。\r\n- **安全性与账号使用建议**：\r\n  - 建议优先使用**备用 / 测试 Apple 账号**体验 TestFlight 与第三方接口功能，勿在公共网络分享账号令牌、设备配对文件或未加密备份；\r\n  - 所有账号凭证、Cookie 快照与安装包均**仅保存在用户本地设备**，App 内诊断日志已对密码、Cookie、会话 ID 与代理凭据做严格脱敏处理。\r\n- **免责声明**：iPadn 以 [GPL-2.0-or-later](LICENSE) 开源，仅用于个人技术研究、合法自购应用备份及个人名下获批测试版管理，与 Apple Inc. 无任何关联。用户须自行遵守所在地区法规与 Apple 服务条款；因使用本工具（包括实验性 TestFlight 功能）产生的账号风控、锁定、数据损坏或其它间接损失，开发者不承担任何责任。\r\n\r\n---\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.0-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.0-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n> **Milestone Summary**: Between **v2.2.1** and **v2.3.0**, iPadn went through **20+ accumulated iterations** locally without bumping the public version tag. **v2.3.0** consolidates all of those improvements—led by a brand-new, built-from-scratch **TestFlight hub (Experimental)**, in-app update variant selection, localized app titles, and official Telegram community integration.\r\n\r\nBoth packages are unsigned—please sign with your own tool before installing.\r\n\r\n#### Official Telegram Channel & GitHub Issues Archive Notice\r\n- **Official Telegram Channel**: [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **Open-Source & Release Cadence**: iPadn remains **free and open source**, and GitHub continues to publish source code and releases. Starting from **v2.3.0**, new binaries and source archives are posted to the official Telegram channel first (GitHub follows slightly behind).\r\n- **GitHub Issues Archived (Read-Only)**: Due to limited maintainer bandwidth, **GitHub Issues are now closed to new submissions** while historical issues remain vi",
-      "iconURL": "https://github.com/mengangs.png",
-      "versions": [
-        {
-          "version": "2.3.0",
-          "date": "2026-11-20T12:50:39Z",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.3.0/iPadn-2.3.0-unsigned.ipa",
-          "size": 46432455,
-          "localizedDescription": "## iPadn 2.3.0\r\n\r\n**目录 / Contents**：[简体中文](#-官方频道与反馈迁移公告) · [TestFlight 安全与免责](#-testflight-实验性说明安全提示与免责声明) · [English](#english) · [TestFlight Disclaimer](#testflight-experimental-notice-security--disclaimer)\r\n\r\n> **版本跨度说明**：自上一版 GitHub Release（**v2.2.1**）以来，项目在本地完成了 **20+ 次连续功能与稳定性迭代**，现统一合并发布为 **v2.3.0**。本次最大的变化是从零构建并集成了全新的 **TestFlight 模块（实验性）**，同时完善了应用内更新版本选择、本地化名称显示与官方 Telegram 社区体系。\r\n\r\n安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 📢 官方频道与反馈迁移公告\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)（点击加入获取首发布与讨论）\r\n- **发布节奏说明**：iPadn 继续保持**免费开源**，GitHub 仍会同步更新与发布源码；自 **v2.3.0** 起，新版本安装包与源码归档会**优先在官方 Telegram 频道发布**（GitHub 发布略慢一步）。\r\n- **GitHub Issues 停止受理（历史 Issues 保留只读归档）**：由于个人维护精力有限，为提升排查与沟通效率，**GitHub Issues 已停止接受新反馈，原有历史 Issues 仅作只读归档保留**。所有新版本使用交流、TestFlight 问题排查与 BUG 反馈，请统一前往官方 Telegram 频道**对应版本贴文评论区**提交。\r\n\r\n---\r\n\r\n### 🆚 相比 v2.2.1 的核心新增与累积改进\r\n\r\n#### 1. 全新 TestFlight 商店与安装体系（实验性新功能）\r\n- **独立 TestFlight 主页（「账号 › TestFlight」）**：采用原生 Store 风格与动态环境背景，按「测试中 / 平台不兼容 / 以往测试」三栏分类展示，支持搜索、本地化中文名及多账号切换。\r\n- **高速下载、SINF 注入与统一安装协调（`InstallCoordinator`）**：支持实时下载速度与 ETA 进度卡片；自带与账号绑定的 SINF，通过 **原生安装** 可免解密免重签直接运行（亦支持 OTA 或导出保存，安装前自动检测 App Group 权限）。\r\n- **与「下载」「应用包」及本机解密打通**：TestFlight 已下载项目支持自动投影到「下载」列表与专业模式「应用包」页，支持按单个构建区分目录并接入 `FairPlayCore` 解密定位与产物标记。\r\n- **TestFlight 专属网络与诊断（`TFNet`）**：内置「跟随系统 / 强制直连 / 强制代理」三种模式；系统代理异常时自动尝试一次直连旁路；提供 DoH 路径检测、Fake-IP 命中判定、脱敏日志自动轮转与一键复制诊断功能。\r\n- **架构隔离与稳定性加固**：TestFlight（Mac/akd 作用域）与主站 iOS 解密会话严格按 DSID 分离存储，互不串号；全链路通过 `TFInvariants` 与 `StoreContextBuilder` 强校验请求不变量与同源 Cookie。\r\n\r\n#### 2. 应用内更新与全局体验优化\r\n- **应用更新弹窗新增版本选择（`AppUpdateView`）**：发现新版本时可直接切换选择 **标准版 / 精简版**、查看对应体积与变更日志并及时弹窗提醒。\r\n- **中文名称显示与界面细节打磨**：商店列表、TestFlight 详情页、下载管理与专业模式「应用包」列表全面接入本地化名称优先显示，补充包体元数据展示与快捷复制 `Bundle ID` 等细节优化。\r\n- **官方频道直达入口（11 种语言同步）**：在「账号 › 设置 › 支持 iPadn」下方及支持详情页新增官方 Telegram 频道入口（`https://t.me/ipadn_official`），同步更新全部 11 种界面语言说明。\r\n\r\n---\r\n\r\n### ⚠️ TestFlight 实验性说明、安全提示与免责声明\r\n\r\n- **实验性与不稳定性提示**：TestFlight 为本次大跨度重构后推出的**全新实验性功能**。其高度依赖 Apple 服务端接口策略、账号当前测试资格、本地代理/DNS 规则以及设备原生安装配对状态，可能存在登录过期、风控二次验证、个别应用详情解析异常或下载中断等不稳定情况。\r\n- **可见范围与历史构建限制**：受 Apple TestFlight 服务端策略限制，目前仅可下载当前账号拥有测试资格且尚未过期/未移除的活跃 iOS/iPadOS 构建；已过期/已下架的「以往测试」或仅限其他平台（Mac / tvOS / visionOS 等）的构建仅作列表展示，不支持回溯历史 TF 旧版本。\r\n- **安全性与账号使用建议**：\r\n  - 建议优先使用**备用 / 测试 Apple 账号**体验 TestFlight 与第三方接口功能，勿在公共网络分享账号令牌、设备配对文件或未加密备份；\r\n  - 所有账号凭证、Cookie 快照与安装包均**仅保存在用户本地设备**，App 内诊断日志已对密码、Cookie、会话 ID 与代理凭据做严格脱敏处理。\r\n- **免责声明**：iPadn 以 [GPL-2.0-or-later](LICENSE) 开源，仅用于个人技术研究、合法自购应用备份及个人名下获批测试版管理，与 Apple Inc. 无任何关联。用户须自行遵守所在地区法规与 Apple 服务条款；因使用本工具（包括实验性 TestFlight 功能）产生的账号风控、锁定、数据损坏或其它间接损失，开发者不承担任何责任。\r\n\r\n---\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.0-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.0-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n> **Milestone Summary**: Between **v2.2.1** and **v2.3.0**, iPadn went through **20+ accumulated iterations** locally without bumping the public version tag. **v2.3.0** consolidates all of those improvements—led by a brand-new, built-from-scratch **TestFlight hub (Experimental)**, in-app update variant selection, localized app titles, and official Telegram community integration.\r\n\r\nBoth packages are unsigned—please sign with your own tool before installing.\r\n\r\n#### Official Telegram Channel & GitHub Issues Archive Notice\r\n- **Official Telegram Channel**: [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **Open-Source & Release Cadence**: iPadn remains **free and open source**, and GitHub continues to publish source code and releases. Starting from **v2.3.0**, new binaries and source archives are posted to the official Telegram channel first (GitHub follows slightly behind).\r\n- **GitHub Issues Archived (Read-Only)**: Due to limited maintainer bandwidth, **GitHub Issues are now closed to new submissions** while historical issues remain vi",
-          "isPrerelease": false,
-          "buildVersion": "36",
-          "minOSVersion": "17.0"
-        }
-      ],
-      "githubRepository": "mengangs/ipadn",
-      "githubAsset": [
-        "https://github.com/mengangs/ipadn/releases/download/v2.3.0/iPadn-2.3.0-unsigned.ipa",
-        46432455,
-        "sha256:21af85fa95a3585b2337f28f1cf1dcb84d4c2489810b45daaa6b30e82cda40b3",
-        "2026-11-20T12:50:38Z"
-      ]
-    },
-    {
-      "name": "iCube",
-      "bundleIdentifier": "com.joemattiello.iCube",
-      "developerName": "Provenance Emu",
-      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
-      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
-      "iconURL": "https://icube-emu.com/icon-1024.png",
-      "tintColor": "#3B82F6",
-      "category": "games",
-      "screenshots": [
-        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
-        "https://icube-emu.com/screenshots/iphone/search.jpg",
-        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
-        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "buildVersion": "545",
-          "date": "2026-11-20T10:02:09.180Z",
-          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-545/Non-Jailbroken.ipa",
-          "size": 124781056,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        }
       ]
     },
     {
@@ -189,76 +285,6 @@
           "platform": "iOS",
           "isBeta": true
         }
-      ]
-    },
-    {
-      "name": "Provenance Alpha",
-      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
-      "developerName": "Provenance-EMU",
-      "subtitle": "Latest dev builds - test new features early",
-      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-      "tintColor": "FF6B35",
-      "screenshotURLs": [],
-      "versions": [
-        {
-          "version": "3.4.0",
-          "buildVersion": "11279",
-          "marketingVersion": "3.4.0-alpha.20261120.bedf493",
-          "date": "2026-11-20",
-          "localizedDescription": "Alpha build bedf493 · 2026-11-20\n\nChanges in this build:\n• fix(library): missing ROM recovery works end to end between two devices\n• build(deps): bump mustache from 1.1.1 to 1.1.3 in /Packages/RxRealm in the bundler group across 1 directory (#3821)\n• feat(widgets): add a Continue list of games with a save state\n• fix(metal): keep the main thread free when the layer has no drawable\n• fix(uti): stop claiming pictures and archives as Provenance's own\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
-          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785067349,
-          "minOSVersion": "17.0"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          {
-            "name": "com.apple.security.application-groups"
-          },
-          {
-            "name": "com.apple.developer.icloud-services"
-          },
-          {
-            "name": "com.apple.developer.icloud-container-identifiers"
-          }
-        ],
-        "privacy": [
-          {
-            "name": "LocalNetwork",
-            "usageDescription": "Used to discover and connect to local network game servers for netplay."
-          },
-          {
-            "name": "Camera",
-            "usageDescription": "Used to scan QR codes for importing game data."
-          }
-        ]
-      }
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 新增：搜索标签页—“下架应用”搜索入口\r\n- 新增：下载标签页—“脱壳功能日志显示”\r\n\r\n### 改进\r\n- 改进：下载标签页-安装按钮（因为，api.palera.in失效了，换新方法触发安装）",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.7.0",
-          "date": "2026-11-19T10:05:46Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.0/APP_2.7.0.ipa",
-          "size": 47445644,
-          "localizedDescription": "### 新增\r\n- 新增：搜索标签页—“下架应用”搜索入口\r\n- 新增：下载标签页—“脱壳功能日志显示”\r\n\r\n### 改进\r\n- 改进：下载标签页-安装按钮（因为，api.palera.in失效了，换新方法触发安装）",
-          "isPrerelease": false,
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.7.0/APP_2.7.0.ipa",
-        47445644,
-        "sha256:1ece9fc4ae27e6d4855de84b711403ba3c94819b9822124c1fc2d101ebc397f3",
-        "2026-11-19T10:05:36Z"
       ]
     },
     {
@@ -514,32 +540,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Kazumi",
-      "bundleIdentifier": "com.example.kazumi",
-      "developerName": "Predidit",
-      "localizedDescription": "- 适配 flutter 3.50",
-      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
-      "versions": [
-        {
-          "version": "2.4.4",
-          "date": "2026-11-12T10:27:44Z",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
-          "size": 30341213,
-          "localizedDescription": "- 适配 flutter 3.50",
-          "isPrerelease": false,
-          "buildVersion": "20404",
-          "minOSVersion": "15.0"
-        }
-      ],
-      "githubRepository": "Predidit/Kazumi",
-      "githubAsset": [
-        "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
-        30341213,
-        "sha256:88d1146bf466a7dbbfd3a0649a8b36fb15a10e6186aca8388080c2e94747bfca",
-        "2026-11-12T10:27:42Z"
-      ]
     },
     {
       "name": "AltStore",
