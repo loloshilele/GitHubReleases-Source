@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T16:25:15.835382+00:00",
+  "generated_at": "2026-11-22T20:00:23.755659+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -142,15 +142,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 2,
-      "eligible_releases": 1,
+      "releases_scanned": 3,
+      "eligible_releases": 2,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "Andarium",
           "bundleIdentifier": "com.imxieyi.andarium",
-          "version": "1.0"
+          "version": "1.1"
         }
       ],
       "retained_apps": 0
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-22T16:25:15.835382+00:00",
+    "last_complete_scan_at": "2026-11-22T20:00:23.755659+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45043689411"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45063857161"
 }

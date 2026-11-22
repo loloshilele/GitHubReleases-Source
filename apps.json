@@ -5,6 +5,111 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "Andarium",
+      "bundleIdentifier": "com.imxieyi.andarium",
+      "developerName": "imxieyi",
+      "localizedDescription": "### What's new\r\n- **Root access**: apps you allow in Magisk can now run as root. Turn on Root access on Home, and the next start installs the official Magisk app.\r\n- **AOT**: Android's system libraries now run from code translated ahead of time, so Android runs faster. It is on by default, in Performance on Home.\r\n- **120 Hz**: on a ProMotion iPhone or iPad, Android can now run at 120 Hz for smoother motion, using more battery. It is off until you turn it on in Performance on Home.\r\n- **Add to Home Screen**: on iPhone and iPad with iOS 27, put an Android app's icon on the Home Screen, and open the app from there, from Shortcuts or with Siri.\r\n- **VoiceOver and TalkBack**: Andarium now works with VoiceOver. To hear Android's screen, turn on TalkBack under Accessibility.\r\n- **Frame rate when hot**: Android now lowers the frame rate only when the device is very hot. To keep it even then, set When hot to Full frame rate under Performance.\r\n- **Text messages**: Android can now receive a text message that you write. Choose Send text message… in Settings while Android is running, and it arrives as an incoming text.\r\n- **Update notice**: when a newer version is out, Home tells you and shows how to update. It checks once a day, and you can turn it off in Info.\r\n- **iOS 26**: the app now runs on iOS 26 or later.\r\n- Fixes:\r\n  - Fixed the virtual machine's Wi-Fi dropping briefly when you return to Andarium\r\n  - Fixed face scans failing in some apps that use the front camera\r\n  - Fixed connections hanging after the device moves from Wi-Fi to cellular data\r\n  - Fixed apps failing to reach servers for a while after the network returns\r\n  - VP9 videos now play with the device's hardware decoder\r\n\r\n### Sideloading\r\nYou can sideload the app with [AltStore](https://altstore.io) or [SideStore](https://sidestore.io).\r\n\r\nThe easy way is to add the source, so updates show up in AltStore or SideStore:\r\n\r\n```\r\nhttps://raw.githubusercontent.com/imxieyi/Kernarium/main/sideload/source.json\r\n```\r\n\r\nAlternatively, install the IPA by hand:\r\n\r\n1. Download `Andarium-1.1-16.ipa` on the device. It's about 1 GB.\r\n2. Open AltStore or SideStore, tap `+` in **My Apps** and pick the IPA.\r\n\r\nA few things to know:\r\n\r\n- iOS 26 or later is required.\r\n- The app uses the [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements.\r\n- A free Apple ID works, but the app expires after 7 days and must be refreshed in AltStore or SideStore.\r\n- With a free Apple ID, Android gets less memory. AltStore 2.2 or later keeps the increased memory limit, SideStore doesn't by default. Extended virtual addressing needs a paid developer account.\r\n- JIT is optional and experimental. To use it, assign the universal script to Andarium in [StikDebug](https://github.com/StikDebug/StikDebug) once, then open Andarium from StikDebug.\r\n- To update by hand, install the new IPA with the same Apple ID and the same tool. It replaces the old version and keeps your virtual machine.\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-ca1.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r29.tar.gz**: the accepted Android system release.\r\n- **lineage24-…-r29-aot.tar.gz**: the AOT artifact of that release. Extract both anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261121-los24-r29 --aot-artifact <dir>/lineage24-mainline6.18-4k-20261121-los24-r29-aot`.\r\n",
+      "iconURL": "https://github.com/imxieyi.png",
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2026-11-22T18:45:39Z",
+          "downloadURL": "https://github.com/imxieyi/Kernarium/releases/download/andarium-1.1/Andarium-1.1-16.ipa",
+          "size": 1248669708,
+          "localizedDescription": "### What's new\r\n- **Root access**: apps you allow in Magisk can now run as root. Turn on Root access on Home, and the next start installs the official Magisk app.\r\n- **AOT**: Android's system libraries now run from code translated ahead of time, so Android runs faster. It is on by default, in Performance on Home.\r\n- **120 Hz**: on a ProMotion iPhone or iPad, Android can now run at 120 Hz for smoother motion, using more battery. It is off until you turn it on in Performance on Home.\r\n- **Add to Home Screen**: on iPhone and iPad with iOS 27, put an Android app's icon on the Home Screen, and open the app from there, from Shortcuts or with Siri.\r\n- **VoiceOver and TalkBack**: Andarium now works with VoiceOver. To hear Android's screen, turn on TalkBack under Accessibility.\r\n- **Frame rate when hot**: Android now lowers the frame rate only when the device is very hot. To keep it even then, set When hot to Full frame rate under Performance.\r\n- **Text messages**: Android can now receive a text message that you write. Choose Send text message… in Settings while Android is running, and it arrives as an incoming text.\r\n- **Update notice**: when a newer version is out, Home tells you and shows how to update. It checks once a day, and you can turn it off in Info.\r\n- **iOS 26**: the app now runs on iOS 26 or later.\r\n- Fixes:\r\n  - Fixed the virtual machine's Wi-Fi dropping briefly when you return to Andarium\r\n  - Fixed face scans failing in some apps that use the front camera\r\n  - Fixed connections hanging after the device moves from Wi-Fi to cellular data\r\n  - Fixed apps failing to reach servers for a while after the network returns\r\n  - VP9 videos now play with the device's hardware decoder\r\n\r\n### Sideloading\r\nYou can sideload the app with [AltStore](https://altstore.io) or [SideStore](https://sidestore.io).\r\n\r\nThe easy way is to add the source, so updates show up in AltStore or SideStore:\r\n\r\n```\r\nhttps://raw.githubusercontent.com/imxieyi/Kernarium/main/sideload/source.json\r\n```\r\n\r\nAlternatively, install the IPA by hand:\r\n\r\n1. Download `Andarium-1.1-16.ipa` on the device. It's about 1 GB.\r\n2. Open AltStore or SideStore, tap `+` in **My Apps** and pick the IPA.\r\n\r\nA few things to know:\r\n\r\n- iOS 26 or later is required.\r\n- The app uses the [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements.\r\n- A free Apple ID works, but the app expires after 7 days and must be refreshed in AltStore or SideStore.\r\n- With a free Apple ID, Android gets less memory. AltStore 2.2 or later keeps the increased memory limit, SideStore doesn't by default. Extended virtual addressing needs a paid developer account.\r\n- JIT is optional and experimental. To use it, assign the universal script to Andarium in [StikDebug](https://github.com/StikDebug/StikDebug) once, then open Andarium from StikDebug.\r\n- To update by hand, install the new IPA with the same Apple ID and the same tool. It replaces the old version and keeps your virtual machine.\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-ca1.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r29.tar.gz**: the accepted Android system release.\r\n- **lineage24-…-r29-aot.tar.gz**: the AOT artifact of that release. Extract both anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261121-los24-r29 --aot-artifact <dir>/lineage24-mainline6.18-4k-20261121-los24-r29-aot`.\r\n",
+          "isPrerelease": false,
+          "buildVersion": "16",
+          "minOSVersion": "26.0"
+        }
+      ],
+      "githubRepository": "imxieyi/Kernarium",
+      "githubAsset": [
+        "https://github.com/imxieyi/Kernarium/releases/download/andarium-1.1/Andarium-1.1-16.ipa",
+        1248669708,
+        "sha256:da277dced66f2208299232172168f71add6de4252a2cbb3f63d450626bf20ac7",
+        "2026-11-22T18:43:18Z"
+      ]
+    },
+    {
+      "name": "Mona - HRT journal",
+      "bundleIdentifier": "com.deliacheminot.mona",
+      "developerName": "Délia Cheminot",
+      "subtitle": "Your hormonal journal",
+      "localizedDescription": "Take control of your hormonal health with Mona, the fully local, open-source app designed to help you track, understand, and manage your hormone journey.\n\nWhy Mona is different:\n- Completely private: All your data stays on your device. Nothing is sent to servers.\n- Open source: The app is fully open source, allowing maximum transparency and contributions from the community.\n- Free for life: No subscriptions, no premium features. Mona is free for everyone.\n\nMedication reminders:\n- Add your medication regimens\n- Get detailed info for each upcoming dose (quantity, date, side, missed doses)\n- Receive notifications so you never miss a dose\n\nManage your medication stock efficiently:\n- Keep track of each medication in stock\n- Quantities are automatically updated with each intake\n\nHormone level graphs: \n- For users on estradiol monotherapy, visualize simulated hormone levels over time",
+      "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
+      "tintColor": "#4d0473",
+      "category": "utilities",
+      "screenshots": [
+        "https://i.imgur.com/9lIZ9Ft.png",
+        "https://i.imgur.com/ZxD1twb.png",
+        "https://i.imgur.com/pGfNAcY.png"
+      ],
+      "screenshotURLs": [
+        "https://i.imgur.com/dSOQssK.png",
+        "https://i.imgur.com/vuSqW2l.png",
+        "https://i.imgur.com/5cjzlB0.png"
+      ],
+      "versionDescription": "New:\n\n- New languages: Northern Kurdish, Pashto, Tajik, Turkish.\n\n\nFix:\n\n- The estradiol graph now shows all blood tests.",
+      "versions": [
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.3/mona-1.25.3.ipa",
+          "size": 11956975,
+          "version": "1.25.3",
+          "buildVersion": "36",
+          "date": "2026-11-22T17:36:38Z",
+          "localizedDescription": "New:\n\n- New languages: Northern Kurdish, Pashto, Tajik, Turkish.\n\n\nFix:\n\n- The estradiol graph now shows all blood tests.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.2/mona-1.25.2.ipa",
+          "size": 11882599,
+          "version": "1.25.2",
+          "buildVersion": "35",
+          "date": "2026-11-08T18:20:12Z",
+          "localizedDescription": "Fix:\n\n- Corrected a performance drop in the simulator.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.1/mona-1.25.1.ipa",
+          "size": 11873556,
+          "version": "1.25.1",
+          "buildVersion": "34",
+          "date": "2026-11-07T19:05:25Z",
+          "localizedDescription": "Fix:\r\n\r\n- Reverted the time charts to left-to-right in all languages.\r\n- Minor UI improvements.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.0/mona-1.25.0.ipa",
+          "size": 11876148,
+          "version": "1.25.0",
+          "buildVersion": "33",
+          "date": "2026-11-03T12:53:20Z",
+          "localizedDescription": "New:\r\n\r\n- You can now record labs with data below or above a value.\r\n- New units: ng/L and µg/L.\r\n- New languages: Arabic, Kurdish, Persian, Hebrew, Luri and Dari.\r\n\r\nFix:\r\n\r\n- Corrected wrong time on daily / weekly notifications after DST.\r\n- The estradiol undecylate graph is not cut anymore after 100 days.",
+          "minOSVersion": "13.0"
+        },
+        {
+          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.24.2/mona-1.24.2.ipa",
+          "size": 11848223,
+          "version": "1.24.2",
+          "buildVersion": "32",
+          "date": "2026-10-17T19:47:08Z",
+          "localizedDescription": "New:\r\n\r\n- New language: Basque\r\n\r\nFix:\r\n\r\n- Fixed a bug causing some characters to import badly and the graph to disappear with imported data",
+          "minOSVersion": "13.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.developer.usernotifications.time-sensitive"
+          },
+          {
+            "name": "get-task-allow"
+          }
+        ],
+        "privacy": {}
+      }
+    },
+    {
       "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
@@ -308,32 +413,6 @@
           "downloadURL": "https://dl.pokemmo.com/PokeMMO-Client.ipa?r=35119",
           "size": 133893685
         }
-      ]
-    },
-    {
-      "name": "Andarium",
-      "bundleIdentifier": "com.imxieyi.andarium",
-      "developerName": "imxieyi",
-      "localizedDescription": "### Release IPA\r\nThe IPA must be sideloaded with [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements. It also supports experimental JIT via [StikDebug](https://github.com/StikDebug/StikDebug).\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-vd2.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r28.tar.gz**: the accepted Android system release. Extract it anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261115-los24-r28`.",
-      "iconURL": "https://github.com/imxieyi.png",
-      "versions": [
-        {
-          "version": "1.0",
-          "date": "2026-11-18T19:26:48Z",
-          "downloadURL": "https://github.com/imxieyi/Kernarium/releases/download/1.0b15-release/Andarium-1.0-15.ipa",
-          "size": 1061900449,
-          "localizedDescription": "### Release IPA\r\nThe IPA must be sideloaded with [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements. It also supports experimental JIT via [StikDebug](https://github.com/StikDebug/StikDebug).\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-vd2.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r28.tar.gz**: the accepted Android system release. Extract it anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261115-los24-r28`.",
-          "isPrerelease": false,
-          "buildVersion": "15",
-          "minOSVersion": "27.0"
-        }
-      ],
-      "githubRepository": "imxieyi/Kernarium",
-      "githubAsset": [
-        "https://github.com/imxieyi/Kernarium/releases/download/1.0b15-release/Andarium-1.0-15.ipa",
-        1061900449,
-        "sha256:88327002e554190a6e4e084265bc69a1e097d52352824e5808eb28042b341ddc",
-        "2026-11-18T18:34:51Z"
       ]
     },
     {
@@ -694,85 +773,6 @@
         "sha256:2f238d89ba828d41b7830e4b1bae44ee6fd04e50d3d8c0ffe15ad47bd66af170",
         "2026-11-08T22:07:37Z"
       ]
-    },
-    {
-      "name": "Mona - HRT journal",
-      "bundleIdentifier": "com.deliacheminot.mona",
-      "developerName": "Délia Cheminot",
-      "subtitle": "Your hormonal journal",
-      "localizedDescription": "Take control of your hormonal health with Mona, the fully local, open-source app designed to help you track, understand, and manage your hormone journey.\n\nWhy Mona is different:\n- Completely private: All your data stays on your device. Nothing is sent to servers.\n- Open source: The app is fully open source, allowing maximum transparency and contributions from the community.\n- Free for life: No subscriptions, no premium features. Mona is free for everyone.\n\nMedication reminders:\n- Add your medication regimens\n- Get detailed info for each upcoming dose (quantity, date, side, missed doses)\n- Receive notifications so you never miss a dose\n\nManage your medication stock efficiently:\n- Keep track of each medication in stock\n- Quantities are automatically updated with each intake\n\nHormone level graphs: \n- For users on estradiol monotherapy, visualize simulated hormone levels over time",
-      "iconURL": "https://i.imgur.com/Xb9A1Lh.png",
-      "tintColor": "#4d0473",
-      "category": "utilities",
-      "screenshots": [
-        "https://i.imgur.com/9lIZ9Ft.png",
-        "https://i.imgur.com/ZxD1twb.png",
-        "https://i.imgur.com/pGfNAcY.png"
-      ],
-      "screenshotURLs": [
-        "https://i.imgur.com/dSOQssK.png",
-        "https://i.imgur.com/vuSqW2l.png",
-        "https://i.imgur.com/5cjzlB0.png"
-      ],
-      "versionDescription": "Fix:\n\n- Corrected a performance drop in the simulator.",
-      "versions": [
-        {
-          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.2/mona-1.25.2.ipa",
-          "size": 11882599,
-          "version": "1.25.2",
-          "buildVersion": "35",
-          "date": "2026-11-08T18:20:12Z",
-          "localizedDescription": "Fix:\n\n- Corrected a performance drop in the simulator.",
-          "minOSVersion": "13.0"
-        },
-        {
-          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.1/mona-1.25.1.ipa",
-          "size": 11873556,
-          "version": "1.25.1",
-          "buildVersion": "34",
-          "date": "2026-11-07T19:05:25Z",
-          "localizedDescription": "Fix:\r\n\r\n- Reverted the time charts to left-to-right in all languages.\r\n- Minor UI improvements.",
-          "minOSVersion": "13.0"
-        },
-        {
-          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.25.0/mona-1.25.0.ipa",
-          "size": 11876148,
-          "version": "1.25.0",
-          "buildVersion": "33",
-          "date": "2026-11-03T12:53:20Z",
-          "localizedDescription": "New:\r\n\r\n- You can now record labs with data below or above a value.\r\n- New units: ng/L and µg/L.\r\n- New languages: Arabic, Kurdish, Persian, Hebrew, Luri and Dari.\r\n\r\nFix:\r\n\r\n- Corrected wrong time on daily / weekly notifications after DST.\r\n- The estradiol undecylate graph is not cut anymore after 100 days.",
-          "minOSVersion": "13.0"
-        },
-        {
-          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.24.2/mona-1.24.2.ipa",
-          "size": 11848223,
-          "version": "1.24.2",
-          "buildVersion": "32",
-          "date": "2026-10-17T19:47:08Z",
-          "localizedDescription": "New:\r\n\r\n- New language: Basque\r\n\r\nFix:\r\n\r\n- Fixed a bug causing some characters to import badly and the graph to disappear with imported data",
-          "minOSVersion": "13.0"
-        },
-        {
-          "downloadURL": "https://github.com/mona-hrt/mona/releases/download/v1.24.1/mona-1.24.1.ipa",
-          "size": 11836644,
-          "version": "1.24.1",
-          "buildVersion": "31",
-          "date": "2026-10-10T17:31:50Z",
-          "localizedDescription": "Fix:\r\n\r\n- The chart is now right-to-left in RTL languages",
-          "minOSVersion": "13.0"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          {
-            "name": "com.apple.developer.usernotifications.time-sensitive"
-          },
-          {
-            "name": "get-task-allow"
-          }
-        ],
-        "privacy": {}
-      }
     },
     {
       "name": "Delta",
