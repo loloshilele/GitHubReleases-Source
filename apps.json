@@ -8,51 +8,77 @@
       "name": "iPadn",
       "bundleIdentifier": "app.local.iPadn",
       "developerName": "mengangs",
-      "localizedDescription": "## iPadn 2.3.3\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.3** 全面加固与体验升级版：重点修复下载/领许可时偶发「Apple 暂时无法完成该操作」的协议盲区（补齐 `1008` 会话过期刷新、`-128` 地区自动纠偏、新版条款提示与 HTTP 200 诊断日志）；升级「下载」页多选与统一撤销删除，新增安装包构建 SDK / Xcode 版本速查，修复「应用包」左滑变灰遮罩，并完成一轮覆盖安全脱敏、滚动性能、深浅色对比度与 11 语言本地化的全面审计优化。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **修复 Apple 下载/获取报错「暂时无法完成该操作」与诊断盲区**\r\n  - 补齐 `1008`（设备验证/会话过期）在下载、历史版本票据、领免费许可及 Mac 包路径中的自动刷新与重新登录处理；补充密码已更改（`Your password has changed.`）与账号停用（`Your account is disabled.`）的明确引导。\r\n  - 新增 `-128`（`MZCommerce.CountryMismatch`）自动纠偏：安全校验 Apple 返回的 `resetAndRedirect?dsf=` 商店代码，自动更新账号真实地区并重试，避免 `+86` 手机号或转区账号卡在地区错配。\r\n  - 新增 `buyProductFailure` 新版 App Store 条款（`termsPage`）检测与严格 `purchaseSuccess` 判定，并补全 `buyProduct` 请求参数与 `pod` 路由。\r\n  - 消除诊断盲区：Apple HTTP 200 plist 业务失败现自动写入严格脱敏的 `RequestFailureLog`（仅记录错误码、文档与弹窗标识，零隐私泄露），未知数字错误码亦会附带在提示末尾便于一眼定位。\r\n- **「下载」页多选体验升级与统一撤销删除**\r\n  - 「下载」页多选改为与「应用包」一致的就地勾选交互，同时纳入 **TestFlight** 任务支持全选与批量删除。\r\n  - 常规下载与 TestFlight 删除（单条左滑或批量多选）统一接入 5 秒撤销倒计时栈，点击撤销可一次性恢复全部已删任务与文件。\r\n- **安装包构建 SDK / Xcode 版本速查与交互修复**\r\n  - 下载详情、应用包与 TestFlight 详情新增构建 **SDK 与 Xcode 版本**快捷查看（自动结合 `Info.plist` 与 Mach-O `LC_BUILD_VERSION` 解析）。\r\n  - 修复专业模式「应用包」与「解密记录」列表左滑操作时整行变灰/出现半透明遮罩的问题。\r\n- **安全、性能与多语言体验全面加固**\r\n  - **安全性与稳定性**：加固诊断脱敏与 TestFlight 多账号 Cookie 隔离、强化 `TFSINF` `cryptid` 校验，提升已购历史同步容错并消除页面生命周期竞态。\r\n  - **滚动流畅度**：移除主线程同步磁盘 I/O 与文件扫描，补充图标与元数据缓存，显著提升「下载」「应用包」「已购」「TestFlight」长列表帧率与响应速度。\r\n  - **UI / 无障碍 / 11 语言**：补全 11 种语言本地化与阿拉伯语 RTL 适配，优化深浅色对比度、账号头像自适应灰阶与 TestFlight 统一占位图标。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.3-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.3-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.3** is a comprehensive reliability, performance, and UX refinement release: it fixes opaque \"Apple couldn't complete the operation\" download/purchase errors (`1008` session refresh, `-128` storefront auto-recovery, updated App Store terms detection, and redacted HTTP 200 plist diagnostics), upgrades **Downloads** multi-select and unified 5-second Undo across regular & TestFlight items, adds quick **SDK / Xcode build version** inspection, fixes the gray dimming mask when swiping rows in **Packages**, and ships a full security, smoothness, contrast, and 11-language localization audit. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2.3.2\r\n\r\n- **Fixed Apple Download Errors & Diagnostic Blind Spots**\r\n  - Handles `failureType = 1008` (device verification / session expired) consistently with `2034 / 2042` across downloads, version tickets, free license acquisition, and Mac offers, plus explicit messages for password changes and disabled accounts.\r\n  - Adds strict `-128` (`MZCommerce.CountryMismatch`) storefront auto-correction (`resetAndRedirect?dsf=`) that persists the account's real storefront, retries `buyProduct`, and prevents login echo headers from overwriting corrected storefronts.\r\n  - Detects `buyProductFailure` App Store Terms prompts (`termsPage`), enforces `purchaseSuccess` validation, adds `pod` routing and standard purchase parameters, records redacted metadata for HTTP 200 Apple",
+      "localizedDescription": "## iPadn 2.3.4\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.4** 体验与稳定性全面升级版：全面打通 **TestFlight 实时同步下载、后台断点续传、统一自动安装与灵动岛进度同步**；取消下载页与「应用包」冗余分组并在全应用（含「已解密」「Wi‑Fi 传输」「存储空间」）统一极简单色 TestFlight 图标；重构下载与 TestFlight 暂停/继续及全状态切换弹性形变动效；根治多账号切换反复触发验证码、多手机号 2FA 与 0 应用账号卡顿；统一「应用包」5 秒侧滑撤销与全应用原生居中弹窗、优化本机配对引导，并补齐 App Store 账单/条款报错引导及原生安装 iOS 17.4+ 与局域网防护。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **TestFlight 同步下载、后台续传、自动安装与灵动岛同步**\r\n  - TestFlight 任务在元数据就绪并实际开始下载后，实时同步显示在「下载」页顶部（准备阶段不提前占位）并联动底部「下载」标签角标，下载过程进度环与常规 App Store 下载体验保持一致。\r\n  - 接入后台传输与前台回退保活，支持真暂停/断点续传（`resumeData` 保存、续传不消耗重试次数、CDN 签名过期自动刷新链接）、实时网速/ETA 估算，并联动「全部暂停 / 全部继续」。\r\n  - TestFlight 同步接入「下载完成后自动安装」与统一安装弹窗，移除会话级「已安装」标签与按钮变色残留，安装行为与常规 IPA 完全一致。\r\n  - TestFlight 与普通下载统一接入**灵动岛与锁屏实时活动**，启用高频实时活动更新与后台保活同步，彻底修复退回后台后灵动岛百分比停滞不同步的问题（完成或暂停自动收起）。\r\n- **全应用统一列表/单色 TestFlight 图标与状态切换动效**\r\n  - 「下载」页与「应用包 › 原始 IPA」取消单独的 TestFlight 分组，与普通 IPA 合并排序展示；全应用统一在版本信息行前置极简单色 TestFlight 图标，移除旧蓝色 `TF` 胶囊。\r\n  - 补齐所有关联页面的统一展示与数据联动：**「应用包 › 已解密」**、解密详情、处理记录、正在处理卡片、原始 IPA 详情、安装页、**「Wi‑Fi 传输」**以及**「设置 › 备份与维护 › 存储空间」**（计入总容量、按大小排序并支持侧滑删除）；`DecryptRecord` 持久记录来源标识，删除原始 TF 包后解密产物与记录仍保留 TestFlight 图标。\r\n  - 修复 `AppStoreActionButton` 外层形变动画并统一重构下载页（常规 + TestFlight）、TestFlight 列表与详情页为单一持久操作组件：获取 → 加载旋转弧 → 下载进度环 → 暂停/继续胶囊 → 完成打钩 → 安装全程原地弹性形变，状态文字纵滑切换，进度条颜色在主题色与暂停灰之间柔和过渡。\r\n- **根治切号反复弹验证码、多手机号 2FA 与 0 应用账号**\r\n  - 后台静默已购同步不再反复触发无验证码登录刷新；TestFlight 启动与切换账号优先静默恢复本地会话与 10-cookie 快照，避免误触发系统验证码推送。\r\n  - 完善多受信任手机号 2FA 选择器（单号码自动发送、多号码弹窗选择），修复 2FA 弹窗关闭竞态与验证后瞬时 `503` 重试。\r\n  - 优化 0 应用账号本地缓存加载（0ms 展示空态并遵守刷新冷却），并将 `TFDoh` 探测收紧为 2 秒并发，消除切号和启动时的长阻塞。\r\n- **应用包侧滑撤销、居中弹窗、配对优化与 iOS 17.4+ 防护**\r\n  - 专业模式「应用包」全部 5 类列表项（TestFlight、原始包、独立包、解密产物、孤立产物）左滑删除统一接入 **5 秒原子撤销倒计时**（可完整恢复文件与解密记录）；长按菜单删除与批量删除弹出居中确认弹窗并直删，不再重复倒计时。\r\n  - 全应用所有二次确认弹窗（含退出登录、清除最近搜索、清除历史版本缓存等）统一升级为原生居中 `.alert`，并精简「账号」页移除与底部 Tab 重复的入口。\r\n  - 优化 iOS 27 本机配对引导：将「取消配对」移至导航栏左上角与「打开设置」对称，修正 6 位配对码推送提醒与提示文字换行截断。\r\n  - 扩展 App Store `buyProductFailure` 识别（新增 `3038` 新版条款及 `5111 / 2022 / 3002 / 5062 / 5304` 账单/付款/首次商店设置引导）；为原生安装新增 **iOS 17.4+ 系统版本前置校验与说明**，修复 `RemotePairingPort` 在同局域网多设备时误采对方 `_remotepairing._tcp` 端口的问题，并补齐 `lookup` / `installedApps` 失败阶段诊断日志。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.4-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.4-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.4** is a major UX, motion, and reliability release: it brings real-time **TestFlight download sync, background pause/resume, unified Auto-Install, and live Dynamic Island percentage sync**; merges TestFlight into unified lists across every screen (including Decrypted outputs, Wi‑Fi Transfer, and Storage) with a cohesive monochrome icon; introduces fluid spring morph animations for pause/resume and state changes; eliminates repeated 2FA prompts, multi-phone 2FA races, and 0-app switching stalls; unifies 5-second swipe Undo in Packages with centered native alerts and a polished on-device pairing guide; and adds App Store billing/terms error guidance plus iOS 17.4+ & LAN Bonjour isolation guards for Native Install. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2",
       "iconURL": "https://github.com/mengangs.png",
       "versions": [
         {
-          "version": "2.3.3",
-          "date": "2026-11-21T14:14:24Z",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.3.3/iPadn-2.3.3-unsigned.ipa",
-          "size": 49810722,
-          "localizedDescription": "## iPadn 2.3.3\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.3** 全面加固与体验升级版：重点修复下载/领许可时偶发「Apple 暂时无法完成该操作」的协议盲区（补齐 `1008` 会话过期刷新、`-128` 地区自动纠偏、新版条款提示与 HTTP 200 诊断日志）；升级「下载」页多选与统一撤销删除，新增安装包构建 SDK / Xcode 版本速查，修复「应用包」左滑变灰遮罩，并完成一轮覆盖安全脱敏、滚动性能、深浅色对比度与 11 语言本地化的全面审计优化。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **修复 Apple 下载/获取报错「暂时无法完成该操作」与诊断盲区**\r\n  - 补齐 `1008`（设备验证/会话过期）在下载、历史版本票据、领免费许可及 Mac 包路径中的自动刷新与重新登录处理；补充密码已更改（`Your password has changed.`）与账号停用（`Your account is disabled.`）的明确引导。\r\n  - 新增 `-128`（`MZCommerce.CountryMismatch`）自动纠偏：安全校验 Apple 返回的 `resetAndRedirect?dsf=` 商店代码，自动更新账号真实地区并重试，避免 `+86` 手机号或转区账号卡在地区错配。\r\n  - 新增 `buyProductFailure` 新版 App Store 条款（`termsPage`）检测与严格 `purchaseSuccess` 判定，并补全 `buyProduct` 请求参数与 `pod` 路由。\r\n  - 消除诊断盲区：Apple HTTP 200 plist 业务失败现自动写入严格脱敏的 `RequestFailureLog`（仅记录错误码、文档与弹窗标识，零隐私泄露），未知数字错误码亦会附带在提示末尾便于一眼定位。\r\n- **「下载」页多选体验升级与统一撤销删除**\r\n  - 「下载」页多选改为与「应用包」一致的就地勾选交互，同时纳入 **TestFlight** 任务支持全选与批量删除。\r\n  - 常规下载与 TestFlight 删除（单条左滑或批量多选）统一接入 5 秒撤销倒计时栈，点击撤销可一次性恢复全部已删任务与文件。\r\n- **安装包构建 SDK / Xcode 版本速查与交互修复**\r\n  - 下载详情、应用包与 TestFlight 详情新增构建 **SDK 与 Xcode 版本**快捷查看（自动结合 `Info.plist` 与 Mach-O `LC_BUILD_VERSION` 解析）。\r\n  - 修复专业模式「应用包」与「解密记录」列表左滑操作时整行变灰/出现半透明遮罩的问题。\r\n- **安全、性能与多语言体验全面加固**\r\n  - **安全性与稳定性**：加固诊断脱敏与 TestFlight 多账号 Cookie 隔离、强化 `TFSINF` `cryptid` 校验，提升已购历史同步容错并消除页面生命周期竞态。\r\n  - **滚动流畅度**：移除主线程同步磁盘 I/O 与文件扫描，补充图标与元数据缓存，显著提升「下载」「应用包」「已购」「TestFlight」长列表帧率与响应速度。\r\n  - **UI / 无障碍 / 11 语言**：补全 11 种语言本地化与阿拉伯语 RTL 适配，优化深浅色对比度、账号头像自适应灰阶与 TestFlight 统一占位图标。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.3-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.3-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.3** is a comprehensive reliability, performance, and UX refinement release: it fixes opaque \"Apple couldn't complete the operation\" download/purchase errors (`1008` session refresh, `-128` storefront auto-recovery, updated App Store terms detection, and redacted HTTP 200 plist diagnostics), upgrades **Downloads** multi-select and unified 5-second Undo across regular & TestFlight items, adds quick **SDK / Xcode build version** inspection, fixes the gray dimming mask when swiping rows in **Packages**, and ships a full security, smoothness, contrast, and 11-language localization audit. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2.3.2\r\n\r\n- **Fixed Apple Download Errors & Diagnostic Blind Spots**\r\n  - Handles `failureType = 1008` (device verification / session expired) consistently with `2034 / 2042` across downloads, version tickets, free license acquisition, and Mac offers, plus explicit messages for password changes and disabled accounts.\r\n  - Adds strict `-128` (`MZCommerce.CountryMismatch`) storefront auto-correction (`resetAndRedirect?dsf=`) that persists the account's real storefront, retries `buyProduct`, and prevents login echo headers from overwriting corrected storefronts.\r\n  - Detects `buyProductFailure` App Store Terms prompts (`termsPage`), enforces `purchaseSuccess` validation, adds `pod` routing and standard purchase parameters, records redacted metadata for HTTP 200 Apple",
+          "version": "2.3.4",
+          "date": "2026-11-22T05:56:54Z",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.3.4/iPadn-2.3.4-unsigned.ipa",
+          "size": 49929497,
+          "localizedDescription": "## iPadn 2.3.4\r\n\r\n**目录 / Contents**：[简体中文](#-核心修复与优化) · [TestFlight 说明与免责](#-testflight-实验性说明与免责声明) · [English](#english) · [TestFlight Notice](#testflight-experimental-notice--disclaimer)\r\n\r\n本次为 **v2.3.4** 体验与稳定性全面升级版：全面打通 **TestFlight 实时同步下载、后台断点续传、统一自动安装与灵动岛进度同步**；取消下载页与「应用包」冗余分组并在全应用（含「已解密」「Wi‑Fi 传输」「存储空间」）统一极简单色 TestFlight 图标；重构下载与 TestFlight 暂停/继续及全状态切换弹性形变动效；根治多账号切换反复触发验证码、多手机号 2FA 与 0 应用账号卡顿；统一「应用包」5 秒侧滑撤销与全应用原生居中弹窗、优化本机配对引导，并补齐 App Store 账单/条款报错引导及原生安装 iOS 17.4+ 与局域网防护。安装包均未签名，请使用自用签名工具签名后安装。\r\n\r\n### 🔧 核心修复与优化\r\n\r\n- **TestFlight 同步下载、后台续传、自动安装与灵动岛同步**\r\n  - TestFlight 任务在元数据就绪并实际开始下载后，实时同步显示在「下载」页顶部（准备阶段不提前占位）并联动底部「下载」标签角标，下载过程进度环与常规 App Store 下载体验保持一致。\r\n  - 接入后台传输与前台回退保活，支持真暂停/断点续传（`resumeData` 保存、续传不消耗重试次数、CDN 签名过期自动刷新链接）、实时网速/ETA 估算，并联动「全部暂停 / 全部继续」。\r\n  - TestFlight 同步接入「下载完成后自动安装」与统一安装弹窗，移除会话级「已安装」标签与按钮变色残留，安装行为与常规 IPA 完全一致。\r\n  - TestFlight 与普通下载统一接入**灵动岛与锁屏实时活动**，启用高频实时活动更新与后台保活同步，彻底修复退回后台后灵动岛百分比停滞不同步的问题（完成或暂停自动收起）。\r\n- **全应用统一列表/单色 TestFlight 图标与状态切换动效**\r\n  - 「下载」页与「应用包 › 原始 IPA」取消单独的 TestFlight 分组，与普通 IPA 合并排序展示；全应用统一在版本信息行前置极简单色 TestFlight 图标，移除旧蓝色 `TF` 胶囊。\r\n  - 补齐所有关联页面的统一展示与数据联动：**「应用包 › 已解密」**、解密详情、处理记录、正在处理卡片、原始 IPA 详情、安装页、**「Wi‑Fi 传输」**以及**「设置 › 备份与维护 › 存储空间」**（计入总容量、按大小排序并支持侧滑删除）；`DecryptRecord` 持久记录来源标识，删除原始 TF 包后解密产物与记录仍保留 TestFlight 图标。\r\n  - 修复 `AppStoreActionButton` 外层形变动画并统一重构下载页（常规 + TestFlight）、TestFlight 列表与详情页为单一持久操作组件：获取 → 加载旋转弧 → 下载进度环 → 暂停/继续胶囊 → 完成打钩 → 安装全程原地弹性形变，状态文字纵滑切换，进度条颜色在主题色与暂停灰之间柔和过渡。\r\n- **根治切号反复弹验证码、多手机号 2FA 与 0 应用账号**\r\n  - 后台静默已购同步不再反复触发无验证码登录刷新；TestFlight 启动与切换账号优先静默恢复本地会话与 10-cookie 快照，避免误触发系统验证码推送。\r\n  - 完善多受信任手机号 2FA 选择器（单号码自动发送、多号码弹窗选择），修复 2FA 弹窗关闭竞态与验证后瞬时 `503` 重试。\r\n  - 优化 0 应用账号本地缓存加载（0ms 展示空态并遵守刷新冷却），并将 `TFDoh` 探测收紧为 2 秒并发，消除切号和启动时的长阻塞。\r\n- **应用包侧滑撤销、居中弹窗、配对优化与 iOS 17.4+ 防护**\r\n  - 专业模式「应用包」全部 5 类列表项（TestFlight、原始包、独立包、解密产物、孤立产物）左滑删除统一接入 **5 秒原子撤销倒计时**（可完整恢复文件与解密记录）；长按菜单删除与批量删除弹出居中确认弹窗并直删，不再重复倒计时。\r\n  - 全应用所有二次确认弹窗（含退出登录、清除最近搜索、清除历史版本缓存等）统一升级为原生居中 `.alert`，并精简「账号」页移除与底部 Tab 重复的入口。\r\n  - 优化 iOS 27 本机配对引导：将「取消配对」移至导航栏左上角与「打开设置」对称，修正 6 位配对码推送提醒与提示文字换行截断。\r\n  - 扩展 App Store `buyProductFailure` 识别（新增 `3038` 新版条款及 `5111 / 2022 / 3002 / 5062 / 5304` 账单/付款/首次商店设置引导）；为原生安装新增 **iOS 17.4+ 系统版本前置校验与说明**，修复 `RemotePairingPort` 在同局域网多设备时误采对方 `_remotepairing._tcp` 端口的问题，并补齐 `lookup` / `installedApps` 失败阶段诊断日志。\r\n\r\n---\r\n\r\n### 📢 官方频道与反馈说明\r\n\r\n- **官方 Telegram 频道**：👉 [**https://t.me/ipadn_official**](https://t.me/ipadn_official)\r\n- **GitHub Issues 仅保留只读归档**：新版安装包与源码优先在官方 Telegram 频道发布；使用问题、排障与 Bug 反馈请直接前往频道**对应版本贴文评论区**提交。\r\n\r\n### ⚠️ TestFlight 实验性说明与免责声明\r\n\r\n- **实验性功能提醒**：TestFlight 下载与原生安装为 `v2.3.x` 系列推出的**实验性功能**，受 Apple 服务端策略、账号当前有效 Beta 资格、本地网络/代理与本机配对影响，建议先使用备用 Apple 账号体验，勿分享配对文件、令牌或完整备份；详细用法与排障指南见 [README — TestFlight 实验性新功能](README.md#testflight-实验性新功能)。\r\n- **免责声明**：iPadn 基于 [GPL-2.0-or-later](LICENSE) 开源，仅限个人合法备份、授权测试与技术研究，与 Apple Inc. 无关；因使用本工具带来的账号风控或数据风险由使用者自行承担。\r\n\r\n### 📦 安装包与签名源\r\n\r\n- `iPadn-2.3.4-unsigned.ipa`：标准版，含实时活动（灵动岛、锁屏进度）与桌面小组件扩展，签名需要 2 个 App ID。\r\n- `iPadn-2.3.4-lite-unsigned.ipa`：精简版，移除扩展，只需 1 个 App ID；不提供实时活动或小组件，其他功能完全一致。\r\n- SideStore、AltStore、Feather 等签名工具可添加源：`https://raw.githubusercontent.com/mengangs/ipadn/main/altstore-source.json`。\r\n\r\n---\r\n\r\n### English\r\n\r\n**v2.3.4** is a major UX, motion, and reliability release: it brings real-time **TestFlight download sync, background pause/resume, unified Auto-Install, and live Dynamic Island percentage sync**; merges TestFlight into unified lists across every screen (including Decrypted outputs, Wi‑Fi Transfer, and Storage) with a cohesive monochrome icon; introduces fluid spring morph animations for pause/resume and state changes; eliminates repeated 2FA prompts, multi-phone 2FA races, and 0-app switching stalls; unifies 5-second swipe Undo in Packages with centered native alerts and a polished on-device pairing guide; and adds App Store billing/terms error guidance plus iOS 17.4+ & LAN Bonjour isolation guards for Native Install. Both packages are unsigned—sign with your own tool before installing.\r\n\r\n#### Fixes & Improvements Since v2",
           "isPrerelease": false,
-          "buildVersion": "39",
+          "buildVersion": "40",
           "minOSVersion": "16.0"
         }
       ],
       "githubRepository": "mengangs/ipadn",
       "githubAsset": [
-        "https://github.com/mengangs/ipadn/releases/download/v2.3.3/iPadn-2.3.3-unsigned.ipa",
-        49810722,
-        "sha256:edcc810ae3360bab13744c53496c5f7cb7a4f5f3283f9d0c33736533cdc56f74",
-        "2026-11-21T14:52:30Z"
+        "https://github.com/mengangs/ipadn/releases/download/v2.3.4/iPadn-2.3.4-unsigned.ipa",
+        49929497,
+        "sha256:9e03156799f0f8f7b69d2c3927d93f5cca4f87feab5786008cdf7a60602688e6",
+        "2026-11-22T06:14:48Z"
+      ]
+    },
+    {
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "localizedDescription": "- 修复 Bangumi 同步无法使用的问题",
+      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
+      "versions": [
+        {
+          "version": "2.4.6",
+          "date": "2026-11-22T05:42:23Z",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.6/Kazumi_ios_2.4.6_no_sign.ipa",
+          "size": 30369553,
+          "localizedDescription": "- 修复 Bangumi 同步无法使用的问题",
+          "isPrerelease": false,
+          "buildVersion": "20406",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "Predidit/Kazumi",
+      "githubAsset": [
+        "https://github.com/Predidit/Kazumi/releases/download/2.4.6/Kazumi_ios_2.4.6_no_sign.ipa",
+        30369553,
+        "sha256:11f56776543e9c7ce65704c649311f3af77916da8b3de9d3f32cb48971d5b641",
+        "2026-11-22T05:42:22Z"
       ]
     },
     {
       "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 新增：独立的脱壳功能，标签页。\r\n\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd42423c-adbd-4aca-880d-7000c8e6f399\" />\r\n",
+      "localizedDescription": "### 新增\r\n- 操作声音功能和开关\r\n\r\n### 修改\r\n- 修改解决：签名功能-导入证书文件问题\r\n\r\n",
       "iconURL": "https://github.com/pxx917144686.png",
       "versions": [
         {
-          "version": "2.7.4",
-          "date": "2026-11-21T09:26:56Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
-          "size": 51620712,
-          "localizedDescription": "### 新增\r\n- 新增：独立的脱壳功能，标签页。\r\n\r\n<img width=\"1320\" height=\"2868\" alt=\"image\" src=\"https://github.com/user-attachments/assets/cd42423c-adbd-4aca-880d-7000c8e6f399\" />\r\n",
+          "version": "2.7.5",
+          "date": "2026-11-22T01:00:48Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
+          "size": 51685905,
+          "localizedDescription": "### 新增\r\n- 操作声音功能和开关\r\n\r\n### 修改\r\n- 修改解决：签名功能-导入证书文件问题\r\n\r\n",
           "isPrerelease": false,
           "minOSVersion": "17.4"
         }
       ],
       "githubRepository": "pxx917144686/APP",
       "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.7.4/APP_2.7.4.ipa",
-        51620712,
-        "sha256:2f9f54d5a495366d1dbc04c0aaf0f21affc97624e348da3d2cd82bad9f36bea3",
-        "2026-11-21T09:25:01Z"
+        "https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
+        51685905,
+        "sha256:20930cc8b707818b1fcac05afc2b857fdc6e405feb9537f074c38fc491a1c044",
+        "2026-11-22T02:13:12Z"
       ]
     },
     {
@@ -78,7 +104,7 @@
         {
           "version": "1.0.0",
           "buildVersion": "546",
-          "date": "2026-11-21T07:01:24.859Z",
+          "date": "2026-11-22T00:12:40.397Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
           "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-546/Non-Jailbroken.ipa",
           "size": 124780512,
@@ -86,32 +112,6 @@
           "platform": "iOS",
           "isBeta": true
         }
-      ]
-    },
-    {
-      "name": "Kazumi",
-      "bundleIdentifier": "com.example.kazumi",
-      "developerName": "Predidit",
-      "localizedDescription": "- 重新设计播放页的选集与评论面板\r\n- 番剧详情页的评分编辑在窄屏上改为底部面板\r\n- 追番页头部随列表滚动，竖屏可显示更多内容 (#2859)\r\n- 优化 Material 3 Expressive 组件的选中配色与过渡动画\r\n- 精简各页面的说明文案\r\n- 修复 Linux 下部分 NVIDIA 设备画面偏移到左下角的问题 (#2838)\r\n- 修复 Windows 启动后画面偶发拉伸的问题",
-      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
-      "versions": [
-        {
-          "version": "2.4.5",
-          "date": "2026-11-21T05:56:21Z",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.5/Kazumi_ios_2.4.5_no_sign.ipa",
-          "size": 30370674,
-          "localizedDescription": "- 重新设计播放页的选集与评论面板\r\n- 番剧详情页的评分编辑在窄屏上改为底部面板\r\n- 追番页头部随列表滚动，竖屏可显示更多内容 (#2859)\r\n- 优化 Material 3 Expressive 组件的选中配色与过渡动画\r\n- 精简各页面的说明文案\r\n- 修复 Linux 下部分 NVIDIA 设备画面偏移到左下角的问题 (#2838)\r\n- 修复 Windows 启动后画面偶发拉伸的问题",
-          "isPrerelease": false,
-          "buildVersion": "20405",
-          "minOSVersion": "15.0"
-        }
-      ],
-      "githubRepository": "Predidit/Kazumi",
-      "githubAsset": [
-        "https://github.com/Predidit/Kazumi/releases/download/2.4.5/Kazumi_ios_2.4.5_no_sign.ipa",
-        30370674,
-        "sha256:29f63290d92c9cb5a4e854972a16e9a3c9d85e7641b6ebbc030b2efa4fae974f",
-        "2026-11-21T05:56:20Z"
       ]
     },
     {
@@ -185,32 +185,6 @@
       }
     },
     {
-      "name": "DSH Go",
-      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
-      "developerName": "ccch1mneyyy",
-      "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
-      "iconURL": "https://github.com/ccch1mneyyy.png",
-      "versions": [
-        {
-          "version": "1.3.0",
-          "date": "2026-11-20T20:04:40Z",
-          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
-          "size": 126020561,
-          "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
-          "isPrerelease": false,
-          "buildVersion": "1",
-          "minOSVersion": "15.0"
-        }
-      ],
-      "githubRepository": "ccch1mneyyy/dsh-Go",
-      "githubAsset": [
-        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
-        126020561,
-        "sha256:f0e6f32b7d4610d8dfe4de73ba31f059ee3c6a963166560158f5ca1f9d12c15b",
-        "2026-11-20T20:35:34Z"
-      ]
-    },
-    {
       "name": "iFly",
       "bundleIdentifier": "com.provenance.ifly",
       "developerName": "Provenance Emu",
@@ -230,6 +204,17 @@
         "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1795244554",
+          "buildVersion": "1795244554",
+          "date": "2026-11-21",
+          "localizedDescription": "iFly 1.0.0 (build 1795244554) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795244554/iFly-1.0.0-1795244554.ipa",
+          "size": 137000808,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1795170836",
           "buildVersion": "1795170836",
@@ -273,18 +258,33 @@
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795156210",
-          "buildVersion": "1795156210",
-          "date": "2026-11-20",
-          "localizedDescription": "iFly 1.0.0 (build 1795156210) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795156210/iFly-1.0.0-1795156210.ipa",
-          "size": 136592814,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
         }
+      ]
+    },
+    {
+      "name": "DSH Go",
+      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
+      "developerName": "ccch1mneyyy",
+      "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
+      "iconURL": "https://github.com/ccch1mneyyy.png",
+      "versions": [
+        {
+          "version": "1.3.0",
+          "date": "2026-11-20T20:04:40Z",
+          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
+          "size": 126020561,
+          "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "ccch1mneyyy/dsh-Go",
+      "githubAsset": [
+        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
+        126020561,
+        "sha256:f0e6f32b7d4610d8dfe4de73ba31f059ee3c6a963166560158f5ca1f9d12c15b",
+        "2026-11-20T20:35:34Z"
       ]
     },
     {
