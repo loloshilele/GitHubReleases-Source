@@ -5,6 +5,31 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "### 新增\r\n- 设置-版本号\r\n\r\n### 修改\r\n- 修改解决：修改导致产生脱壳问题。",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.7.6",
+          "date": "2026-11-22T12:23:00Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
+          "size": 51719504,
+          "localizedDescription": "### 新增\r\n- 设置-版本号\r\n\r\n### 修改\r\n- 修改解决：修改导致产生脱壳问题。",
+          "isPrerelease": false,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
+        51719504,
+        "sha256:b7e2255bb58e00f992ca7af36099f0990904c025a518f9653e866f313aa47a19",
+        "2026-11-22T12:21:20Z"
+      ]
+    },
+    {
       "name": "iPadn",
       "bundleIdentifier": "app.local.iPadn",
       "developerName": "mengangs",
@@ -54,31 +79,6 @@
         30369553,
         "sha256:11f56776543e9c7ce65704c649311f3af77916da8b3de9d3f32cb48971d5b641",
         "2026-11-22T05:42:22Z"
-      ]
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 操作声音功能和开关\r\n\r\n### 修改\r\n- 修改解决：签名功能-导入证书文件问题\r\n\r\n",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.7.5",
-          "date": "2026-11-22T01:00:48Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
-          "size": 51685905,
-          "localizedDescription": "### 新增\r\n- 操作声音功能和开关\r\n\r\n### 修改\r\n- 修改解决：签名功能-导入证书文件问题\r\n\r\n",
-          "isPrerelease": false,
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.7.5/APP_2.7.5.ipa",
-        51685905,
-        "sha256:20930cc8b707818b1fcac05afc2b857fdc6e405feb9537f074c38fc491a1c044",
-        "2026-11-22T02:13:12Z"
       ]
     },
     {
