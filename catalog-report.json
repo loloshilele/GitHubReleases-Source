@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T14:55:15.178446+00:00",
+  "generated_at": "2026-11-23T21:46:26.326932+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -244,15 +244,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 52,
-      "eligible_releases": 28,
+      "releases_scanned": 53,
+      "eligible_releases": 29,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.7.6"
+          "version": "2.7.8"
         },
         {
           "name": "APP",
@@ -326,7 +326,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 1330,
-      "eligible_releases": 122,
+      "eligible_releases": 121,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -534,20 +534,20 @@
       "failures": [],
       "duplicates": [
         {
-          "asset": "iPadn-2.3.4-lite-unsigned.ipa",
+          "asset": "iPadn-2.3.5-lite-unsigned.ipa",
           "bundleIdentifier": "app.local.iPadn",
           "reason": "Same Bundle ID; prefer complete unsigned IPA"
         }
       ],
-      "releases_scanned": 26,
-      "eligible_releases": 26,
+      "releases_scanned": 27,
+      "eligible_releases": 27,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "iPadn",
           "bundleIdentifier": "app.local.iPadn",
-          "version": "2.3.4"
+          "version": "2.3.5"
         }
       ],
       "retained_apps": 0
@@ -790,7 +790,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 144,
-      "eligible_releases": 42,
+      "eligible_releases": 41,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-23T14:55:15.178446+00:00",
+    "last_complete_scan_at": "2026-11-23T21:46:26.326932+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45199239613"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45272916904"
 }
