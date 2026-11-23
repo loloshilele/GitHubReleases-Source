@@ -5,6 +5,84 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "iCube",
+      "bundleIdentifier": "com.joemattiello.iCube",
+      "developerName": "Provenance Emu",
+      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
+      "iconURL": "https://icube-emu.com/icon-1024.png",
+      "tintColor": "#3B82F6",
+      "category": "games",
+      "screenshots": [
+        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
+        "https://icube-emu.com/screenshots/iphone/search.jpg",
+        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "549",
+          "date": "2026-11-23T04:40:46.676Z",
+          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-549/Non-Jailbroken.ipa",
+          "size": 124817949,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
+      ]
+    },
+    {
+      "name": "Provenance Alpha",
+      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
+      "developerName": "Provenance-EMU",
+      "subtitle": "Latest dev builds - test new features early",
+      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "tintColor": "FF6B35",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "3.4.0",
+          "buildVersion": "11295",
+          "marketingVersion": "3.4.0-alpha.20261123.8b6e86d",
+          "date": "2026-11-23",
+          "localizedDescription": "Alpha build 8b6e86d · 2026-11-23\n\nChanges in this build:\n• feat(bezels): built-in TVs cover the screen, with a seat setting\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
+          "size": 785817338,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "com.apple.developer.icloud-services"
+          },
+          {
+            "name": "com.apple.developer.icloud-container-identifiers"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Used to discover and connect to local network game servers for netplay."
+          },
+          {
+            "name": "Camera",
+            "usageDescription": "Used to scan QR codes for importing game data."
+          }
+        ]
+      }
+    },
+    {
       "name": "Andarium",
       "bundleIdentifier": "com.imxieyi.andarium",
       "developerName": "imxieyi",
@@ -187,39 +265,6 @@
       ]
     },
     {
-      "name": "iCube",
-      "bundleIdentifier": "com.joemattiello.iCube",
-      "developerName": "Provenance Emu",
-      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
-      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
-      "iconURL": "https://icube-emu.com/icon-1024.png",
-      "tintColor": "#3B82F6",
-      "category": "games",
-      "screenshots": [
-        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
-        "https://icube-emu.com/screenshots/iphone/search.jpg",
-        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
-        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "buildVersion": "546",
-          "date": "2026-11-22T04:11:26.804Z",
-          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-546/Non-Jailbroken.ipa",
-          "size": 124780512,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        }
-      ]
-    },
-    {
       "name": "iFly",
       "bundleIdentifier": "com.provenance.ifly",
       "developerName": "Provenance Emu",
@@ -239,6 +284,17 @@
         "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
       ],
       "versions": [
+        {
+          "version": "1.0.0+1795380446",
+          "buildVersion": "1795380446",
+          "date": "2026-11-22",
+          "localizedDescription": "iFly 1.0.0 (build 1795380446) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795380446/iFly-1.0.0-1795380446.ipa",
+          "size": 138020193,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
         {
           "version": "1.0.0+1795306860",
           "buildVersion": "1795306860",
@@ -282,17 +338,6 @@
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795158816",
-          "buildVersion": "1795158816",
-          "date": "2026-11-20",
-          "localizedDescription": "iFly 1.0.0 (build 1795158816) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795158816/iFly-1.0.0-1795158816.ipa",
-          "size": 136685811,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
         }
       ]
     },
@@ -320,51 +365,6 @@
         "sha256:7148637b7786492a0e6e79f44583a1c77029bdbe8f738c2ad06d888ef4072d9a",
         "2026-11-21T00:03:49Z"
       ]
-    },
-    {
-      "name": "Provenance Alpha",
-      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
-      "developerName": "Provenance-EMU",
-      "subtitle": "Latest dev builds - test new features early",
-      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-      "tintColor": "FF6B35",
-      "screenshotURLs": [],
-      "versions": [
-        {
-          "version": "3.4.0",
-          "buildVersion": "11285",
-          "marketingVersion": "3.4.0-alpha.20261121.e0f5945",
-          "date": "2026-11-21",
-          "localizedDescription": "Alpha build e0f5945 · 2026-11-21\n\nChanges in this build:\n• feat(sharing): a library's games are a cover grid\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
-          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785330665,
-          "minOSVersion": "17.0"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          {
-            "name": "com.apple.security.application-groups"
-          },
-          {
-            "name": "com.apple.developer.icloud-services"
-          },
-          {
-            "name": "com.apple.developer.icloud-container-identifiers"
-          }
-        ],
-        "privacy": [
-          {
-            "name": "LocalNetwork",
-            "usageDescription": "Used to discover and connect to local network game servers for netplay."
-          },
-          {
-            "name": "Camera",
-            "usageDescription": "Used to scan QR codes for importing game data."
-          }
-        ]
-      }
     },
     {
       "name": "DSH Go",
