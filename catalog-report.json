@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T09:52:54.719917+00:00",
+  "generated_at": "2026-11-23T14:55:15.178446+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -244,8 +244,8 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 51,
-      "eligible_releases": 27,
+      "releases_scanned": 52,
+      "eligible_releases": 28,
       "status": "included",
       "attempts": 1,
       "published_apps": [
@@ -635,8 +635,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 119,
-      "eligible_releases": 118,
+      "releases_scanned": 120,
+      "eligible_releases": 119,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -705,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 83,
-      "eligible_releases": 70,
+      "releases_scanned": 85,
+      "eligible_releases": 72,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -959,7 +959,7 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 292,
+      "releases_scanned": 293,
       "eligible_releases": 149,
       "status": "no_ipa",
       "attempts": 1,
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-23T09:52:54.719917+00:00",
+    "last_complete_scan_at": "2026-11-23T14:55:15.178446+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45150889348"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45199239613"
 }

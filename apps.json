@@ -5,6 +5,32 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "### 新增\r\n- 设置-灵动岛\r\n- iPhone小组件\r\n<img width=\"1320\" height=\"1102\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4a88a839-a110-457e-b557-fc5b0f4a6efc\" />\r\n<img width=\"1320\" height=\"1566\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f1fd8479-1324-46ed-85b2-9ff898d7ecac\" />\r\n",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.7.6",
+          "date": "2026-11-23T13:24:18Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.7/APP_2.7.7.ipa",
+          "size": 52032407,
+          "localizedDescription": "### 新增\r\n- 设置-灵动岛\r\n- iPhone小组件\r\n<img width=\"1320\" height=\"1102\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4a88a839-a110-457e-b557-fc5b0f4a6efc\" />\r\n<img width=\"1320\" height=\"1566\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f1fd8479-1324-46ed-85b2-9ff898d7ecac\" />\r\n",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.7.7/APP_2.7.7.ipa",
+        52032407,
+        "sha256:b76efcfd67e18c28d77af8becc388e09e147d0924d5938c855906058d0daa898",
+        "2026-11-23T13:22:39Z"
+      ]
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
@@ -26,11 +52,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "549",
-          "date": "2026-11-23T04:40:46.676Z",
+          "buildVersion": "554",
+          "date": "2026-11-23T11:41:03.398Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-549/Non-Jailbroken.ipa",
-          "size": 124817949,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-554/Non-Jailbroken.ipa",
+          "size": 124824232,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -49,12 +75,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11295",
-          "marketingVersion": "3.4.0-alpha.20261123.8b6e86d",
+          "buildVersion": "11298",
+          "marketingVersion": "3.4.0-alpha.20261123.b85aa52",
           "date": "2026-11-23",
-          "localizedDescription": "Alpha build 8b6e86d · 2026-11-23\n\nChanges in this build:\n• feat(bezels): built-in TVs cover the screen, with a seat setting\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build b85aa52 · 2026-11-23\n\nChanges in this build:\n• fix(input): computer systems boot with a working mouse and keyboard\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785817338,
+          "size": 785938084,
           "minOSVersion": "17.0"
         }
       ],
@@ -186,31 +212,6 @@
         ],
         "privacy": {}
       }
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 设置-版本号\r\n\r\n### 修改\r\n- 修改解决：修改导致产生脱壳问题。",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.7.6",
-          "date": "2026-11-22T12:23:00Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
-          "size": 51719504,
-          "localizedDescription": "### 新增\r\n- 设置-版本号\r\n\r\n### 修改\r\n- 修改解决：修改导致产生脱壳问题。",
-          "isPrerelease": false,
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.7.6/APP_2.7.6.ipa",
-        51719504,
-        "sha256:b7e2255bb58e00f992ca7af36099f0990904c025a518f9653e866f313aa47a19",
-        "2026-11-22T12:21:20Z"
-      ]
     },
     {
       "name": "iPadn",
