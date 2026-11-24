@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T00:54:49.301293+00:00",
+  "generated_at": "2026-11-24T02:57:29.083837+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 58
+      "repositories": 59
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,20 @@
           "version": "2.4.6"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/nickrunning/wechat-selkies/releases",
+      "repository": "nickrunning/wechat-selkies",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 14,
+      "eligible_releases": 12,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -395,8 +409,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 453,
-      "eligible_releases": 20,
+      "releases_scanned": 454,
+      "eligible_releases": 21,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1010,14 +1024,14 @@
     }
   ],
   "app_count": 32,
-  "github_repositories": 58,
+  "github_repositories": 59,
   "health": {
-    "github_repositories": 58,
+    "github_repositories": 59,
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-24T00:54:49.301293+00:00",
+    "last_complete_scan_at": "2026-11-24T02:57:29.083837+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45300898821"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45316013919"
 }
