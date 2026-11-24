@@ -5,18 +5,51 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "iCube",
+      "bundleIdentifier": "com.joemattiello.iCube",
+      "developerName": "Provenance Emu",
+      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
+      "iconURL": "https://icube-emu.com/icon-1024.png",
+      "tintColor": "#3B82F6",
+      "category": "games",
+      "screenshots": [
+        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
+        "https://icube-emu.com/screenshots/iphone/search.jpg",
+        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
+        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
+        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "buildVersion": "572",
+          "date": "2026-11-24T10:16:17.524Z",
+          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-572/Non-Jailbroken.ipa",
+          "size": 125003184,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
+      ]
+    },
+    {
       "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
-      "localizedDescription": "### 新增\r\n- 签名-签名证书ID-小组件、大组件WE、网络扩展NE\r\n<img width=\"1320\" height=\"2682\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f2fa7b23-ebf5-423a-9cc6-27c64a1a1e5e\" />\r\n<img width=\"1320\" height=\"925\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c531538f-4e30-4eee-b0c3-c3ef04195955\" />\r\n",
+      "localizedDescription": "### 改进\r\n- 改进细节",
       "iconURL": "https://github.com/pxx917144686.png",
       "versions": [
         {
-          "version": "2.7.8",
-          "date": "2026-11-23T17:51:40Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.8/APP_2.7.8.ipa",
-          "size": 52109129,
-          "localizedDescription": "### 新增\r\n- 签名-签名证书ID-小组件、大组件WE、网络扩展NE\r\n<img width=\"1320\" height=\"2682\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f2fa7b23-ebf5-423a-9cc6-27c64a1a1e5e\" />\r\n<img width=\"1320\" height=\"925\" alt=\"image\" src=\"https://github.com/user-attachments/assets/c531538f-4e30-4eee-b0c3-c3ef04195955\" />\r\n",
+          "version": "2.7.9",
+          "date": "2026-11-24T08:21:55Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.7.9/APP_2.7.9.ipa",
+          "size": 52208989,
+          "localizedDescription": "### 改进\r\n- 改进细节",
           "isPrerelease": false,
           "buildVersion": "1",
           "minOSVersion": "17.4"
@@ -24,10 +57,132 @@
       ],
       "githubRepository": "pxx917144686/APP",
       "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.7.8/APP_2.7.8.ipa",
-        52109129,
-        "sha256:fa9ae2bee5898537f188eb1c45ffe9fdbe25bec6b742bc2c108b81a7ab222418",
-        "2026-11-23T17:49:38Z"
+        "https://github.com/pxx917144686/APP/releases/download/2.7.9/APP_2.7.9.ipa",
+        52208989,
+        "sha256:ffa5ad7acb1c356ca234343454826a2be8c4e4becad60968899b36fe088b4066",
+        "2026-11-24T08:21:49Z"
+      ]
+    },
+    {
+      "name": "Provenance Alpha",
+      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
+      "developerName": "Provenance-EMU",
+      "subtitle": "Latest dev builds - test new features early",
+      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
+      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
+      "tintColor": "FF6B35",
+      "screenshotURLs": [],
+      "versions": [
+        {
+          "version": "3.4.0",
+          "buildVersion": "11309",
+          "marketingVersion": "3.4.0-alpha.20261124.155c5b7",
+          "date": "2026-11-24",
+          "localizedDescription": "Alpha build 155c5b7 · 2026-11-24\n\nChanges in this build:\n• build(deps): bump iCube to SkinKit 0.7.0 pin\n• build(deps): SkinKit 0.7.0\n• bump dolphin\n• [Agent] fix(tvos): the bezel strip works with the Siri Remote (#3828)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
+          "size": 786197447,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          {
+            "name": "com.apple.security.application-groups"
+          },
+          {
+            "name": "com.apple.developer.icloud-services"
+          },
+          {
+            "name": "com.apple.developer.icloud-container-identifiers"
+          }
+        ],
+        "privacy": [
+          {
+            "name": "LocalNetwork",
+            "usageDescription": "Used to discover and connect to local network game servers for netplay."
+          },
+          {
+            "name": "Camera",
+            "usageDescription": "Used to scan QR codes for importing game data."
+          }
+        ]
+      }
+    },
+    {
+      "name": "iFly",
+      "bundleIdentifier": "com.provenance.ifly",
+      "developerName": "Provenance Emu",
+      "subtitle": "Dreamcast Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
+      "iconURL": "https://ifly-emu.com/icon-1024.png",
+      "tintColor": "#ff6900",
+      "category": "games",
+      "screenshots": [
+        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
+        "https://ifly-emu.com/screenshots/iphone/search.jpg",
+        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
+      ],
+      "versions": [
+        {
+          "version": "1.0.0+1795506073",
+          "buildVersion": "1795506073",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795506073) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795506073/iFly-1.0.0-1795506073.ipa",
+          "size": 96534586,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795505392",
+          "buildVersion": "1795505392",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795505392) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795505392/iFly-1.0.0-1795505392.ipa",
+          "size": 138073964,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795493898",
+          "buildVersion": "1795493898",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795493898) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795493898/iFly-1.0.0-1795493898.ipa",
+          "size": 138062126,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795491787",
+          "buildVersion": "1795491787",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795491787) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795491787/iFly-1.0.0-1795491787.ipa",
+          "size": 138045447,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795489899",
+          "buildVersion": "1795489899",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795489899) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795489899/iFly-1.0.0-1795489899.ipa",
+          "size": 138028032,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        }
       ]
     },
     {
@@ -55,84 +210,6 @@
         "sha256:87fbae3a85be6a9dfea945e6697a19de87c18cb73f04aa2bad358986bdb9d7a3",
         "2026-11-23T15:22:42Z"
       ]
-    },
-    {
-      "name": "iCube",
-      "bundleIdentifier": "com.joemattiello.iCube",
-      "developerName": "Provenance Emu",
-      "subtitle": "GameCube & Wii Emulator for iOS & tvOS",
-      "localizedDescription": "Experience classic Nintendo GameCube and Wii games on your iOS devices and Apple TV. Built on the proven Dolphin emulator foundation.\n\nFeatures:\n• Full GameCube and Wii emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\niCube is a fork of DolphiniOS, optimized for iOS and tvOS devices.",
-      "iconURL": "https://icube-emu.com/icon-1024.png",
-      "tintColor": "#3B82F6",
-      "category": "games",
-      "screenshots": [
-        "https://icube-emu.com/screenshots/2026-11/iphone/play.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/library.jpg",
-        "https://icube-emu.com/screenshots/2026-11/iphone/trinitron.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-light.jpg",
-        "https://icube-emu.com/screenshots/iphone/search.jpg",
-        "https://icube-emu.com/screenshots/iphone/emulation.jpg",
-        "https://icube-emu.com/screenshots/iphone/library-dark.jpg",
-        "https://icube-emu.com/screenshots/iphone/shaders.jpg"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "buildVersion": "554",
-          "date": "2026-11-23T11:41:03.398Z",
-          "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-554/Non-Jailbroken.ipa",
-          "size": 124824232,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        }
-      ]
-    },
-    {
-      "name": "Provenance Alpha",
-      "bundleIdentifier": "org.provenance-emu.provenance.alpha",
-      "developerName": "Provenance-EMU",
-      "subtitle": "Latest dev builds - test new features early",
-      "localizedDescription": "Alpha builds of Provenance from the develop branch. These builds include the latest features and fixes but may contain bugs. Install alongside the stable version to test new features without losing your stable install.\n\nSupports 60+ retro gaming systems including NES, SNES, N64, Genesis, PlayStation, GBA, and many more.",
-      "iconURL": "https://raw.githubusercontent.com/Provenance-Emu/Provenance/develop/Provenance/Resources/Assets.xcassets/AppIcon.appiconset/iTunesArtwork%402x.png",
-      "tintColor": "FF6B35",
-      "screenshotURLs": [],
-      "versions": [
-        {
-          "version": "3.4.0",
-          "buildVersion": "11298",
-          "marketingVersion": "3.4.0-alpha.20261123.b85aa52",
-          "date": "2026-11-23",
-          "localizedDescription": "Alpha build b85aa52 · 2026-11-23\n\nChanges in this build:\n• fix(input): computer systems boot with a working mouse and keyboard\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
-          "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 785938084,
-          "minOSVersion": "17.0"
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          {
-            "name": "com.apple.security.application-groups"
-          },
-          {
-            "name": "com.apple.developer.icloud-services"
-          },
-          {
-            "name": "com.apple.developer.icloud-container-identifiers"
-          }
-        ],
-        "privacy": [
-          {
-            "name": "LocalNetwork",
-            "usageDescription": "Used to discover and connect to local network game servers for netplay."
-          },
-          {
-            "name": "Camera",
-            "usageDescription": "Used to scan QR codes for importing game data."
-          }
-        ]
-      }
     },
     {
       "name": "Andarium",
@@ -263,83 +340,6 @@
         30369553,
         "sha256:11f56776543e9c7ce65704c649311f3af77916da8b3de9d3f32cb48971d5b641",
         "2026-11-22T05:42:22Z"
-      ]
-    },
-    {
-      "name": "iFly",
-      "bundleIdentifier": "com.provenance.ifly",
-      "developerName": "Provenance Emu",
-      "subtitle": "Dreamcast Emulator for iOS & tvOS",
-      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
-      "iconURL": "https://ifly-emu.com/icon-1024.png",
-      "tintColor": "#ff6900",
-      "category": "games",
-      "screenshots": [
-        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
-        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
-        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/library.jpg",
-        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
-        "https://ifly-emu.com/screenshots/iphone/search.jpg",
-        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0+1795380446",
-          "buildVersion": "1795380446",
-          "date": "2026-11-22",
-          "localizedDescription": "iFly 1.0.0 (build 1795380446) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795380446/iFly-1.0.0-1795380446.ipa",
-          "size": 138020193,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795306860",
-          "buildVersion": "1795306860",
-          "date": "2026-11-22",
-          "localizedDescription": "iFly 1.0.0 (build 1795306860) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795306860/iFly-1.0.0-1795306860.ipa",
-          "size": 137000559,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795244554",
-          "buildVersion": "1795244554",
-          "date": "2026-11-21",
-          "localizedDescription": "iFly 1.0.0 (build 1795244554) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795244554/iFly-1.0.0-1795244554.ipa",
-          "size": 137000808,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795170836",
-          "buildVersion": "1795170836",
-          "date": "2026-11-20",
-          "localizedDescription": "iFly 1.0.0 (build 1795170836) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795170836/iFly-1.0.0-1795170836.ipa",
-          "size": 137000688,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795163016",
-          "buildVersion": "1795163016",
-          "date": "2026-11-20",
-          "localizedDescription": "iFly 1.0.0 (build 1795163016) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795163016/iFly-1.0.0-1795163016.ipa",
-          "size": 136974214,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        }
       ]
     },
     {

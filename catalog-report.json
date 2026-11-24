@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T02:57:29.083837+00:00",
+  "generated_at": "2026-11-24T14:59:29.614187+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "url": "https://git.ryujinx.app/melonx/emu/-/raw/XC-ios-ht/source.json",
-      "error": "HTTP Error 522: <none>"
+      "error": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
@@ -93,7 +93,7 @@
     {
       "url": "https://github.com/loloshilele?tab=stars",
       "status": "complete",
-      "repositories": 59
+      "repositories": 61
     },
     {
       "url": "https://github.com/Predidit/Kazumi/releases",
@@ -113,6 +113,34 @@
           "version": "2.4.6"
         }
       ],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/amir1376/ab-download-manager/releases",
+      "repository": "amir1376/ab-download-manager",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 70,
+      "eligible_releases": 22,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
+      "retained_apps": 0
+    },
+    {
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/releases",
+      "repository": "ai-job-search-dev/ai-job-search",
+      "accepted": 0,
+      "ipa_assets": 0,
+      "failures": [],
+      "duplicates": [],
+      "releases_scanned": 15,
+      "eligible_releases": 15,
+      "status": "no_ipa",
+      "attempts": 1,
+      "published_apps": [],
       "retained_apps": 0
     },
     {
@@ -258,15 +286,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 53,
-      "eligible_releases": 29,
+      "releases_scanned": 54,
+      "eligible_releases": 30,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.7.8"
+          "version": "2.7.9"
         },
         {
           "name": "APP",
@@ -381,8 +409,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 264,
-      "eligible_releases": 262,
+      "releases_scanned": 265,
+      "eligible_releases": 263,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -649,8 +677,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 120,
-      "eligible_releases": 119,
+      "releases_scanned": 121,
+      "eligible_releases": 120,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -677,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 76,
-      "eligible_releases": 76,
+      "releases_scanned": 77,
+      "eligible_releases": 77,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -719,8 +747,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 85,
-      "eligible_releases": 72,
+      "releases_scanned": 88,
+      "eligible_releases": 75,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -894,7 +922,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 97,
-      "eligible_releases": 45,
+      "eligible_releases": 44,
       "status": "included",
       "attempts": 1,
       "published_apps": [
@@ -973,8 +1001,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 293,
-      "eligible_releases": 149,
+      "releases_scanned": 295,
+      "eligible_releases": 150,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1024,14 +1052,14 @@
     }
   ],
   "app_count": 32,
-  "github_repositories": 59,
+  "github_repositories": 61,
   "health": {
-    "github_repositories": 59,
+    "github_repositories": 61,
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-24T02:57:29.083837+00:00",
+    "last_complete_scan_at": "2026-11-24T14:59:29.614187+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45316013919"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45420117623"
 }
