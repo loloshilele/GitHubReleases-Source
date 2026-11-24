@@ -19,8 +19,6 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
   group: public-source-refresh
   cancel-in-progress: false
@@ -30,7 +28,7 @@ jobs:
     timeout-minutes: 30
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://loloshilele.github.io/GitHubReleases-Source/
     steps:
       - uses: actions/checkout@v6
         with:
@@ -123,12 +121,7 @@ jobs:
           api('/git/refs/heads/main','PATCH',{'sha':updated['sha'],'force':False})
           print('Published snapshot commit:',updated['sha'])
           PY
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: _site
-      - name: Deploy public source
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # GitHub Pages publishes the snapshot from main. Wait for that deployment below.
       - name: Verify live source and release dates
         run: |
           python3 - <<'PY'
