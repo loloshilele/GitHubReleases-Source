@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T21:46:26.326932+00:00",
+  "generated_at": "2026-11-24T00:54:49.301293+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "url": "https://git.ryujinx.app/melonx/emu/-/raw/XC-ios-ht/source.json",
-      "error": "Expecting value: line 1 column 1 (char 0)"
+      "error": "HTTP Error 522: <none>"
     },
     {
       "url": "https://github.com/chachillie/Flycast-iOS/raw/refs/heads/main/flycast-ios.json",
@@ -1016,8 +1016,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-23T21:46:26.326932+00:00",
+    "last_complete_scan_at": "2026-11-24T00:54:49.301293+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45272916904"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45300898821"
 }
