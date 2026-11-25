@@ -5,6 +5,92 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "Geode",
+      "bundleIdentifier": "com.geode.launcher",
+      "developerName": "Geode SDK Team",
+      "subtitle": "Geode, now on iOS!",
+      "localizedDescription": "Geode, has come to iOS!",
+      "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
+      "tintColor": "#272727",
+      "category": "games",
+      "screenshots": [
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-1.png",
+          "width": 1242,
+          "height": 2208
+        },
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-2.png",
+          "width": 2208,
+          "height": 1242
+        },
+        {
+          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-3.png",
+          "width": 2208,
+          "height": 1242
+        }
+      ],
+      "versions": [
+        {
+          "minOSVersion": "14.0",
+          "version": "1.6.1",
+          "localizedDescription": "A quick bug fix\r\n- Fixed bug where updating Geode wouldn't update to v6.0.0\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.6.0...v1.6.1",
+          "date": "2026-11-24T20:14:42Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.6.1/com.geode.launcher_1.6.1.ipa",
+          "size": 13257515
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.6.0",
+          "localizedDescription": "2.209 support and other fixes!\r\n- 2.209 support!\r\n- Fixed subtitle height for importing cert from SideStore\r\n- Renamed warn JIT setting to be the other way around\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.5...v1.6.0",
+          "date": "2026-11-24T19:44:58Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.6.0/com.geode.launcher_1.6.0.ipa",
+          "size": 13257499
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.5",
+          "localizedDescription": "Massive bug fix update! Including the fix for iOS 27 devices not being able to run Geode!\r\n\r\n- Fixed **iOS 27** compatibility\r\n- Fixed importing mods in JIT-Less not being signed (https://github.com/geode-sdk/ios-launcher/issues/180)\r\n- Fixed iPhone SE devices from not being able to tap the Import Certificate button on the setup\r\n- Fixed restarting not working in LiveContainer JIT-Less\r\n- Changed the \"You need to update the Helper\" message to explain whether the Helper was actually updated or not\r\n- Attempt to fix the \"first time setup\" on Enterprise Mode from reappearing (due to IPA being removed from temporary directory)\r\n- Use new release API endpoint  for downloading Geode (for those who can't access github.com)\r\n- Added safe mode restarting\r\n- Added metadata information in the About section in settings\r\n- Added in settings: Open crashlogs (Opens the crashlogs folder), Download and redownload (Deletes Geode and redownloads it, usually fixing issues if geode is missing in GD)\r\n- Added custom JIT enabler\r\n- Added skipping the intro setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.4...v1.5.5",
+          "date": "2026-09-15T07:26:49Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.5/com.geode.launcher_1.5.5.ipa",
+          "size": 13256824
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.4",
+          "localizedDescription": "Sapphire SDK!\r\n\r\n- Replaced default logo with Sapphire SDK\r\n- Fixed PDF rendering for iOS 18+ (hopefully)\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.3...v1.5.4",
+          "date": "2026-04-01T07:09:04Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.4/com.geode.launcher_1.5.4.ipa",
+          "size": 13242128
+        },
+        {
+          "minOSVersion": "14.0",
+          "version": "1.5.3",
+          "localizedDescription": "An important bug fix that fixes mods that require static hook patching, and more!\r\n\r\n- Made iOS 26 use JIT-Less by default on the setup\r\n- Disabled Automatic Launch for Enterprise Mode\r\n- Disabled Launch without Patching for non-developers, requiring Developer Mode to use\r\n- Fixed static hook patching causing Geometry Dash to not launch anymore\r\n- Fixed the wrong link for the PC guide on the setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.2...v1.5.3",
+          "date": "2026-03-15T20:06:48Z",
+          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.3/com.geode.launcher_1.5.3.ipa",
+          "size": 10354018
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "application-identifier",
+          "com.apple.developer.team-identifier",
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.security.application-groups",
+          "get-task-allow",
+          "com.apple.private.MobileContainerManager.allowed",
+          "keychain-access-groups"
+        ],
+        "privacy": {
+          "NSMicrophoneUsageDescription": "A mod you are using is requesting this permission.",
+          "NSCameraUsageDescription": "A mod you are using is requesting this permission.",
+          "NSLocalNetworkUsageDescription": "This permission is needed for accessing the JIT server."
+        }
+      }
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
@@ -129,56 +215,56 @@
       ],
       "versions": [
         {
+          "version": "1.0.0+1795555942",
+          "buildVersion": "1795555942",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795555942) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795555942/iFly-1.0.0-1795555942.ipa",
+          "size": 99593786,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795555348",
+          "buildVersion": "1795555348",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795555348) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795555348/iFly-1.0.0-1795555348.ipa",
+          "size": 99591343,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795553949",
+          "buildVersion": "1795553949",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795553949) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795553949/iFly-1.0.0-1795553949.ipa",
+          "size": 99591703,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795513073",
+          "buildVersion": "1795513073",
+          "date": "2026-11-24",
+          "localizedDescription": "iFly 1.0.0 (build 1795513073) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795513073/iFly-1.0.0-1795513073.ipa",
+          "size": 96534362,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
           "version": "1.0.0+1795506073",
           "buildVersion": "1795506073",
           "date": "2026-11-24",
           "localizedDescription": "iFly 1.0.0 (build 1795506073) for iOS",
           "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795506073/iFly-1.0.0-1795506073.ipa",
           "size": 96534586,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795505392",
-          "buildVersion": "1795505392",
-          "date": "2026-11-24",
-          "localizedDescription": "iFly 1.0.0 (build 1795505392) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795505392/iFly-1.0.0-1795505392.ipa",
-          "size": 138073964,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795493898",
-          "buildVersion": "1795493898",
-          "date": "2026-11-24",
-          "localizedDescription": "iFly 1.0.0 (build 1795493898) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795493898/iFly-1.0.0-1795493898.ipa",
-          "size": 138062126,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795491787",
-          "buildVersion": "1795491787",
-          "date": "2026-11-24",
-          "localizedDescription": "iFly 1.0.0 (build 1795491787) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795491787/iFly-1.0.0-1795491787.ipa",
-          "size": 138045447,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795489899",
-          "buildVersion": "1795489899",
-          "date": "2026-11-24",
-          "localizedDescription": "iFly 1.0.0 (build 1795489899) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795489899/iFly-1.0.0-1795489899.ipa",
-          "size": 138028032,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -896,92 +982,6 @@
         "sha256:e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
         "2026-09-15T11:12:45Z"
       ]
-    },
-    {
-      "name": "Geode",
-      "bundleIdentifier": "com.geode.launcher",
-      "developerName": "Geode SDK Team",
-      "subtitle": "Geode, now on iOS!",
-      "localizedDescription": "Geode, has come to iOS!",
-      "iconURL": "https://raw.githubusercontent.com/geode-sdk/ios-launcher/main/Icons/Default.png",
-      "tintColor": "#272727",
-      "category": "games",
-      "screenshots": [
-        {
-          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-1.png",
-          "width": 1242,
-          "height": 2208
-        },
-        {
-          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-2.png",
-          "width": 2208,
-          "height": 1242
-        },
-        {
-          "imageURL": "https://ios-repo.geode-sdk.org/img/LauncherShotiPhone-3.png",
-          "width": 2208,
-          "height": 1242
-        }
-      ],
-      "versions": [
-        {
-          "minOSVersion": "14.0",
-          "version": "1.5.5",
-          "localizedDescription": "Massive bug fix update! Including the fix for iOS 27 devices not being able to run Geode!\r\n\r\n- Fixed **iOS 27** compatibility\r\n- Fixed importing mods in JIT-Less not being signed (https://github.com/geode-sdk/ios-launcher/issues/180)\r\n- Fixed iPhone SE devices from not being able to tap the Import Certificate button on the setup\r\n- Fixed restarting not working in LiveContainer JIT-Less\r\n- Changed the \"You need to update the Helper\" message to explain whether the Helper was actually updated or not\r\n- Attempt to fix the \"first time setup\" on Enterprise Mode from reappearing (due to IPA being removed from temporary directory)\r\n- Use new release API endpoint  for downloading Geode (for those who can't access github.com)\r\n- Added safe mode restarting\r\n- Added metadata information in the About section in settings\r\n- Added in settings: Open crashlogs (Opens the crashlogs folder), Download and redownload (Deletes Geode and redownloads it, usually fixing issues if geode is missing in GD)\r\n- Added custom JIT enabler\r\n- Added skipping the intro setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.4...v1.5.5",
-          "date": "2026-09-15T07:26:49Z",
-          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.5/com.geode.launcher_1.5.5.ipa",
-          "size": 13256824
-        },
-        {
-          "minOSVersion": "14.0",
-          "version": "1.5.4",
-          "localizedDescription": "Sapphire SDK!\r\n\r\n- Replaced default logo with Sapphire SDK\r\n- Fixed PDF rendering for iOS 18+ (hopefully)\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.3...v1.5.4",
-          "date": "2026-04-01T07:09:04Z",
-          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.4/com.geode.launcher_1.5.4.ipa",
-          "size": 13242128
-        },
-        {
-          "minOSVersion": "14.0",
-          "version": "1.5.3",
-          "localizedDescription": "An important bug fix that fixes mods that require static hook patching, and more!\r\n\r\n- Made iOS 26 use JIT-Less by default on the setup\r\n- Disabled Automatic Launch for Enterprise Mode\r\n- Disabled Launch without Patching for non-developers, requiring Developer Mode to use\r\n- Fixed static hook patching causing Geometry Dash to not launch anymore\r\n- Fixed the wrong link for the PC guide on the setup\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.2...v1.5.3",
-          "date": "2026-03-15T20:06:48Z",
-          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.3/com.geode.launcher_1.5.3.ipa",
-          "size": 10354018
-        },
-        {
-          "minOSVersion": "14.0",
-          "version": "1.5.2",
-          "localizedDescription": "This fixes the infinite checking for update problem...\r\n\r\n- Added Force Update back (with warning)\r\n- Fixed TrollStore (TIPA) version from crashing upon launch\r\n- Fixed checking for updates not ending and taking forever\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.1...v1.5.2",
-          "date": "2026-02-24T01:54:11Z",
-          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.2/com.geode.launcher_1.5.2.ipa",
-          "size": 10354103
-        },
-        {
-          "minOSVersion": "14.0",
-          "version": "1.5.1",
-          "localizedDescription": "A short update that fixes an issue with the wrong offset, as I forgot to change it before\r\n\r\n- Fixed Enterprise Mode from looping to a \"You must launch the Helper with the launcher\"\r\n\r\nView the [INSTALL.md](https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md) guide on installing.\r\n\r\n**Full Changelog**: https://github.com/geode-sdk/ios-launcher/compare/v1.5.0...v1.5.1",
-          "date": "2026-02-23T01:50:53Z",
-          "downloadURL": "https://github.com/geode-sdk/ios-launcher/releases/download/v1.5.1/com.geode.launcher_1.5.1.ipa",
-          "size": 10352389
-        }
-      ],
-      "appPermissions": {
-        "entitlements": [
-          "application-identifier",
-          "com.apple.developer.team-identifier",
-          "com.apple.developer.kernel.extended-virtual-addressing",
-          "com.apple.developer.kernel.increased-memory-limit",
-          "com.apple.security.application-groups",
-          "get-task-allow",
-          "com.apple.private.MobileContainerManager.allowed",
-          "keychain-access-groups"
-        ],
-        "privacy": {
-          "NSMicrophoneUsageDescription": "A mod you are using is requesting this permission.",
-          "NSCameraUsageDescription": "A mod you are using is requesting this permission.",
-          "NSLocalNetworkUsageDescription": "This permission is needed for accessing the JIT server."
-        }
-      }
     },
     {
       "name": "StikPair",
