@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T00:32:00.054268+00:00",
+  "generated_at": "2026-11-26T13:15:26.195272+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -102,15 +102,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 143,
-      "eligible_releases": 52,
+      "releases_scanned": 144,
+      "eligible_releases": 53,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "Kazumi",
           "bundleIdentifier": "com.example.kazumi",
-          "version": "2.4.6"
+          "version": "2.4.7"
         }
       ],
       "retained_apps": 0
@@ -286,15 +286,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 57,
-      "eligible_releases": 33,
+      "releases_scanned": 62,
+      "eligible_releases": 38,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.8.2"
+          "version": "2.8.7"
         },
         {
           "name": "APP",
@@ -479,9 +479,9 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 0,
-      "eligible_releases": 0,
-      "status": "no_recent_release",
+      "releases_scanned": 1,
+      "eligible_releases": 1,
+      "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
       "retained_apps": 0
@@ -677,8 +677,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 124,
-      "eligible_releases": 123,
+      "releases_scanned": 127,
+      "eligible_releases": 126,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -705,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 77,
-      "eligible_releases": 77,
+      "releases_scanned": 78,
+      "eligible_releases": 78,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -747,8 +747,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 91,
-      "eligible_releases": 78,
+      "releases_scanned": 94,
+      "eligible_releases": 81,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -832,7 +832,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 144,
-      "eligible_releases": 41,
+      "eligible_releases": 40,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1001,7 +1001,7 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 297,
+      "releases_scanned": 298,
       "eligible_releases": 149,
       "status": "no_ipa",
       "attempts": 1,
@@ -1058,8 +1058,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-26T00:32:00.054268+00:00",
+    "last_complete_scan_at": "2026-11-26T13:15:26.195272+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45729329308"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45827220339"
 }
