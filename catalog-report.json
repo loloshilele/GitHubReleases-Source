@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T14:00:53.337113+00:00",
+  "generated_at": "2026-11-26T22:38:52.313805+00:00",
   "max_age_days": 365,
   "sources": [
     {
@@ -150,8 +150,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 14,
-      "eligible_releases": 12,
+      "releases_scanned": 15,
+      "eligible_releases": 13,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -204,8 +204,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 109,
-      "eligible_releases": 27,
+      "releases_scanned": 110,
+      "eligible_releases": 28,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -286,15 +286,15 @@
       "ipa_assets": 1,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 62,
-      "eligible_releases": 38,
+      "releases_scanned": 63,
+      "eligible_releases": 39,
       "status": "included",
       "attempts": 1,
       "published_apps": [
         {
           "name": "APP",
           "bundleIdentifier": "com.pxx917144686.App",
-          "version": "2.8.7"
+          "version": "2.8.8"
         },
         {
           "name": "APP",
@@ -368,7 +368,7 @@
       "failures": [],
       "duplicates": [],
       "releases_scanned": 1332,
-      "eligible_releases": 119,
+      "eligible_releases": 118,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -409,8 +409,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 265,
-      "eligible_releases": 263,
+      "releases_scanned": 266,
+      "eligible_releases": 264,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -705,8 +705,8 @@
       "ipa_assets": 0,
       "failures": [],
       "duplicates": [],
-      "releases_scanned": 78,
-      "eligible_releases": 78,
+      "releases_scanned": 80,
+      "eligible_releases": 80,
       "status": "no_ipa",
       "attempts": 1,
       "published_apps": [],
@@ -1058,8 +1058,8 @@
     "github_failed": 0,
     "github_included": 14,
     "official_source_failures": 4,
-    "last_complete_scan_at": "2026-11-26T14:00:53.337113+00:00",
+    "last_complete_scan_at": "2026-11-26T22:38:52.313805+00:00",
     "mode": "complete"
   },
-  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45834622459"
+  "run_url": "https://github.com/loloshilele/GitHubReleases-Source/actions/runs/45906061602"
 }

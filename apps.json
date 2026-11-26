@@ -8,26 +8,26 @@
       "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
-      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：下载页面-多线程\r\n2.设置-“多线程下载”选项改进\r\n3.恢复灵动岛功能。APP在灵动岛。\r\n\r\n```\r\n<img width=\"1320\" height=\"1830\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e62af172-6ed4-4822-bb93-19f3c1f961bf\" />\r\n",
+      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：整体UI的细节\r\n\r\n```\r\n\r\n<img width=\"1320\" height=\"1185\" alt=\"image\" src=\"https://github.com/user-attachments/assets/816b1d04-c7a3-4fff-8478-8697c2781c89\" />\r\n",
       "iconURL": "https://github.com/pxx917144686.png",
       "versions": [
         {
-          "version": "2.8.7",
-          "date": "2026-11-26T11:36:15Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.7/APP_2.8.7.ipa",
-          "size": 54337380,
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：下载页面-多线程\r\n2.设置-“多线程下载”选项改进\r\n3.恢复灵动岛功能。APP在灵动岛。\r\n\r\n```\r\n<img width=\"1320\" height=\"1830\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e62af172-6ed4-4822-bb93-19f3c1f961bf\" />\r\n",
+          "version": "2.8.8",
+          "date": "2026-11-26T16:17:23Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
+          "size": 54462701,
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：整体UI的细节\r\n\r\n```\r\n\r\n<img width=\"1320\" height=\"1185\" alt=\"image\" src=\"https://github.com/user-attachments/assets/816b1d04-c7a3-4fff-8478-8697c2781c89\" />\r\n",
           "isPrerelease": false,
-          "buildVersion": "5",
+          "buildVersion": "1",
           "minOSVersion": "17.4"
         }
       ],
       "githubRepository": "pxx917144686/APP",
       "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.8.7/APP_2.8.7.ipa",
-        54337380,
-        "sha256:59d66a8e7c34ee56b957fac1db6f08667141b8ec275338ffbccf476a91ef71b1",
-        "2026-11-26T11:44:18Z"
+        "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
+        54462701,
+        "sha256:9543de43d75dd8c0f7c5a6d57f00213404010162b55ba692c23407fa2cdbd35f",
+        "2026-11-26T16:16:41Z"
       ]
     },
     {
@@ -52,11 +52,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "627",
-          "date": "2026-11-26T08:37:30.826Z",
+          "buildVersion": "631",
+          "date": "2026-11-26T12:33:25.950Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-627/Non-Jailbroken.ipa",
-          "size": 141452315,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-631/Non-Jailbroken.ipa",
+          "size": 141511114,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -101,12 +101,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11328",
-          "marketingVersion": "3.4.0-alpha.20261126.adcfa50",
+          "buildVersion": "11329",
+          "marketingVersion": "3.4.0-alpha.20261126.71bb56e",
           "date": "2026-11-26",
-          "localizedDescription": "Alpha build adcfa50 · 2026-11-26\n\nChanges in this build:\n• [Agent] build(deps): update shared packages (#3846)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 71bb56e · 2026-11-26\n\nChanges in this build:\n• [Agent] build(deps): update shared packages (#3847)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787211784,
+          "size": 787285491,
           "minOSVersion": "17.0"
         }
       ],
@@ -155,6 +155,17 @@
       ],
       "versions": [
         {
+          "version": "1.0.0+1795695085",
+          "buildVersion": "1795695085",
+          "date": "2026-11-26",
+          "localizedDescription": "iFly 1.0.0 (build 1795695085) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795695085/iFly-1.0.0-1795695085.ipa",
+          "size": 101022783,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
           "version": "1.0.0+1795675587",
           "buildVersion": "1795675587",
           "date": "2026-11-26",
@@ -194,17 +205,6 @@
           "localizedDescription": "iFly 1.0.0 (build 1795661976) for iOS",
           "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795661976/iFly-1.0.0-1795661976.ipa",
           "size": 100958053,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795661347",
-          "buildVersion": "1795661347",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795661347) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795661347/iFly-1.0.0-1795661347.ipa",
-          "size": 100714207,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
