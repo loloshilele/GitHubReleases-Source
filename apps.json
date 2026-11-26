@@ -5,6 +5,58 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.删除：灵动岛功能\r\n\r\n```",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.8.2",
+          "date": "2026-11-25T20:09:56Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.2/APP_2.8.2.ipa",
+          "size": 53941374,
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.删除：灵动岛功能\r\n\r\n```",
+          "isPrerelease": false,
+          "buildVersion": "5",
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.8.2/APP_2.8.2.ipa",
+        53941374,
+        "sha256:6179de30a166290c49cdda31ddfe12c1edad52bd7df10eac8ed88945c37c008d",
+        "2026-11-25T20:09:22Z"
+      ]
+    },
+    {
+      "name": "DSH Go",
+      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
+      "developerName": "ccch1mneyyy",
+      "localizedDescription": "**下载 · Downloads**\n\n- [Android arm64 APK](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-arm64.apk)\n- [iOS IPA](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa) · 未签名 / Unsigned\n- [鸿蒙 HarmonyOS HAP](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ohos-unsigned.hap) · 未签名旁加载包 / Unsigned sideload build\n\n### 中文\n\n#### 新功能\n\n- **伙伴小屋有了完整模式。** 伙伴可以在自己的 DSH 会话里工作，小屋里能直接看进度、打电话或打开她的主会话。也可以养多个伙伴，或在 Android 上把伙伴设为系统默认助理。\n- **Android 手机操控有了悬浮岛和手机技能。** 操作进度能显示在屏幕顶部或支持的系统灵动岛里。完成任务后，可以把做法保存成手机技能，下次直接调用。\n- **OpenAI 官方渠道。** 支持的 Android 本机引擎可以用 ChatGPT 账号授权订阅，选用该账号可用的模型。\n- **酒馆和外观。** 补充了 SillyTavern 1.19 预设与 SPreset 支持。创意工坊的主题包可以改更多界面细节，壁纸也支持动图。\n- **iOS 实时活动。** 可以在锁屏和灵动岛查看进度。\n\n#### 修复与改进\n\n- 修复远程主机网页版偶尔打不开、部分连接断开后无法恢复的问题。\n- 修复终端键盘无法重新唤起、复制粘贴异常，以及部分 vivo 手机上手机操控无法读回结果的问题。\n- 减轻长对话和流式回复时的卡顿，修复通话字幕偶尔截断表情的问题。\n\n### English\n\n#### New features\n\n- **Full mode in the companion room.** Your companion can work in her own DSH session. See progress, call her or open her main session from the room. You can keep multiple companions or set your companion as Android’s default assistant.\n- **Floating island and phone skills on Android.** See phone control progress at the top of the screen or in the system island on supported phones. After a task, you can save the steps as a phone skill and use it again later.\n- **Official OpenAI channel.** On supported local Android engines, sign in with a ChatGPT account to authorize your subscription and use the models available to it.\n- **Tavern and appearance.** Expanded SillyTavern 1.19 preset and SPreset support. Workshop themes can customize more of the interface, and wallpapers can be animated.\n- **iOS Live Activities.** See progress on the Lock Screen and Dynamic Island.\n\n#### Fixes and improvements\n\n- Fixed cases where a remote host’s web app failed to open or a dropped connection failed to recover.\n- Fixed reopening the terminal keyboard, copying and pasting, and reading phone control results back on some vivo phones.\n- Reduced stutter in long chats and streaming replies. Fixed call captions occasionally cutting off emoji.\n",
+      "iconURL": "https://github.com/ccch1mneyyy.png",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2026-11-25T14:53:25Z",
+          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa",
+          "size": 129653636,
+          "localizedDescription": "**下载 · Downloads**\n\n- [Android arm64 APK](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-arm64.apk)\n- [iOS IPA](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa) · 未签名 / Unsigned\n- [鸿蒙 HarmonyOS HAP](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ohos-unsigned.hap) · 未签名旁加载包 / Unsigned sideload build\n\n### 中文\n\n#### 新功能\n\n- **伙伴小屋有了完整模式。** 伙伴可以在自己的 DSH 会话里工作，小屋里能直接看进度、打电话或打开她的主会话。也可以养多个伙伴，或在 Android 上把伙伴设为系统默认助理。\n- **Android 手机操控有了悬浮岛和手机技能。** 操作进度能显示在屏幕顶部或支持的系统灵动岛里。完成任务后，可以把做法保存成手机技能，下次直接调用。\n- **OpenAI 官方渠道。** 支持的 Android 本机引擎可以用 ChatGPT 账号授权订阅，选用该账号可用的模型。\n- **酒馆和外观。** 补充了 SillyTavern 1.19 预设与 SPreset 支持。创意工坊的主题包可以改更多界面细节，壁纸也支持动图。\n- **iOS 实时活动。** 可以在锁屏和灵动岛查看进度。\n\n#### 修复与改进\n\n- 修复远程主机网页版偶尔打不开、部分连接断开后无法恢复的问题。\n- 修复终端键盘无法重新唤起、复制粘贴异常，以及部分 vivo 手机上手机操控无法读回结果的问题。\n- 减轻长对话和流式回复时的卡顿，修复通话字幕偶尔截断表情的问题。\n\n### English\n\n#### New features\n\n- **Full mode in the companion room.** Your companion can work in her own DSH session. See progress, call her or open her main session from the room. You can keep multiple companions or set your companion as Android’s default assistant.\n- **Floating island and phone skills on Android.** See phone control progress at the top of the screen or in the system island on supported phones. After a task, you can save the steps as a phone skill and use it again later.\n- **Official OpenAI channel.** On supported local Android engines, sign in with a ChatGPT account to authorize your subscription and use the models available to it.\n- **Tavern and appearance.** Expanded SillyTavern 1.19 preset and SPreset support. Workshop themes can customize more of the interface, and wallpapers can be animated.\n- **iOS Live Activities.** See progress on the Lock Screen and Dynamic Island.\n\n#### Fixes and improvements\n\n- Fixed cases where a remote host’s web app failed to open or a dropped connection failed to recover.\n- Fixed reopening the terminal keyboard, copying and pasting, and reading phone control results back on some vivo phones.\n- Reduced stutter in long chats and streaming replies. Fixed call captions occasionally cutting off emoji.\n",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "ccch1mneyyy/dsh-Go",
+      "githubAsset": [
+        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa",
+        129653636,
+        "sha256:ca1ef9ff1a79d0fb60b876f07ff9c6aef0c144b938029fc90c3b690180ab0893",
+        "2026-11-25T14:47:04Z"
+      ]
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
@@ -35,32 +87,6 @@
           "platform": "iOS",
           "isBeta": true
         }
-      ]
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.新增: TF Apple ID 登录\r\n\r\n2.新增: TF 下载\r\n\r\n3.新增：TF页面-悬浮图标-搜索TF功能\r\n\r\n4.解决: 签名功能-签名surge6 iOS ，显示WE（小组件、大组件、控制中心）\r\n\r\n```\r\n<img width=\"901\" height=\"926\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2129592c-aa37-47a9-99b5-7ed9d4166da9\" />\r\n",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.8.0",
-          "date": "2026-11-25T10:03:14Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.0/APP_2.8.0.ipa",
-          "size": 54079009,
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.新增: TF Apple ID 登录\r\n\r\n2.新增: TF 下载\r\n\r\n3.新增：TF页面-悬浮图标-搜索TF功能\r\n\r\n4.解决: 签名功能-签名surge6 iOS ，显示WE（小组件、大组件、控制中心）\r\n\r\n```\r\n<img width=\"901\" height=\"926\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2129592c-aa37-47a9-99b5-7ed9d4166da9\" />\r\n",
-          "isPrerelease": false,
-          "buildVersion": "5",
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.8.0/APP_2.8.0.ipa",
-        54079009,
-        "sha256:41f5efd7256bac1c5c614841feb4fd399387f6f790e4cf3e3cae57dd53cccfc4",
-        "2026-11-25T10:02:06Z"
       ]
     },
     {
@@ -451,32 +477,6 @@
         51606881,
         "sha256:7148637b7786492a0e6e79f44583a1c77029bdbe8f738c2ad06d888ef4072d9a",
         "2026-11-21T00:03:49Z"
-      ]
-    },
-    {
-      "name": "DSH Go",
-      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
-      "developerName": "ccch1mneyyy",
-      "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
-      "iconURL": "https://github.com/ccch1mneyyy.png",
-      "versions": [
-        {
-          "version": "1.3.0",
-          "date": "2026-11-20T20:04:40Z",
-          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
-          "size": 126020561,
-          "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk)。**\n\n`update.json` 和 `SHA256SUMS` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.3.0-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.3.0/dsh-go-1.3.0-arm64.apk).**\n\n`update.json` and `SHA256SUMS` support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n### 中文\n\n- **顶栏一键语音通话。** 首页右上角、新对话按钮旁边多了通话按钮，新对话里也能直接打。\n- **长按就能选字。** 长按回复或自己发的消息直接选中按到的词，拖两端改范围；选区上有复制、引用、分享、朗读、全选，「更多」里是原来的消息菜单。自己发的消息也能引用了。朗读选中的文字时，里面的密码、密钥不会念出来。\n- **远程主机：对话备份和网页版。** 远程主机页可以把主机上的对话加密备份到手机，再恢复到原来的或另一台主机（每次恢复新建对话，不覆盖；附件和工作区源码不迁移）。主机支持时，还能在 App 里直接打开主机的 DSH 网页版，不用把登录凭据交给浏览器；服务繁忙时会提示「人太多了，请稍后重试」。\n- **后台保护（需要自己打开）。** 设置里新增后台运行保护，默认关闭。打开后本机长任务切到后台更不容易被系统杀掉，被系统收回时如实显示，不会假装还在运行。iOS 可以选静音音频或后台定位来保活，都要自己授权，不保存也不上传位置。\n- **酒馆。**\n  - 支持酒馆助手脚本库：全局、预设、角色卡里的脚本都能运行。预设的脚本能拿到 SillyTavern 的事件和当前预设，像小猫之神这类预设的菜单现在能出来；脚本面板在画布里显示，开关会写回预设。\n  - 大卡明显不卡了：重卡导入、卡库列表、长历史显示快了数倍，卡库占用减少约三分之二。前端卡只渲染屏幕上看得见的消息，写回复时少了很多多余重建。新增「省电渲染」开关（酒馆设置 › 显示，默认关）：关掉卡片网页里的毛玻璃，循环动画只播一遍。\n  - 上下文满了一次裁掉一截，而不是每条都裁，模型的缓存能持续命中，更快也更省钱（默认开）。\n  - 前端卡的开场白不再显示成一堆代码；深色模式下卡片颜色和网页文字看得清；酒馆界面统一了间距、样式和文案，加了克制的动效。\n- **伙伴小屋更清晰。** 小屋按屏幕本身的像素密度渲染（之前最多按 2 倍），卡顿时临时降低的清晰度流畅后会自己升回来。\n- **新桌宠「小粉鱼」。** 第三只内置宠物，带 18 种状态动画和 3 段待机小动作；切换动作时淡入淡出。\n- **分享长图。** 分享成图片时保留完整正文，生成一张长图，不再截掉后半段。\n- **本机引擎默认用 tawcroot 启动**（Android 10 及以上）：启动更快；起不来会自动退回原来的兼容启动（PRoot），不弹故障卡。之前手动关过的保持原样。卓易通上 PRoot 启动失败时，故障卡上会出现「用 tawcroot 启动」。\n- **修复。** 升级到 1.1.0 后本机新建对话失败；本机用久了会话列表超过 8 MB 就整个加载失败；配了多台 DNS 时第一台拒绝就联网失败；插件配置里 API Key 填不进去；Android 10 用 Shizuku 授权后手机操控报「身份改变」；HyperOS / Android 16 一直 60 Hz（刷新率设置现在也作用到画面本身）；APK 已下好但空间只够一份时误报空间不足；同一路径的图片被覆盖后，旧消息里显示成新图；模型列表接口返回 404 时现在会提示可以手动添加模型；模型选择里过长的名字显示不全；伙伴自动想起记忆时误把子代理配置当成对话内容；桌宠、悬浮窗菜单、伙伴小组件和网页岛的几处显示问题。\n- **验证情况。** 这一版的新功能大部分只经过自动测试和编译检查，tawcroot 默认启动、后台保护、远程备份和网页版都没有在各种真机上完整走过。iOS 安装包等 CI 编完会补到这个版本下；鸿蒙 HAP 这一版仍不提供。遇到问题请导出诊断并开 issue。\n\n### English\n\n- **One-tap voice call in the top bar.** A call button sits next to New chat in the top right, and works from a new chat too.\n- **Long-press to select text.** Long-press a reply or your own message to select the word under your finger, then drag the handles. The selection bar has Copy, Quote, Share, Read aloud and Select all; More opens the usual message menu. Your own messages can be quoted too. Reading a selection aloud skips any passwords or keys in it.\n- **Remote hosts: chat backup and the web app.** The remote host page can back up the host's chats to the phone, encrypted, and restore them to the same or another host (each restore makes a new chat and overwrites nothing; attachments and workspace source are not moved). When the host supports it, you can open its DSH web app inside the app without handing your credentials to a browser; when the service is busy it says so and asks you to try later.\n- **Background protection (opt-in).** Settings has a new background protection option, off by default. When on, long local tasks are less likely to be killed in the background, and when the system takes the time back the app says so instead of pretending the engine is still running. On iOS you can choose silent audio or background location to keep it alive; both need your permission, and location is never stored or sent.\n- **Tavern.**\n  - Tavern Helper script library: scripts from global settings, presets and character cards all run. Preset scripts get SillyTavern's event source and the current preset, so menus from presets such as Meowssiah now show up; the script panel shows in the canvas and its switches are written back to the preset.\n  - Large cards no longer stutter: importing heavy cards, the card library list and long histories are several times faster, and the card library takes about a third of the space. Frontend cards only render the messages on screen, and writing a reply triggers far fewer rebui",
-          "isPrerelease": false,
-          "buildVersion": "1",
-          "minOSVersion": "15.0"
-        }
-      ],
-      "githubRepository": "ccch1mneyyy/dsh-Go",
-      "githubAsset": [
-        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.3.0/dsh-go-1.3.0-ios-unsigned.ipa",
-        126020561,
-        "sha256:f0e6f32b7d4610d8dfe4de73ba31f059ee3c6a963166560158f5ca1f9d12c15b",
-        "2026-11-20T20:35:34Z"
       ]
     },
     {
