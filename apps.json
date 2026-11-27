@@ -26,11 +26,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "634",
-          "date": "2026-11-26T23:33:51.449Z",
+          "buildVersion": "657",
+          "date": "2026-11-27T10:07:28.040Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-634/Non-Jailbroken.ipa",
-          "size": 141511126,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-657/Non-Jailbroken.ipa",
+          "size": 141536877,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -38,18 +38,44 @@
       ]
     },
     {
+      "name": "DSH Go",
+      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
+      "developerName": "ccch1mneyyy",
+      "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.4.1-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.4.1/dsh-go-1.4.1-arm64.apk)。**\n\n`update.json`、`SHA256SUMS` 和增量包 `*.dshdelta` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.4.1-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.4.1/dsh-go-1.4.1-arm64.apk).**\n\n`update.json`, `SHA256SUMS` and the `*.dshdelta` patches support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n⭐ 喜欢 DSH Go 的话，[给仓库点个 Star](https://github.com/ccch1mneyyy/dsh-go) 支持一下 · Like DSH Go? [Star the repository](https://github.com/ccch1mneyyy/dsh-go) — it really helps.\n\n### 中文\n\n#### 改进\n\n- **对话显示解码速度。** 每轮结束的脚注、用量弹层和对话详情新增 `tokens/秒`（输出 token ÷ 解码时长，与单步详情同一口径）；子代理数量按会话谱系统计。\n- **远程主机后台连接。** 连上远程主机后由独立的前台服务维持连接：切到后台或息屏不再受 App 自设时限，也不会顺带启动本机引擎。后台运行页新增「远程连接保活」，可选静音音频和保护性后台定位（默认关闭，定位只用大致位置，不保存也不发送坐标）。\n- **状态显示更清楚。** 远程主机时顶栏把「主机连接」和「会话同步」分开显示，中继连接直接显示实际线路。\n\n#### 修复\n\n- **DS Bot 走中继。** 中继上通过 `dsBot/call`、`dsBot/feed` 访问 DS Bot（需要远端 Host 插件包含 ds-harness-remote#605）；只对可以安全重放的读操作重试，操作不会被执行两次。\n- **更新检查。** 多个官方源并行比较，选出版本最新的一个，旧的内测源不会再挡住 GitHub 正式版；打开 App 和从后台返回都会检查（成功检查后 24 小时内不重复）；检查失败时，已下载的安装包仍可校验并安装。\n- **OpenAI 订阅渠道支持图片。** ChatGPT 订阅渠道按官方声明的模型能力接收图片，可以直接发图。\n- **创意工坊投稿。** 可以投稿主题包，也可以直接选择 ZIP；投稿完成后回到「我的投稿」并看到这一条。\n- **tawcroot 启动。** 显式的 `/dev/shm` 绑定优先，不再被进程内的共享内存模拟覆盖。\n- **鸿蒙。** 修复真机图像打包、Inspector 与生命周期同步。\n\n#### 验证情况\n\n这版改动大多只经过自动测试和编译检查；1.4.1 的测试包在一台 vivo X200 Pro（Android 16）上装过并启动。远程主机后台保活、DS Bot 中继、OpenAI 订阅图片和更新检查需要相应的主机或账号，尚未逐项在真机上验证。\n\n### English\n\n#### Improvements\n\n- **Decoding speed in chats.** The end-of-turn footnote, the usage sheet and the conversation details now show `tokens/sec` (output tokens ÷ decoding time, the same measure as the step details), and the subagent count comes from the conversation lineage.\n- **Remote hosts in the background.** Once connected, a dedicated foreground service keeps the remote link alive: leaving the app or turning the screen off no longer runs into a self-imposed limit, and the local engine is not started. The background page gains remote connection protection — silent audio and protective background location, both off by default; location is coarse only and is never stored or sent.\n- **Clearer status.** With a remote host, the header shows the host link and the conversation sync state separately, and relay connections show the actual route.\n\n#### Fixes\n\n- **DS Bot over the relay.** DS Bot is reached through `dsBot/call` and `dsBot/feed` on relay hosts (the remote host plugin must include ds-harness-remote#605); only reads that are safe to replay are retried, so an action is never executed twice.\n- **Update checks.** Official sources are compared in parallel and the newest release wins, so a stale beta feed can no longer hide the GitHub release; checks run at launch and on returning to the app (at most once per 24 hours after a successful check); when a check fails, an already downloaded package can still be verified and installed.\n- **Images with an OpenAI subscription.** Models on the ChatGPT subscription channel now take images according to their declared capabilities.\n- **Workshop submissions.** Theme packs can be submitted, or a ZIP picked directly; a finished submission lands back in My uploads with the new entry.\n- **tawcroot launch.** Explicit `/dev/shm` binds take precedence instead of being shadowed by per-process shared-memory emulation.\n- **HarmonyOS.** Fixed on-device image packaging, the Inspector and lifecycle sync.\n\n#### Testing\n\nMost of this version has only been checked by automated tests and builds; the 1.4.1 test build was installed and started on a vivo X200 Pro (Android 16). Remote background protection, DS Bot over the relay, images on the OpenAI subscription and update checks need the matching host or account and have not each been verified on a real device.\n",
+      "iconURL": "https://github.com/ccch1mneyyy.png",
+      "versions": [
+        {
+          "version": "1.4.1",
+          "date": "2026-11-27T04:37:38Z",
+          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.1/dsh-go-1.4.1-ios-unsigned.ipa",
+          "size": 129673089,
+          "localizedDescription": "**手机安装：只需下载 [`dsh-go-1.4.1-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.4.1/dsh-go-1.4.1-arm64.apk)。**\n\n`update.json`、`SHA256SUMS` 和增量包 `*.dshdelta` 供自动更新与校验使用，无需手动下载。GitHub 自动生成的 Source code 是源码包，不是安装包。\n\n**Install on your phone: download [`dsh-go-1.4.1-arm64.apk`](https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.4.1/dsh-go-1.4.1-arm64.apk).**\n\n`update.json`, `SHA256SUMS` and the `*.dshdelta` patches support automatic updates and verification. You do not need to download them manually. GitHub's Source code archives are not installers.\n\n⭐ 喜欢 DSH Go 的话，[给仓库点个 Star](https://github.com/ccch1mneyyy/dsh-go) 支持一下 · Like DSH Go? [Star the repository](https://github.com/ccch1mneyyy/dsh-go) — it really helps.\n\n### 中文\n\n#### 改进\n\n- **对话显示解码速度。** 每轮结束的脚注、用量弹层和对话详情新增 `tokens/秒`（输出 token ÷ 解码时长，与单步详情同一口径）；子代理数量按会话谱系统计。\n- **远程主机后台连接。** 连上远程主机后由独立的前台服务维持连接：切到后台或息屏不再受 App 自设时限，也不会顺带启动本机引擎。后台运行页新增「远程连接保活」，可选静音音频和保护性后台定位（默认关闭，定位只用大致位置，不保存也不发送坐标）。\n- **状态显示更清楚。** 远程主机时顶栏把「主机连接」和「会话同步」分开显示，中继连接直接显示实际线路。\n\n#### 修复\n\n- **DS Bot 走中继。** 中继上通过 `dsBot/call`、`dsBot/feed` 访问 DS Bot（需要远端 Host 插件包含 ds-harness-remote#605）；只对可以安全重放的读操作重试，操作不会被执行两次。\n- **更新检查。** 多个官方源并行比较，选出版本最新的一个，旧的内测源不会再挡住 GitHub 正式版；打开 App 和从后台返回都会检查（成功检查后 24 小时内不重复）；检查失败时，已下载的安装包仍可校验并安装。\n- **OpenAI 订阅渠道支持图片。** ChatGPT 订阅渠道按官方声明的模型能力接收图片，可以直接发图。\n- **创意工坊投稿。** 可以投稿主题包，也可以直接选择 ZIP；投稿完成后回到「我的投稿」并看到这一条。\n- **tawcroot 启动。** 显式的 `/dev/shm` 绑定优先，不再被进程内的共享内存模拟覆盖。\n- **鸿蒙。** 修复真机图像打包、Inspector 与生命周期同步。\n\n#### 验证情况\n\n这版改动大多只经过自动测试和编译检查；1.4.1 的测试包在一台 vivo X200 Pro（Android 16）上装过并启动。远程主机后台保活、DS Bot 中继、OpenAI 订阅图片和更新检查需要相应的主机或账号，尚未逐项在真机上验证。\n\n### English\n\n#### Improvements\n\n- **Decoding speed in chats.** The end-of-turn footnote, the usage sheet and the conversation details now show `tokens/sec` (output tokens ÷ decoding time, the same measure as the step details), and the subagent count comes from the conversation lineage.\n- **Remote hosts in the background.** Once connected, a dedicated foreground service keeps the remote link alive: leaving the app or turning the screen off no longer runs into a self-imposed limit, and the local engine is not started. The background page gains remote connection protection — silent audio and protective background location, both off by default; location is coarse only and is never stored or sent.\n- **Clearer status.** With a remote host, the header shows the host link and the conversation sync state separately, and relay connections show the actual route.\n\n#### Fixes\n\n- **DS Bot over the relay.** DS Bot is reached through `dsBot/call` and `dsBot/feed` on relay hosts (the remote host plugin must include ds-harness-remote#605); only reads that are safe to replay are retried, so an action is never executed twice.\n- **Update checks.** Official sources are compared in parallel and the newest release wins, so a stale beta feed can no longer hide the GitHub release; checks run at launch and on returning to the app (at most once per 24 hours after a successful check); when a check fails, an already downloaded package can still be verified and installed.\n- **Images with an OpenAI subscription.** Models on the ChatGPT subscription channel now take images according to their declared capabilities.\n- **Workshop submissions.** Theme packs can be submitted, or a ZIP picked directly; a finished submission lands back in My uploads with the new entry.\n- **tawcroot launch.** Explicit `/dev/shm` binds take precedence instead of being shadowed by per-process shared-memory emulation.\n- **HarmonyOS.** Fixed on-device image packaging, the Inspector and lifecycle sync.\n\n#### Testing\n\nMost of this version has only been checked by automated tests and builds; the 1.4.1 test build was installed and started on a vivo X200 Pro (Android 16). Remote background protection, DS Bot over the relay, images on the OpenAI subscription and update checks need the matching host or account and have not each been verified on a real device.\n",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "15.0"
+        }
+      ],
+      "githubRepository": "ccch1mneyyy/dsh-Go",
+      "githubAsset": [
+        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.1/dsh-go-1.4.1-ios-unsigned.ipa",
+        129673089,
+        "sha256:4ffe886d64735cdd940191c3a746e188d26ddbf83cc406497e7bcde0ef8ec162",
+        "2026-11-27T05:19:03Z"
+      ]
+    },
+    {
       "name": "APP",
       "bundleIdentifier": "com.pxx917144686.App",
       "developerName": "pxx917144686",
-      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：整体UI的细节\r\n\r\n```\r\n\r\n<img width=\"1320\" height=\"1185\" alt=\"image\" src=\"https://github.com/user-attachments/assets/816b1d04-c7a3-4fff-8478-8697c2781c89\" />\r\n",
+      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
       "iconURL": "https://github.com/pxx917144686.png",
       "versions": [
         {
-          "version": "2.8.8",
-          "date": "2026-11-26T16:17:23Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
-          "size": 54462701,
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：整体UI的细节\r\n\r\n```\r\n\r\n<img width=\"1320\" height=\"1185\" alt=\"image\" src=\"https://github.com/user-attachments/assets/816b1d04-c7a3-4fff-8478-8697c2781c89\" />\r\n",
+          "version": "2.8.9",
+          "date": "2026-11-27T01:06:10Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
+          "size": 54481500,
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
           "isPrerelease": false,
           "buildVersion": "1",
           "minOSVersion": "17.4"
@@ -57,36 +83,10 @@
       ],
       "githubRepository": "pxx917144686/APP",
       "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.8.8/APP_2.8.8.ipa",
-        54462701,
-        "sha256:9543de43d75dd8c0f7c5a6d57f00213404010162b55ba692c23407fa2cdbd35f",
-        "2026-11-26T16:16:41Z"
-      ]
-    },
-    {
-      "name": "Kazumi",
-      "bundleIdentifier": "com.example.kazumi",
-      "developerName": "Predidit",
-      "localizedDescription": "- 修复 Linux 平台偶发的崩溃问题 (@Predidit)\r\n- 修复 windows 平台偶发的崩溃问题 (#2876) (@Predidit)\r\n- 修复部分规则来源下载只能下载到首个片段的问题 (#2886) (@wanxinlei1)\r\n- 修复桌面平台调整窗体大小时图片闪烁的问题 (@LiggMax)\r\n- 优化 windows/Linux 平台超分辨率性能 (@Predidit)",
-      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
-      "versions": [
-        {
-          "version": "2.4.7",
-          "date": "2026-11-26T05:31:42Z",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.7/Kazumi_ios_2.4.7_no_sign.ipa",
-          "size": 30376353,
-          "localizedDescription": "- 修复 Linux 平台偶发的崩溃问题 (@Predidit)\r\n- 修复 windows 平台偶发的崩溃问题 (#2876) (@Predidit)\r\n- 修复部分规则来源下载只能下载到首个片段的问题 (#2886) (@wanxinlei1)\r\n- 修复桌面平台调整窗体大小时图片闪烁的问题 (@LiggMax)\r\n- 优化 windows/Linux 平台超分辨率性能 (@Predidit)",
-          "isPrerelease": false,
-          "buildVersion": "20407",
-          "minOSVersion": "15.0"
-        }
-      ],
-      "githubRepository": "Predidit/Kazumi",
-      "githubAsset": [
-        "https://github.com/Predidit/Kazumi/releases/download/2.4.7/Kazumi_ios_2.4.7_no_sign.ipa",
-        30376353,
-        "sha256:148fae14e0a90a853b4a1a60da6a75aaeaf30b729103528d53edd711c5786f36",
-        "2026-11-26T05:31:41Z"
+        "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
+        54481500,
+        "sha256:01434fd1fd40298ad656448a5c48704355439c374fb81b712dae781d8ca00ed0",
+        "2026-11-27T12:19:38Z"
       ]
     },
     {
@@ -101,12 +101,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11329",
-          "marketingVersion": "3.4.0-alpha.20261126.71bb56e",
-          "date": "2026-11-26",
-          "localizedDescription": "Alpha build 71bb56e · 2026-11-26\n\nChanges in this build:\n• [Agent] build(deps): update shared packages (#3847)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "buildVersion": "11345",
+          "marketingVersion": "3.4.0-alpha.20261127.61c4447",
+          "date": "2026-11-27",
+          "localizedDescription": "Alpha build 61c4447 · 2026-11-27\n\nChanges in this build:\n• chore(changelog): absorb 1 pending fragment(s) (#3862)\n• [Agent] fix(bezels): TVs in portrait below the notch; a changed TV shows without a restart (#3855)\n• [Agent] build(deps): update shared packages (#3861)\n• chore(changelog): absorb 1 pending fragment(s) (#3860)\n• fix(tvos): keep four-player arcade controls visible (#3859)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787285491,
+          "size": 787414477,
           "minOSVersion": "17.0"
         }
       ],
@@ -155,56 +155,56 @@
       ],
       "versions": [
         {
-          "version": "1.0.0+1795695085",
-          "buildVersion": "1795695085",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795695085) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795695085/iFly-1.0.0-1795695085.ipa",
-          "size": 101022783,
+          "version": "1.0.0+1795764729",
+          "buildVersion": "1795764729",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795764729) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795764729/iFly-1.0.0-1795764729.ipa",
+          "size": 101021743,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
         },
         {
-          "version": "1.0.0+1795675587",
-          "buildVersion": "1795675587",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795675587) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795675587/iFly-1.0.0-1795675587.ipa",
-          "size": 100964429,
+          "version": "1.0.0+1795761476",
+          "buildVersion": "1795761476",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795761476) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795761476/iFly-1.0.0-1795761476.ipa",
+          "size": 101021711,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
         },
         {
-          "version": "1.0.0+1795674769",
-          "buildVersion": "1795674769",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795674769) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795674769/iFly-1.0.0-1795674769.ipa",
-          "size": 100963323,
+          "version": "1.0.0+1795750267",
+          "buildVersion": "1795750267",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795750267) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795750267/iFly-1.0.0-1795750267.ipa",
+          "size": 101021700,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
         },
         {
-          "version": "1.0.0+1795669065",
-          "buildVersion": "1795669065",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795669065) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795669065/iFly-1.0.0-1795669065.ipa",
-          "size": 100963329,
+          "version": "1.0.0+1795738631",
+          "buildVersion": "1795738631",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795738631) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795738631/iFly-1.0.0-1795738631.ipa",
+          "size": 101022275,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
         },
         {
-          "version": "1.0.0+1795661976",
-          "buildVersion": "1795661976",
-          "date": "2026-11-26",
-          "localizedDescription": "iFly 1.0.0 (build 1795661976) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795661976/iFly-1.0.0-1795661976.ipa",
-          "size": 100958053,
+          "version": "1.0.0+1795737208",
+          "buildVersion": "1795737208",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795737208) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795737208/iFly-1.0.0-1795737208.ipa",
+          "size": 101022331,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -212,29 +212,29 @@
       ]
     },
     {
-      "name": "DSH Go",
-      "bundleIdentifier": "io.github.ccch1mneyyy.dshgo",
-      "developerName": "ccch1mneyyy",
-      "localizedDescription": "**下载 · Downloads**\n\n- [Android arm64 APK](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-arm64.apk)\n- [iOS IPA](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa) · 未签名 / Unsigned\n- [鸿蒙 HarmonyOS HAP](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ohos-unsigned.hap) · 未签名旁加载包 / Unsigned sideload build\n\n### 中文\n\n#### 新功能\n\n- **伙伴小屋有了完整模式。** 伙伴可以在自己的 DSH 会话里工作，小屋里能直接看进度、打电话或打开她的主会话。也可以养多个伙伴，或在 Android 上把伙伴设为系统默认助理。\n- **Android 手机操控有了悬浮岛和手机技能。** 操作进度能显示在屏幕顶部或支持的系统灵动岛里。完成任务后，可以把做法保存成手机技能，下次直接调用。\n- **OpenAI 官方渠道。** 支持的 Android 本机引擎可以用 ChatGPT 账号授权订阅，选用该账号可用的模型。\n- **酒馆和外观。** 补充了 SillyTavern 1.19 预设与 SPreset 支持。创意工坊的主题包可以改更多界面细节，壁纸也支持动图。\n- **iOS 实时活动。** 可以在锁屏和灵动岛查看进度。\n\n#### 修复与改进\n\n- 修复远程主机网页版偶尔打不开、部分连接断开后无法恢复的问题。\n- 修复终端键盘无法重新唤起、复制粘贴异常，以及部分 vivo 手机上手机操控无法读回结果的问题。\n- 减轻长对话和流式回复时的卡顿，修复通话字幕偶尔截断表情的问题。\n\n### English\n\n#### New features\n\n- **Full mode in the companion room.** Your companion can work in her own DSH session. See progress, call her or open her main session from the room. You can keep multiple companions or set your companion as Android’s default assistant.\n- **Floating island and phone skills on Android.** See phone control progress at the top of the screen or in the system island on supported phones. After a task, you can save the steps as a phone skill and use it again later.\n- **Official OpenAI channel.** On supported local Android engines, sign in with a ChatGPT account to authorize your subscription and use the models available to it.\n- **Tavern and appearance.** Expanded SillyTavern 1.19 preset and SPreset support. Workshop themes can customize more of the interface, and wallpapers can be animated.\n- **iOS Live Activities.** See progress on the Lock Screen and Dynamic Island.\n\n#### Fixes and improvements\n\n- Fixed cases where a remote host’s web app failed to open or a dropped connection failed to recover.\n- Fixed reopening the terminal keyboard, copying and pasting, and reading phone control results back on some vivo phones.\n- Reduced stutter in long chats and streaming replies. Fixed call captions occasionally cutting off emoji.\n",
-      "iconURL": "https://github.com/ccch1mneyyy.png",
+      "name": "Kazumi",
+      "bundleIdentifier": "com.example.kazumi",
+      "developerName": "Predidit",
+      "localizedDescription": "- 修复 Linux 平台偶发的崩溃问题 (@Predidit)\r\n- 修复 windows 平台偶发的崩溃问题 (#2876) (@Predidit)\r\n- 修复部分规则来源下载只能下载到首个片段的问题 (#2886) (@wanxinlei1)\r\n- 修复桌面平台调整窗体大小时图片闪烁的问题 (@LiggMax)\r\n- 优化 windows/Linux 平台超分辨率性能 (@Predidit)",
+      "iconURL": "https://raw.githubusercontent.com/Predidit/Kazumi/main/assets/images/logo/logo_ios.png",
       "versions": [
         {
-          "version": "1.4.0",
-          "date": "2026-11-25T14:53:25Z",
-          "downloadURL": "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa",
-          "size": 129653636,
-          "localizedDescription": "**下载 · Downloads**\n\n- [Android arm64 APK](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-arm64.apk)\n- [iOS IPA](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa) · 未签名 / Unsigned\n- [鸿蒙 HarmonyOS HAP](https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ohos-unsigned.hap) · 未签名旁加载包 / Unsigned sideload build\n\n### 中文\n\n#### 新功能\n\n- **伙伴小屋有了完整模式。** 伙伴可以在自己的 DSH 会话里工作，小屋里能直接看进度、打电话或打开她的主会话。也可以养多个伙伴，或在 Android 上把伙伴设为系统默认助理。\n- **Android 手机操控有了悬浮岛和手机技能。** 操作进度能显示在屏幕顶部或支持的系统灵动岛里。完成任务后，可以把做法保存成手机技能，下次直接调用。\n- **OpenAI 官方渠道。** 支持的 Android 本机引擎可以用 ChatGPT 账号授权订阅，选用该账号可用的模型。\n- **酒馆和外观。** 补充了 SillyTavern 1.19 预设与 SPreset 支持。创意工坊的主题包可以改更多界面细节，壁纸也支持动图。\n- **iOS 实时活动。** 可以在锁屏和灵动岛查看进度。\n\n#### 修复与改进\n\n- 修复远程主机网页版偶尔打不开、部分连接断开后无法恢复的问题。\n- 修复终端键盘无法重新唤起、复制粘贴异常，以及部分 vivo 手机上手机操控无法读回结果的问题。\n- 减轻长对话和流式回复时的卡顿，修复通话字幕偶尔截断表情的问题。\n\n### English\n\n#### New features\n\n- **Full mode in the companion room.** Your companion can work in her own DSH session. See progress, call her or open her main session from the room. You can keep multiple companions or set your companion as Android’s default assistant.\n- **Floating island and phone skills on Android.** See phone control progress at the top of the screen or in the system island on supported phones. After a task, you can save the steps as a phone skill and use it again later.\n- **Official OpenAI channel.** On supported local Android engines, sign in with a ChatGPT account to authorize your subscription and use the models available to it.\n- **Tavern and appearance.** Expanded SillyTavern 1.19 preset and SPreset support. Workshop themes can customize more of the interface, and wallpapers can be animated.\n- **iOS Live Activities.** See progress on the Lock Screen and Dynamic Island.\n\n#### Fixes and improvements\n\n- Fixed cases where a remote host’s web app failed to open or a dropped connection failed to recover.\n- Fixed reopening the terminal keyboard, copying and pasting, and reading phone control results back on some vivo phones.\n- Reduced stutter in long chats and streaming replies. Fixed call captions occasionally cutting off emoji.\n",
+          "version": "2.4.7",
+          "date": "2026-11-26T05:31:42Z",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.7/Kazumi_ios_2.4.7_no_sign.ipa",
+          "size": 30376353,
+          "localizedDescription": "- 修复 Linux 平台偶发的崩溃问题 (@Predidit)\r\n- 修复 windows 平台偶发的崩溃问题 (#2876) (@Predidit)\r\n- 修复部分规则来源下载只能下载到首个片段的问题 (#2886) (@wanxinlei1)\r\n- 修复桌面平台调整窗体大小时图片闪烁的问题 (@LiggMax)\r\n- 优化 windows/Linux 平台超分辨率性能 (@Predidit)",
           "isPrerelease": false,
-          "buildVersion": "1",
+          "buildVersion": "20407",
           "minOSVersion": "15.0"
         }
       ],
-      "githubRepository": "ccch1mneyyy/dsh-Go",
+      "githubRepository": "Predidit/Kazumi",
       "githubAsset": [
-        "https://github.com/ccch1mneyyy/dsh-Go/releases/download/v1.4.0/dsh-go-1.4.0-ios-unsigned.ipa",
-        129653636,
-        "sha256:ca1ef9ff1a79d0fb60b876f07ff9c6aef0c144b938029fc90c3b690180ab0893",
-        "2026-11-25T14:47:04Z"
+        "https://github.com/Predidit/Kazumi/releases/download/2.4.7/Kazumi_ios_2.4.7_no_sign.ipa",
+        30376353,
+        "sha256:148fae14e0a90a853b4a1a60da6a75aaeaf30b729103528d53edd711c5786f36",
+        "2026-11-26T05:31:41Z"
       ]
     },
     {
