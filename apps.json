@@ -5,6 +5,32 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：大文件（游戏APP）下载导致崩溃问题\r\n2.更新：核对多国语言字符串\r\n3.完善：设置-源代码\r\n\r\n```",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.9.1",
+          "date": "2026-11-27T18:47:05Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
+          "size": 54732459,
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：大文件（游戏APP）下载导致崩溃问题\r\n2.更新：核对多国语言字符串\r\n3.完善：设置-源代码\r\n\r\n```",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
+        54732459,
+        "sha256:867024630ff9e1d5213e1f3212256e564aae6f052c04766721340b2db259bca6",
+        "2026-11-27T19:37:42Z"
+      ]
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
@@ -61,32 +87,6 @@
         129673089,
         "sha256:4ffe886d64735cdd940191c3a746e188d26ddbf83cc406497e7bcde0ef8ec162",
         "2026-11-27T05:19:03Z"
-      ]
-    },
-    {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
-      "iconURL": "https://github.com/pxx917144686.png",
-      "versions": [
-        {
-          "version": "2.8.9",
-          "date": "2026-11-27T01:06:10Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
-          "size": 54481500,
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：签名功能\r\n\r\n```",
-          "isPrerelease": false,
-          "buildVersion": "1",
-          "minOSVersion": "17.4"
-        }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.8.9/APP_2.8.9.ipa",
-        54481500,
-        "sha256:01434fd1fd40298ad656448a5c48704355439c374fb81b712dae781d8ca00ed0",
-        "2026-11-27T12:19:38Z"
       ]
     },
     {
