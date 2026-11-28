@@ -5,6 +5,32 @@
   "iconURL": "https://loloshilele.github.io/GitHubReleases-Source/source-icon.jpg",
   "apps": [
     {
+      "name": "APP",
+      "bundleIdentifier": "com.pxx917144686.App",
+      "developerName": "pxx917144686",
+      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：iOS26中脱壳失败问题\r\n\r\n```",
+      "iconURL": "https://github.com/pxx917144686.png",
+      "versions": [
+        {
+          "version": "2.9.2",
+          "date": "2026-11-28T10:22:07Z",
+          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.9.2/APP_2.9.2.ipa",
+          "size": 54730150,
+          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：iOS26中脱壳失败问题\r\n\r\n```",
+          "isPrerelease": false,
+          "buildVersion": "1",
+          "minOSVersion": "17.4"
+        }
+      ],
+      "githubRepository": "pxx917144686/APP",
+      "githubAsset": [
+        "https://github.com/pxx917144686/APP/releases/download/2.9.2/APP_2.9.2.ipa",
+        54730150,
+        "sha256:ac93b2c160b4c21fae89316afaee83e0bede66c61b55d632d866706d08e85d8b",
+        "2026-11-28T10:21:14Z"
+      ]
+    },
+    {
       "name": "iCube",
       "bundleIdentifier": "com.joemattiello.iCube",
       "developerName": "Provenance Emu",
@@ -26,11 +52,11 @@
       "versions": [
         {
           "version": "1.0.0",
-          "buildVersion": "661",
-          "date": "2026-11-28T03:40:33.233Z",
+          "buildVersion": "665",
+          "date": "2026-11-28T09:31:19.767Z",
           "localizedDescription": "Rolling CI alpha from GitHub Releases. Unsigned; replaced on every successful default-branch or develop build.",
-          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-661/Non-Jailbroken.ipa",
-          "size": 141950535,
+          "downloadURL": "https://github.com/Provenance-Emu/iCube/releases/download/alpha-665/Non-Jailbroken.ipa",
+          "size": 141950580,
           "minOSVersion": "17.0",
           "platform": "iOS",
           "isBeta": true
@@ -49,12 +75,12 @@
       "versions": [
         {
           "version": "3.4.0",
-          "buildVersion": "11348",
-          "marketingVersion": "3.4.0-alpha.20261128.a2623d7",
+          "buildVersion": "11352",
+          "marketingVersion": "3.4.0-alpha.20261128.671e5d6",
           "date": "2026-11-28",
-          "localizedDescription": "Alpha build a2623d7 · 2026-11-28\n\nChanges in this build:\n• chore(bezels): SkinKit 0.11.0; the TV switcher offers the Seat (#3865)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
+          "localizedDescription": "Alpha build 671e5d6 · 2026-11-28\n\nChanges in this build:\n• [Agent] feat(cheats): cheats menu loads local and online cheats by itself (#3868)\n\nInstalls alongside the stable app. Built automatically from develop — expect rough edges.",
           "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/alpha/Provenance-iOS-NoExtensions.ipa",
-          "size": 787498221,
+          "size": 787258077,
           "minOSVersion": "17.0"
         }
       ],
@@ -83,29 +109,80 @@
       }
     },
     {
-      "name": "APP",
-      "bundleIdentifier": "com.pxx917144686.App",
-      "developerName": "pxx917144686",
-      "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：大文件（游戏APP）下载导致崩溃问题\r\n2.更新：核对多国语言字符串\r\n3.完善：设置-源代码\r\n\r\n```",
-      "iconURL": "https://github.com/pxx917144686.png",
+      "name": "iFly",
+      "bundleIdentifier": "com.provenance.ifly",
+      "developerName": "Provenance Emu",
+      "subtitle": "Dreamcast Emulator for iOS & tvOS",
+      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
+      "iconURL": "https://ifly-emu.com/icon-1024.png",
+      "tintColor": "#ff6900",
+      "category": "games",
+      "screenshots": [
+        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library.jpg",
+        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
+        "https://ifly-emu.com/screenshots/iphone/search.jpg",
+        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
+        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
+      ],
       "versions": [
         {
-          "version": "2.9.1",
-          "date": "2026-11-27T18:47:05Z",
-          "downloadURL": "https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
-          "size": 54732459,
-          "localizedDescription": "#修改\r\n\r\n```js\r\n\r\n1.改进：大文件（游戏APP）下载导致崩溃问题\r\n2.更新：核对多国语言字符串\r\n3.完善：设置-源代码\r\n\r\n```",
-          "isPrerelease": false,
-          "buildVersion": "1",
-          "minOSVersion": "17.4"
+          "version": "1.0.0+1795835765",
+          "buildVersion": "1795835765",
+          "date": "2026-11-28",
+          "localizedDescription": "iFly 1.0.0 (build 1795835765) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795835765/iFly-1.0.0-1795835765.ipa",
+          "size": 101449249,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795833171",
+          "buildVersion": "1795833171",
+          "date": "2026-11-28",
+          "localizedDescription": "iFly 1.0.0 (build 1795833171) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795833171/iFly-1.0.0-1795833171.ipa",
+          "size": 101438997,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795829339",
+          "buildVersion": "1795829339",
+          "date": "2026-11-28",
+          "localizedDescription": "iFly 1.0.0 (build 1795829339) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795829339/iFly-1.0.0-1795829339.ipa",
+          "size": 101436493,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795774653",
+          "buildVersion": "1795774653",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795774653) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795774653/iFly-1.0.0-1795774653.ipa",
+          "size": 101437024,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
+        },
+        {
+          "version": "1.0.0+1795771521",
+          "buildVersion": "1795771521",
+          "date": "2026-11-27",
+          "localizedDescription": "iFly 1.0.0 (build 1795771521) for iOS",
+          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795771521/iFly-1.0.0-1795771521.ipa",
+          "size": 100897935,
+          "minOSVersion": "17.0",
+          "platform": "iOS",
+          "isBeta": true
         }
-      ],
-      "githubRepository": "pxx917144686/APP",
-      "githubAsset": [
-        "https://github.com/pxx917144686/APP/releases/download/2.9.1/APP_2.9.1.ipa",
-        54732459,
-        "sha256:867024630ff9e1d5213e1f3212256e564aae6f052c04766721340b2db259bca6",
-        "2026-11-27T19:37:42Z"
       ]
     },
     {
@@ -132,83 +209,6 @@
         129673089,
         "sha256:4ffe886d64735cdd940191c3a746e188d26ddbf83cc406497e7bcde0ef8ec162",
         "2026-11-27T05:19:03Z"
-      ]
-    },
-    {
-      "name": "iFly",
-      "bundleIdentifier": "com.provenance.ifly",
-      "developerName": "Provenance Emu",
-      "subtitle": "Dreamcast Emulator for iOS & tvOS",
-      "localizedDescription": "Experience classic Sega Dreamcast games on your iOS devices and Apple TV.\n\nFeatures:\n• Full Dreamcast emulation\n• Controller support (MFi, PlayStation, Xbox)\n• Save states and real-time saves\n• High-resolution rendering\n• Fast-forward and slow motion\n• Customizable controls\n• Game library management\n• And much more!\n\nThis is an early build of iFly optimized for iOS and tvOS devices.",
-      "iconURL": "https://ifly-emu.com/icon-1024.png",
-      "tintColor": "#ff6900",
-      "category": "games",
-      "screenshots": [
-        "https://ifly-emu.com/screenshots/2026-11/iphone/play.jpg",
-        "https://ifly-emu.com/screenshots/2026-11/iphone/library.jpg",
-        "https://ifly-emu.com/screenshots/2026-11/iphone/themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/library.jpg",
-        "https://ifly-emu.com/screenshots/iphone/library-theme.jpg",
-        "https://ifly-emu.com/screenshots/iphone/search.jpg",
-        "https://ifly-emu.com/screenshots/iphone/settings-themes.jpg",
-        "https://ifly-emu.com/screenshots/iphone/cheats.jpg"
-      ],
-      "versions": [
-        {
-          "version": "1.0.0+1795774653",
-          "buildVersion": "1795774653",
-          "date": "2026-11-27",
-          "localizedDescription": "iFly 1.0.0 (build 1795774653) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795774653/iFly-1.0.0-1795774653.ipa",
-          "size": 101437024,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795771521",
-          "buildVersion": "1795771521",
-          "date": "2026-11-27",
-          "localizedDescription": "iFly 1.0.0 (build 1795771521) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795771521/iFly-1.0.0-1795771521.ipa",
-          "size": 100897935,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795768886",
-          "buildVersion": "1795768886",
-          "date": "2026-11-27",
-          "localizedDescription": "iFly 1.0.0 (build 1795768886) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795768886/iFly-1.0.0-1795768886.ipa",
-          "size": 101425335,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795764729",
-          "buildVersion": "1795764729",
-          "date": "2026-11-27",
-          "localizedDescription": "iFly 1.0.0 (build 1795764729) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795764729/iFly-1.0.0-1795764729.ipa",
-          "size": 101021743,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        },
-        {
-          "version": "1.0.0+1795761476",
-          "buildVersion": "1795761476",
-          "date": "2026-11-27",
-          "localizedDescription": "iFly 1.0.0 (build 1795761476) for iOS",
-          "downloadURL": "https://github.com/JoeMatt/iFly-releases/releases/download/v1.0.0%2B1795761476/iFly-1.0.0-1795761476.ipa",
-          "size": 101021711,
-          "minOSVersion": "17.0",
-          "platform": "iOS",
-          "isBeta": true
-        }
       ]
     },
     {
